@@ -1,0 +1,86 @@
+---
+title: Home
+permalink: /
+order: 1
+layout: index
+tags:
+---
+
+{# Upcoming #}
+
+{% if collections.gigs | length > 0 %}
+<section class="mb-8">
+
+  <h1 class="mb-6 text-neutral-100 text-xl font-bold">Upcoming</h1>
+
+  {% for gig in collections.gigs %}
+
+  {# Event date and title #}
+  <h2 class="mb-2 text-neutral-300 font-semibold">{{ gig.data.date | postDate }} - {{ gig.data.title }}</h2>
+
+  {# Event description / content #}
+  <div class="text-neutral-400 mb-2">{{ gig.content | safe }}</div>
+  <ul class="mb-8">
+
+    {# Event time #}
+    {% if gig.data.time %}
+    <li class="text-neutral-400"><i class="fa-regular fa-clock w-5 text-center"></i> <span class=" ">{{
+        gig.data.time }}</a></li>
+    {% endif %}
+
+    {# Event location #}
+    {% if gig.data.gmaps %}
+    <li class="text-neutral-400"><i class="fas fa-map-marker-alt w-5 text-center"></i> <a href="{{ gig.data.gmaps }}"
+        class="text-sky-600 hover:text-sky-400">{{
+        gig.data.location }}</a></li>
+    {% endif %}
+
+    {# Facebook link #}
+    {% if gig.data.fblink %}
+    <li class="text-neutral-400"><i class="fab fa-facebook-f w-5 text-center"></i> <a href="{{ gig.data.fblink }}"
+        class="text-sky-600 hover:text-sky-400">Facebook event</a></li>
+    {% endif %}
+
+    {# Web link #}
+    {% if gig.data.weblink %}
+    <li class="text-neutral-400"><i class="fa-solid fa-link w-5 text-center"></i> <a href="{{ gig.data.weblink }}"
+        class="text-sky-600 hover:text-sky-400">Event website</a></li>
+    {% endif %}
+  </ul>
+
+  {% endfor %}
+
+</section>
+{% endif %}
+
+{# Latest #}
+
+{% if collections.pinned | length > 0 %}
+<section>
+  <h1 class="mb-8 text-neutral-100 text-xl font-bold">Latest</h1>
+
+  {% for post in collections.pinned %}
+  <h2 class="mb-2 text-neutral-300 font-semibold">{{ post.data.date | postDate }} - {{ post.data.title }}</h2>
+
+  <div class="text-neutral-400 mb-6 prose">{{ post.content | safe }}</div>
+  {% endfor %}
+
+</section>
+{% endif %}
+
+{# Placeholder, if no gigs or latest news #}
+
+{% if collections.gigs | length == 0 and collections.pinned | length == 0 %}
+
+<p class="text-neutral-400 mb-4">
+  Embracing the vibrant rhythms of Afrobeat, the soulful melodies of Ethio-Jazz, and the lively beats of Cumbia, our
+  Helsinki-based collective crafts a unique, multicultural musical experience that transcends borders and unites
+  audiences.
+</p>
+<p class="text-neutral-400 mb-4">While the stage awaits our return, we're busy blending new rhythms and melodies to
+  bring you
+  an unforgettable live
+  experience. Keep your ears open and spirits ready for when we announce our next performance dates. The journey through
+  sound continues, and we can't wait to share it with you soon. Stay tuned!</p>
+
+{% endif %}

@@ -1,0 +1,12 @@
+<div class="flex w-full justify-between">
+    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {% if previousPost %}<a
+        class="dark:bg-indigo-400 dark:text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        href="{{ previousPost.url }}">Previous: {{ previousPost.data.title
+        }}</a>{% endif %}
+    {% if nextPost %}<a
+        class="dark:bg-indigo-400 dark:text-white active:bg-lightBlue-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        href="{{ nextPost.url }}">Next post: {{ nextPost.data.title }}</a>{% endif
+    %}
+</div>

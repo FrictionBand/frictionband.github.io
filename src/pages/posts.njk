@@ -1,0 +1,15 @@
+---
+title: Posts
+permalink: /posts/
+order: 3
+---
+
+<section>
+    <h1 class="mb-8 text-neutral-100 text-2xl font-bolder">Posts</h1>
+
+    {% for post in collections.posts %}
+    <h2 class="mb-2 text-neutral-300 font-semibold">{{ post.data.date | postDate }} - {{ post.data.title }}</h2>
+
+    <div class="text-neutral-400 mb-6 prose">{{ post.content | safe }}</div>
+    {% endfor %}
+</section>

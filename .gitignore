@@ -1,0 +1,14 @@
+# Eleventy output directory
+_site/
+
+# Node modules directory
+node_modules/
+
+# Operating system files
+.DS_Store
+
+# Editor directories and files
+.vscode/
+
+# Dependencies
+/package-lock.json
