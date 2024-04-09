@@ -2,7 +2,7 @@
     <nav class="flex items-center justify-between max-w-3xl mx-auto w-full">
 
         <!-- Friction logo (functions as home link as well) -->
-        <a href="/" class="inline-block w-40 p-5 uppercase font-semibold text-xl tracking-wider 
+        <a href="{{ site.baseUrl }}" class="inline-block w-40 p-5 uppercase font-semibold text-xl tracking-wider 
             {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-500{% endif %}">
             {% include "svg/logo.svg" %}
         </a>
@@ -41,7 +41,7 @@
                 {%- for item in collections.pages -%}
                 {% if item.data.title != "Home" %}
 
-                <a href="{{ item.url }}" class="p-5 inline-flex uppercase font-extrabold
+                <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 inline-flex uppercase font-extrabold
                     items-center 
                     {% if item.url === page.url %}text-sky-100{% else %}text-gray-400 hover:text-sky-500{% endif %}">
                     {{ item.data.title }}
@@ -66,7 +66,7 @@
         <ul>
             {%- for item in collections.pages -%}
             <li>
-                <a href="{{ item.url }}" class="p-5 block uppercase font-extrabold text-center
+                <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 block uppercase font-extrabold text-center
             {% if item.url === page.url %}text-sky-100{% else %}text-gray-400 hover:text-sky-500{% endif %}">
                     {{ item.data.title }}
                 </a>
