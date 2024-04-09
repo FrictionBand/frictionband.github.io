@@ -2,28 +2,41 @@ name: Eleventy Build
 on: [push]
 
 jobs:
-  build_deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
         contents: write
     concurrency:
         group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20' 
+    
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies and build
         run: |
           npm install
           npm run build 
+    
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: _site 
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
