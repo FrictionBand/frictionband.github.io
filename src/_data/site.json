@@ -1,5 +1,7 @@
 {
     "title": "Friction",
     "description": "Super cool band",
-    "keywords": "eleventy, 11ty, css, ssg"
+    "keywords": "friction",
+    "url": "https://cle-ment.github.io",
+    "baseUrl": "/friction-helsinki-website"
 }
