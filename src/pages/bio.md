@@ -11,5 +11,5 @@ It’s safe to say that the name Friction is more than a little tongue in cheek,
 
 Together, the members and contributors of the Friction collective are pushing new boundaries, creating an innovative sound that is truly unique, and building a reputation as one of Helsinki’s more exciting live music offerings.
 
-![](/media/images/friction-about.jpg "Friction Band")
+![]({{ site.baseUrl }}/media/images/friction-about.jpg "Friction Band")
 
