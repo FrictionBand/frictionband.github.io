@@ -3,6 +3,7 @@ on: [push]
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     permissions:
         contents: write
@@ -30,6 +31,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    name: Deploy
     permissions:
       contents: read
       pages: write
@@ -39,7 +41,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

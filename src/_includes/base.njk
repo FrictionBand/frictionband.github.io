@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- stylesheet -->
 
-  <link rel="stylesheet" href="{{ 'assets/css/tailwind.css' | url }}">
+  <link rel="stylesheet" href="{{ site.baseUrl }}/{{ 'assets/css/tailwind.css' | url }}">
 
   <!-- Meta -->
   <title>{{site.name}}{% if title %} - {{title}} {% endif %} </title>
@@ -34,7 +34,7 @@
 
 
 
-  <script src="assets/js/menu.js"></script>
+  <script src="{{ site.baseUrl }}/assets/js/menu.js"></script>
 
 </body>
 
