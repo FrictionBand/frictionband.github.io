@@ -10,10 +10,17 @@ jobs:
         group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@master
-      - name: Build
-        uses: TartanLlama/actions-eleventy@v1.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-            install_dependencies: true
+          node-version: '14' # or any other version you prefer
+
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build 
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
