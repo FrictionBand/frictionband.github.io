@@ -1,4 +1,7 @@
 ---
+title: Bio
+permalink: /bio/
+order: 2
 ---
 # About Friction
 
