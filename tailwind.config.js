@@ -12,6 +12,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: 'none',
             color: theme('colors.neutral.400'),
             a: {
               color: theme('colors.sky.600'),

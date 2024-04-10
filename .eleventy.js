@@ -1,10 +1,15 @@
 module.exports = function (eleventyConfig) {
 
+
+  // PASSTHROUGH
+
   // Passthrough copy: site assets
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Passthrough copy: media attachments
   eleventyConfig.addPassthroughCopy("src/media");
+
+  // COLLECTIONS
 
   // Sort pages by frontmatter 'order'
   eleventyConfig.addCollection("page", function (collections) {
@@ -13,20 +18,11 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  // Pinned posts
+  // FILTER
+
+  // Pinned posts filter
   eleventyConfig.addFilter("filterPinned", function (collection) {
     return collection.filter(item => item.data.pinned === true);
-  });
-
-  // Debug filter
-  eleventyConfig.addFilter("dumpPost", function (collection) {
-    return collection.map(item => ({
-      url: item.url,
-      data: {
-        title: item.data.title,
-        pinned: item.data.pinned
-      }
-    }));
   });
 
   // Data filter to display date in Finnish Locale
@@ -34,6 +30,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).setLocale('fi').toLocaleString(DateTime.DATE_SHORT);
   });
+
+  // PLUGINS
+
+  const embedEverything = require("eleventy-plugin-embed-everything");
+  eleventyConfig.addPlugin(embedEverything);
+
 
   return {
     dir: {
