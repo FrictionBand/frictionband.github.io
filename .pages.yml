@@ -25,6 +25,24 @@ content:
     view:
       fields: [ title, date, pinned ]
       sort: [ pinned, date, title ]
+
+  - name: posts
+    label: Posts Page
+    path: src/pages/posts.njk
+    type: file
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: permalink
+        label: Permalink
+        type: string
+      - name: order
+        label: Navigation order
+        type: number
+      - name: body
+        label: Body
+        type: rich-text
       
   - name: bio
     label: Bio
