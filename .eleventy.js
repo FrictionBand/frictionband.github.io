@@ -13,6 +13,22 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  // Pinned posts
+  eleventyConfig.addFilter("filterPinned", function (collection) {
+    return collection.filter(item => item.data.pinned === true);
+  });
+
+  // Debug filter
+  eleventyConfig.addFilter("dumpPost", function (collection) {
+    return collection.map(item => ({
+      url: item.url,
+      data: {
+        title: item.data.title,
+        pinned: item.data.pinned
+      }
+    }));
+  });
+
   // Data filter to display date in Finnish Locale
   const { DateTime } = require("luxon");
   eleventyConfig.addFilter("postDate", (dateObj) => {

@@ -3,7 +3,6 @@ title: Home
 permalink: /
 order: 1
 layout: index
-tags:
 ---
 
 {# Upcoming #}
@@ -55,11 +54,13 @@ tags:
 
 {# Latest #}
 
-{% if collections.pinned | length > 0 %}
+{% set pinnedPosts = collections.posts | filterPinned %}
+{% if pinnedPosts | length > 0 %}
 <section>
   <h1 class="mb-8 text-neutral-100 text-xl font-bold">Latest</h1>
 
-  {% for post in collections.pinned %}
+  {% for post in pinnedPosts %}
+
   <h2 class="mb-2 text-neutral-300 font-semibold">{{ post.data.date | postDate }} - {{ post.data.title }}</h2>
 
   <div class="text-neutral-400 mb-6 prose">{{ post.content | safe }}</div>
@@ -70,8 +71,7 @@ tags:
 
 {# Placeholder, if no gigs or latest news #}
 
-{% if collections.gigs | length == 0 and collections.pinned | length == 0 %}
-
+{% if collections.gigs | length == 0 and pinnedPosts | length == 0 %}
 <p class="text-neutral-400 mb-4">
   Embracing the vibrant rhythms of Afrobeat, the soulful melodies of Ethio-Jazz, and the lively beats of Cumbia, our
   Helsinki-based collective crafts a unique, multicultural musical experience that transcends borders and unites
