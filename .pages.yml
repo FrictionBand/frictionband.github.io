@@ -1,6 +1,6 @@
 media:
   input: src/media
-  output: /media
+  output: /friction-helsinki-website/media
 content:
   - name: posts
     label: Posts
