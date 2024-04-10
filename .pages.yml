@@ -1,0 +1,34 @@
+media:
+  input: src/media
+  output: /media
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: 'src/posts'
+    fields:
+      - name: date
+        label: Date
+        type: date
+      - name: title
+        label: Title
+        type: string
+      - name: body
+        label: Body
+        type: rich-text
+  - name: site
+    label: Site settings
+    path: src/_data/site.json
+    type: file
+    fields:
+      - name: title
+        label: Website title
+        type: string
+      - name: description
+        label: Website description
+        type: string
+        description: Will be provused for any page with no description.
+      - name: keywords
+        label: Website keywords
+        type: string
+        description: Comma-separated list of keywords for search engines
