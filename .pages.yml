@@ -42,7 +42,7 @@ content:
         type: number
       - name: body
         label: Body
-        type: rich-text
+        type: text
       
   - name: bio
     label: Bio
