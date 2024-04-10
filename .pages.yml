@@ -16,8 +16,7 @@ content:
       - name: pinned
         label: Pinned
         type: boolean
-        description: When a post is pinned it will be shown in the "Latest" section 
-        on the home page
+        description: When a post is pinned it will be shown in the "Latest" section on the home page
       - name: body
         label: Body
         type: rich-text
