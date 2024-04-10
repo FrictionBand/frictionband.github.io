@@ -9,4 +9,4 @@ Helsinki based Friction has been performing in Finland's capital region for the 
 
 Together, the members and contributors of the Friction collective are pushing new boundaries, creating an innovative sound that is truly unique, and building a reputation as one of Helsinki’s more exciting live music offerings.
 
-![](/media/images/friction-about.jpg)
+![](/friction-helsinki-website/media/images/friction-about.jpg)
