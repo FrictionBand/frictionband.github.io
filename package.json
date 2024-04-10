@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
+    "dev": "npm-run-all -p dev:*",
     "build": "run-s build:*",
     "dev:11ty": "npx @11ty/eleventy --serve",
     "dev:css": "tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --watch",
