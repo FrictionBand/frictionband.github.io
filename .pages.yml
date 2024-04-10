@@ -2,6 +2,7 @@ media:
   input: src/media
   output: /friction-helsinki-website/media
 content:
+
   - name: posts
     label: Posts
     type: collection
@@ -24,6 +25,7 @@ content:
     view:
       fields: [ title, date, pinned ]
       sort: [ pinned, date, title ]
+      
   - name: bio
     label: Bio
     path: src/pages/bio.md
@@ -41,6 +43,7 @@ content:
       - name: body
         label: Body
         type: rich-text
+        
   - name: site
     label: Site settings
     path: src/_data/site.json
