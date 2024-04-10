@@ -28,6 +28,15 @@ content:
     path: src/pages/bio.md
     type: file
     fields:
+      - name: title
+        label: Title
+        type: string
+      - name: permalink
+        label: Permalink
+        type: string
+      - name: order
+        label: Navigation order
+        type: number
       - name: body
         label: Body
         type: rich-text
