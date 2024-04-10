@@ -20,6 +20,9 @@ content:
       - name: body
         label: Body
         type: rich-text
+    view:
+      fields: [ title, date, pinned ]
+      sort: [ pinned, date, title ]
   - name: site
     label: Site settings
     path: src/_data/site.json
