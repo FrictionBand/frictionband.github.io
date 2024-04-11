@@ -29,7 +29,7 @@ content:
   - name: pages
     label: Pages
     type: collection
-    path: 'src/pages/md'
+    path: 'src/pages/dynamic'
     fields:
       - name: title
         label: Title
