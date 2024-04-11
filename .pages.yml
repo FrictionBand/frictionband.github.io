@@ -24,7 +24,7 @@ content:
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
     view:
       fields: [ title, date, archived ]
-      sort: [ -archived, date, title ]
+      sort: [ date, title ]
 
   - name: pages
     label: Pages
