@@ -1,6 +1,6 @@
 ---
 title: Jams
-permalink: /bio/
+permalink: /jams/
 order: 2
 ---
 # Kaapeli Jam hosted by Friction
