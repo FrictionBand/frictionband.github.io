@@ -1,0 +1,45 @@
+{% if collections.gigs | length > 0 %}
+<section class="mb-12">
+
+    <h1 class="mb-6 text-neutral-100 text-xl font-bold">Upcoming Gigs</h1>
+
+    {% for gig in collections.gigs %}
+
+    {# Event date and title #}
+    <h2 class="mb-2 text-neutral-100 font-semibold">{{ gig.data.date | postDate }} - {{ gig.data.title }}
+    </h2>
+
+    {# Event description / content #}
+    <div class="text-neutral-300 mb-2">{{ gig.content | safe }}</div>
+    <ul class="mb-8">
+
+        {# Event time #}
+        {% if gig.data.time %}
+        <li class="text-neutral-300"><i class="fa-regular fa-clock w-5 text-center"></i> <span class=" ">{{
+                gig.data.time }}</a></li>
+        {% endif %}
+
+        {# Event location #}
+        {% if gig.data.gmaps %}
+        <li class="text-neutral-300"><i class="fas fa-map-marker-alt w-5 text-center"></i> <a
+                href="{{ gig.data.gmaps }}" class="text-sky-500 hover:text-sky-400">{{
+                gig.data.location }}</a></li>
+        {% endif %}
+
+        {# Facebook link #}
+        {% if gig.data.fblink %}
+        <li class="text-neutral-300"><i class="fab fa-facebook-f w-5 text-center"></i> <a href="{{ gig.data.fblink }}"
+                class="text-sky-500 hover:text-sky-400">Facebook event</a></li>
+        {% endif %}
+
+        {# Web link #}
+        {% if gig.data.weblink %}
+        <li class="text-neutral-300"><i class="fa-solid fa-link w-5 text-center"></i> <a href="{{ gig.data.weblink }}"
+                class="text-sky-500 hover:text-sky-400">Event website</a></li>
+        {% endif %}
+    </ul>
+
+    {% endfor %}
+
+</section>
+{% endif %}

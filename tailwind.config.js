@@ -25,6 +25,7 @@ module.exports = {
             h1: {
               fontSize: theme('fontSize.2xl'),
               color: theme('colors.neutral.100'),
+              marginTop: theme('spacing.12')
             },
             h2: {
               fontSize: theme('fontSize.lg'),
