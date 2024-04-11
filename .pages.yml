@@ -4,7 +4,7 @@ media:
 content:
 
   - name: posts
-    label: Posts
+    label: News
     type: collection
     path: 'src/posts'
     fields:
@@ -14,10 +14,10 @@ content:
       - name: title
         label: Title
         type: string
-      - name: pinned
-        label: Pinned
+      - name: archived
+        label: Archived
         type: boolean
-        description: When a post is pinned it will be shown in the "Latest" section on the home page
+        description: Archived posts are not shown on the home page anymore. They can be found in the archive page, if that is set to visible.
       - name: body
         label: Body
         type: rich-text
