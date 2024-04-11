@@ -31,6 +31,11 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).setLocale('fi').toLocaleString(DateTime.DATE_SHORT);
   });
 
+  eleventyConfig.addFilter("newlineToBreak", function (value) {
+    return value.replace(/\n/g, '<br>');
+  });
+
+
   // PLUGINS
 
   const embedEverything = require("eleventy-plugin-embed-everything");

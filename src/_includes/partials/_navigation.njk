@@ -3,18 +3,18 @@
 
         <!-- Friction logo (functions as home link as well) -->
         <a href="{{ site.baseUrl }}/" class="inline-block w-40 p-5 uppercase font-semibold text-xl tracking-wider 
-            {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-500{% endif %}">
+            {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}">
             {% include "svg/logo.svg" %}
         </a>
 
         <!-- Top navigation for bigger screens -->
         <div class="hidden sm:flex justify-end">
             {%- for item in collections.pages -%}
-            {% if item.data.title != "Home" %}
+            {% if item.data.title != "Home" and item.data.hidden != true %}
 
             <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 inline-flex uppercase font-extrabold
                 items-center 
-                {% if item.url === page.url %}text-sky-100{% else %}text-gray-400 hover:text-sky-500{% endif %}">
+                {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
                 {{ item.data.title }}
             </a>
 
@@ -28,7 +28,7 @@
 
         <!-- Mobile navigation toggle for small screens -->
         <div class="flex justify-end sm:hidden">
-            <button id="menuToggle" class="p-5 text-xl text-gray-400 hover:text-sky-500">
+            <button id="menuToggle" class="p-5 text-xl text-gray-300 hover:text-sky-400">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -39,17 +39,18 @@
         <noscript>
             <div class="block">
                 {%- for item in collections.pages -%}
-                {% if item.data.title != "Home" %}
+                {% if item.data.title != "Home" and item.data.hidden != true %}
 
                 <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 inline-flex uppercase font-extrabold
                     items-center 
-                    {% if item.url === page.url %}text-sky-100{% else %}text-gray-400 hover:text-sky-500{% endif %}">
+                    {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
                     {{ item.data.title }}
                 </a>
 
                 {% endif %}
                 {%- endfor -%}
             </div>
+
         </noscript>
 
     </nav>
@@ -58,19 +59,21 @@
 <!-- Full-screen Overlay Mobile Menu -->
 <div id="mobileMenu" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex justify-center items-center ">
     <!-- Close Button -->
-    <button id="menuClose" class="p-5 absolute top-0 right-0 text-gray-200 text-2xl">
+    <button id="menuClose" class="p-5 absolute top-0 right-0 text-gray-300 text-2xl">
         <i class="fas fa-times"></i> <!-- Close icon -->
     </button>
     <!-- Menu Items -->
     <nav>
         <ul>
             {%- for item in collections.pages -%}
+            {% if item.data.hidden != true %}
             <li>
                 <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 block uppercase font-extrabold text-center
-            {% if item.url === page.url %}text-sky-100{% else %}text-gray-400 hover:text-sky-500{% endif %}">
+                {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
                     {{ item.data.title }}
                 </a>
             </li>
+            {% endif %}
             {%- endfor -%}
             <div class="mt-12">{% include "partials/_social.html" %}</div>
         </ul>

@@ -13,9 +13,9 @@ module.exports = {
         DEFAULT: {
           css: {
             maxWidth: 'none',
-            color: theme('colors.neutral.400'),
+            color: theme('colors.neutral.300'),
             a: {
-              color: theme('colors.sky.600'),
+              color: theme('colors.sky.500'),
               textDecoration: 'none',
               fontWeight: 'normal',
               '&:hover': {
@@ -24,11 +24,11 @@ module.exports = {
             },
             h1: {
               fontSize: theme('fontSize.2xl'),
-              color: theme('colors.neutral.200'),
+              color: theme('colors.neutral.100'),
             },
             h2: {
               fontSize: theme('fontSize.lg'),
-              color: theme('colors.neutral.200'),
+              color: theme('colors.neutral.100'),
             },
           },
         },
