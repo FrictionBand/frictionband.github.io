@@ -1,6 +1,6 @@
 ---
 title: Bio
-permalink: /bio
+permalink: /bio/
 order: 2
 ---
 # About Friction
