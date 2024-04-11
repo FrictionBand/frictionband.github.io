@@ -20,9 +20,9 @@ module.exports = function (eleventyConfig) {
 
   // FILTER
 
-  // Pinned posts filter
-  eleventyConfig.addFilter("filterPinned", function (collection) {
-    return collection.filter(item => item.data.pinned === true);
+  // Filter non-archived posts
+  eleventyConfig.addFilter("filterNonArchived", function (collection) {
+    return collection.filter(item => item.data.archived === false);
   });
 
   // Data filter to display date in Finnish Locale

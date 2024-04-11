@@ -54,12 +54,12 @@ layout: video
 
 {# News #}
 
-{% set pinnedPosts = collections.posts | filterPinned %}
-{% if pinnedPosts | length > 0 %}
+{% set posts = collections.posts | filterNonArchived %}
+{% if posts | length > 0 %}
 <section class="mb-16">
   <h1 class="text-center mb-8 text-neutral-100 text-xl font-bold">What's new?</h1>
 
-  {% for post in pinnedPosts %}
+  {% for post in posts %}
 
   <h2 class="text-center mb-2 text-neutral-100 font-semibold">{{ post.data.title }}</h2>
 

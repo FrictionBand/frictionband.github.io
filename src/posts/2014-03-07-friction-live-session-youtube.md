@@ -1,7 +1,7 @@
 ---
 date: 2024-03-07
 title: Friction on YouTube Live
-pinned: false
+archived: true
 ---
 Recently Friction broadcasted their first ever live stream. Check it out here:  
 
