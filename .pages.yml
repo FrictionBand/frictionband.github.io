@@ -37,7 +37,7 @@ content:
       - name: permalink
         label: Permalink
         type: string
-        description: The link path for this site, e.g. "/bio" makes the site available under "https://<website url>/bio"
+        description: The link path for this site, e.g. "/bio/" makes the site available under "https://<website url>/bio/" The slash / in the end is important, it's not gonna work without for some reason.
       - name: order
         type: number
         label: Navigation order
