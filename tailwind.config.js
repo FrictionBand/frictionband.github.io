@@ -23,13 +23,35 @@ module.exports = {
               },
             },
             h1: {
-              fontSize: theme('fontSize.2xl'),
               color: theme('colors.neutral.100'),
-              marginTop: theme('spacing.12')
+              marginTop: theme('spacing.12'),
+              fontSize: theme('fontSize.2xl'),
+              '@screen md': {
+                fontSize: theme('fontSize.3xl'),
+              },
+              '@screen lg': {
+                fontSize: theme('fontSize.4xl'),
+              },
             },
             h2: {
-              fontSize: theme('fontSize.lg'),
               color: theme('colors.neutral.100'),
+              fontSize: theme('fontSize.xl'),
+              '@screen md': {
+                fontSize: theme('fontSize.2xl'),
+              },
+              '@screen lg': {
+                fontSize: theme('fontSize.3xl'),
+              },
+            },
+            h3: {
+              color: theme('colors.neutral.100'),
+              fontSize: theme('fontSize.base'),
+              '@screen md': {
+                fontSize: theme('fontSize.xl'),
+              },
+              '@screen lg': {
+                fontSize: theme('fontSize.2xl'),
+              },
             },
           },
         },

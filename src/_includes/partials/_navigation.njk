@@ -9,19 +9,7 @@
 
         <!-- Top navigation for bigger screens -->
         <div class="hidden sm:flex justify-end">
-            {%- for item in collections.pages -%}
-            {% if item.data.title != "Home" and item.data.hidden != true %}
-
-            <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 inline-flex uppercase font-extrabold
-                items-center 
-                {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
-                {{ item.data.title }}
-            </a>
-
-            {% endif %}
-            {%- endfor -%}
-
-            <!-- Social media links and email -->
+            {% include "partials/_navi_links.njk" %}
             {# {% include "partials/_social.html" %} #}
 
         </div>
@@ -34,21 +22,9 @@
         </div>
 
         <!-- Mobile navigation for non-JS users -->
-        {# TODO: style this, maybe make a full Non-JS navi with new lines for links #}
-        {# also hide JS navi by default and only make it visible with JS enabled #}
         <noscript>
             <div class="block">
-                {%- for item in collections.pages -%}
-                {% if item.data.title != "Home" and item.data.hidden != true %}
-
-                <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 inline-flex uppercase font-extrabold
-                    items-center 
-                    {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
-                    {{ item.data.title }}
-                </a>
-
-                {% endif %}
-                {%- endfor -%}
+                {% include "partials/_navi_links.njk" %}
             </div>
 
         </noscript>
@@ -65,16 +41,8 @@
     <!-- Menu Items -->
     <nav>
         <ul>
-            {%- for item in collections.pages -%}
-            {% if item.data.hidden != true %}
-            <li>
-                <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 block uppercase font-extrabold text-center
-                {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
-                    {{ item.data.title }}
-                </a>
-            </li>
-            {% endif %}
-            {%- endfor -%}
+            {% set mobileNavi = true %}
+            {% include "partials/_navi_links.njk" %}
             <div class="mt-12">{% include "partials/_social.html" %}</div>
         </ul>
     </nav>

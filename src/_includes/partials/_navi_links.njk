@@ -1,0 +1,9 @@
+{% for item in collections.pages %}
+{% if not (item.data.title == "Home" and mobileNavi != true) and item.data.hidden != true %}
+<a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 uppercase font-extrabold items-center 
+    {% if mobileNavi == false %} inline-flex items-center  {% else %} block text-center {% endif %}
+    {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
+    {{ item.data.title }}
+</a>
+{% endif %}
+{% endfor %}

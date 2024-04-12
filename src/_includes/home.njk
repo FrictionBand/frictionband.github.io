@@ -1,9 +1,16 @@
 ---
-layout: video
+layout: base
 ---
 
-{% include "partials/_gigs.njk" %}
+{% include "partials/_video.njk" %}
 
-<div class="prose mb-12">{{content| safe}}</div>
+<main class="items-center justify-between max-w-3xl mx-auto w-full 
+    mt-6 p-5">
+
+    <div class="w-full">{% include "partials/_gigs.njk" %}</div>
+
+    <div class="w-full prose">{{content| safe}}</div>
+
+</main>
 
 {% include "partials/_contact.njk" %}
