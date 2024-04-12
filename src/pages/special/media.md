@@ -6,4 +6,7 @@ hidden: false
 ---
 Media here
 
-[https://youtu.be/xSkVQajnRLo](https://youtu.be/xSkVQajnRLo)
+<!-- [https://youtu.be/xSkVQajnRLo](https://youtu.be/xSkVQajnRLo) -->
+
+
+{% include "partials/_gallery.njk" %}

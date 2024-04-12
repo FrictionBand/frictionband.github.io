@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    /* @apply text-neutral-200 text-xl font-bold; */
-  }
-h2 {    
-    /* @apply text-neutral-200 font-semibold; */
+/* Custom style for image gallery */
+.gallery img {
+    width: 100%;
+    padding: 5px; /* Adjust spacing between images */
 }
-  
+
+@media (min-width: 640px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}

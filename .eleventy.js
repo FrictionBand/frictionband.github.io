@@ -1,5 +1,7 @@
-module.exports = function (eleventyConfig) {
+const fs = require("fs");
+const path = require("path");
 
+module.exports = function (eleventyConfig) {
 
   // PASSTHROUGH
 
@@ -15,6 +17,21 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("page", function (collections) {
     return collections.getFilteredByTag("page").sort(function (a, b) {
       return a.data.order - b.data.order;
+    });
+  });
+
+  eleventyConfig.addCollection("gallery", function (collectionApi) {
+    // Define the directory where your images are stored
+    const galleryDir = path.join(__dirname, 'src', 'media', 'gallery');
+
+    // Read the directory for image files
+    const imageFiles = fs.readdirSync(galleryDir).filter(file => {
+      return file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.png'); // Add more file types if needed
+    });
+
+    // Return image paths or further details as needed
+    return imageFiles.map(file => {
+      return { path: `/media/gallery/${file}` };
     });
   });
 

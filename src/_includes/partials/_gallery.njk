@@ -1,0 +1,5 @@
+<div class="gallery">
+    {% for image in collections.gallery %}
+    <img src="{{site.baseUrl}}/{{ image.path }}" alt="Gallery image">
+    {% endfor %}
+</div>
