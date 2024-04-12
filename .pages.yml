@@ -3,29 +3,6 @@ media:
   output: /friction-helsinki-website/media
 content:
 
-  - name: posts
-    label: News
-    type: collection
-    path: 'src/posts'
-    fields:
-      - name: date
-        label: Date
-        type: date
-      - name: title
-        label: Title
-        type: string
-      - name: archived
-        label: Archived
-        type: boolean
-        description: Archived posts are not shown on the home page anymore. They can be found in the archive page, if that is set to visible.
-      - name: body
-        label: Body
-        type: rich-text
-        description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
-    view:
-      fields: [ title, date, archived ]
-      sort: [ date, title ]
-
   - name: pages
     label: Pages
     type: collection
