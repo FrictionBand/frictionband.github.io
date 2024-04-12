@@ -1,21 +1,12 @@
 ---
-title: Home
-permalink: /
-order: 1
-layout: home
 ---
-
 # What's new?
 
 ## Sáré Kon Kon – Friction Live at Kekri 2023
 
-Check out our live performance during last year's Kekri Festival 
+Check out our live performance during last year's Kekri Festival
 
-https://www.youtube.com/watch?v=xSkVQajnRLo
-
-### Sub heading 
-
-something
+[https://www.youtube.com/watch?v=xSkVQajnRLo](https://www.youtube.com/watch?v=xSkVQajnRLo)
 
 ## Kaapeli Jam hosted by Friction
 
