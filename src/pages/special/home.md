@@ -1,4 +1,8 @@
 ---
+title: Home
+permalink: /
+order: 0
+hidden: false
 ---
 # What's new?
 
