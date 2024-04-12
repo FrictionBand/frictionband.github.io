@@ -1,6 +1,7 @@
 media:
   input: src/media
   output: /friction-helsinki-website/media
+
 content:
 
   - name: pages
