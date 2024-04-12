@@ -27,6 +27,16 @@ content:
         label: Body
         type: rich-text
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
+
+  - name: home
+    label: Home page
+    path: src/pages/special/home.md
+    type: file
+    fields:
+      - name: body
+        label: Body
+        type: rich-text
+        description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
         
   - name: site
     label: Site settings
