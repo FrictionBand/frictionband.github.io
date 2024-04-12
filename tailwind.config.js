@@ -23,8 +23,9 @@ module.exports = {
               },
             },
             h1: {
+              marginTop: theme('spacing.10'),
+              marginBottom: theme('spacing.5'),
               color: theme('colors.neutral.100'),
-              marginTop: theme('spacing.12'),
               fontSize: theme('fontSize.2xl'),
               '@screen md': {
                 fontSize: theme('fontSize.3xl'),
@@ -51,6 +52,16 @@ module.exports = {
               },
               '@screen lg': {
                 fontSize: theme('fontSize.2xl'),
+              },
+            },
+            h4: {
+              color: theme('colors.neutral.100'),
+              fontSize: theme('fontSize.base'),
+              '@screen md': {
+                fontSize: theme('fontSize.base'),
+              },
+              '@screen lg': {
+                fontSize: theme('fontSize.xl'),
               },
             },
           },
