@@ -7,10 +7,15 @@ module.exports = function (eleventyConfig) {
   // PASSTHROUGH
 
   // Passthrough copy: site assets
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/assets/videos");
 
   // Passthrough copy: media attachments
   eleventyConfig.addPassthroughCopy("src/media");
+
+  // Copy Tobii (Lightbox) CSS and JS to the output folder
+  eleventyConfig.addPassthroughCopy({ "node_modules/@midzer/tobii/dist/tobii.min.css": "assets/css/tobii.min.css" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/@midzer/tobii/dist/tobii.min.js": "assets/js/tobii.min.js" });
 
   // COLLECTIONS
 
@@ -51,6 +56,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("newlineToBreak", function (value) {
     return value.replace(/\n/g, '<br>');
+  });
+
+  // Extract the filename without extension
+  eleventyConfig.addFilter("filenameNoExt", function (path) {
+    // Extract the filename from the path
+    const filename = path.split('/').pop();
+    // Remove the file extension
+    return filename.replace(/\.[^/.]+$/, "");
   });
 
 

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-img": "^4.0.2",
+    "@midzer/tobii": "^2.5.0",
     "@tailwindcss/typography": "^0.5.10",
     "eleventy-plugin-embed-everything": "^1.18.2",
     "luxon": "^3.4.4"

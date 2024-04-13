@@ -1,7 +1,7 @@
-<div class="gallery sm:columns-2 not-prose mt-5">
+<div class="columns-2 sm:columns-3 not-prose mt-5">
     {% for image in collections.gallery %}
-    <a href="{{ site.baseUrl }}/{{ image.path }}" class="image-gallery">
-        <img class="mb-5" src="{{ site.baseUrl }}/{{ image.path }}" alt="Description of the photo">
+    <a href="{{ site.baseUrl }}/{{ image.path }}" class="lightbox">
+        <img class="mb-5" src="{{ site.baseUrl }}/{{ image.path }}" alt="{{ image.path | filenameNoExt }}">
     </a>
     {% endfor %}
 </div>
