@@ -1,5 +1,7 @@
-<div class="gallery">
+<div class="gallery sm:columns-2 not-prose mt-5">
     {% for image in collections.gallery %}
-    <img src="{{site.baseUrl}}/{{ image.path }}" alt="Gallery image">
+    <a href="{{ site.baseUrl }}/{{ image.path }}" class="image-gallery">
+        <img class="mb-5" src="{{ site.baseUrl }}/{{ image.path }}" alt="Description of the photo">
+    </a>
     {% endfor %}
 </div>

@@ -20,6 +20,10 @@ content:
         type: number
         label: Navigation order
         description: The links in the navigation will be shown in the order given here. Make sure each site has a different positive number so the ordering works.
+      - name: layout
+        type: string
+        hidden: true
+        default: "page" 
       - name: hidden
         label: Hidden
         type: boolean
@@ -34,11 +38,30 @@ content:
     path: src/pages/special/home.md
     type: file
     fields:
+      - name: title
+        label: Title
+        type: string
+      - name: permalink
+        type: string
+        hidden: true
+        default: "/"
+      - name: order
+        type: number
+        hidden: true
+        default: 0
+      - name: hidden
+        type: boolean
+        hidden: true
+        default: false     
+      - name: layout
+        type: string
+        hidden: true
+        default: "home"   
       - name: body
         label: Body
         type: rich-text
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
-        
+
   - name: site
     label: Site settings
     path: src/_data/site.json

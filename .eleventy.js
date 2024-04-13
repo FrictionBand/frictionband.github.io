@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function (eleventyConfig) {
 
@@ -53,11 +54,9 @@ module.exports = function (eleventyConfig) {
   });
 
 
-  // PLUGINS
+  // EMBED PLUGIN
 
-  const embedEverything = require("eleventy-plugin-embed-everything");
   eleventyConfig.addPlugin(embedEverything);
-
 
   return {
     dir: {
