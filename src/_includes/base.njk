@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-{# <html lang="en" class="dark"> #}
 
 <head>
   <meta charset="UTF-8" />
@@ -10,9 +9,7 @@
   <!-- stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="{{ site.baseUrl }}/{{ 'assets/css/tailwind.css' | url }}">
-
-  <link href="{{ site.baseUrl }}/assets/css/tobii.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/css/tobii.min.css">
 
   <!-- Meta -->
   <title>{{site.title}}{% if title %} - {{title}} {% endif %} </title>
@@ -23,6 +20,7 @@
         {{site.description}}
       {% endif %}
     " />
+
 </head>
 
 <body class="bg-neutral-900">
@@ -33,15 +31,42 @@
 
   {% include "partials/_footer.njk" %}
 
-  <script src="{{ site.baseUrl }}/assets/js/menu.js"></script>
-  <script src="{{ site.baseUrl }}/assets/js/email.js"></script>
-  <script src="{{ site.baseUrl }}/assets/js/tobii.min.js"></script>
+  <script src="{{ site.baseUrl }}/assets/js/menu.js" defer></script>
+  <script src="{{ site.baseUrl }}/assets/js/email.js" defer></script>
+  <script src="{{ site.baseUrl }}/assets/js/tobii.min.js" defer></script>
   <script>
+    // Init Lightroom plugin for media gallery
     const tobii = new Tobii({
       // captions: false,
       counter: false,
       zoom: false
     })
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const video = document.getElementById('backgroundVideo');
+      const fallbackImage = document.getElementById('fallbackImage');
+
+      // Function to hide the fallback image
+      function hideFallbackImage() {
+        fallbackImage.style.display = 'none';
+      }
+
+      // Try to play the video and listen for the canplaythrough event
+      if (video) {
+        video.addEventListener('canplaythrough', hideFallbackImage); // Ideal for ensuring full buffer
+        video.play().then(() => {
+          console.log("Video autoplayed successfully.");
+          hideFallbackImage(); // Hide fallback image if autoplay succeeds
+        }).catch(error => {
+          console.log("Autoplay failed due to browser policy. Error: ", error.message);
+          // Keep showing fallback image if autoplay is blocked
+        });
+      } else {
+        console.log("Video element not found. Ensure the ID is correct and the element exists in the DOM.");
+      }
+    });
+
   </script>
 
 </body>

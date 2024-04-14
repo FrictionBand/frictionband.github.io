@@ -1,18 +1,19 @@
-<div class="relative overflow-hidden" style="height: 65vh; min-height: 28rem; max-height: 35rem;">
+<div class="relative overflow-hidden" style="height: 60vh; min-height: 30rem; max-height: 35rem;">
     <!-- Background gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b 
-    from-transparent to-neutral-900 z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900 z-10"></div>
 
     <!-- Video -->
-    <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 
-    w-full h-full -translate-x-1/2 -translate-y-1/2 z-0" style="object-fit: cover;">
+    <img src="assets/images/video-fallback-image.png" alt="Fallback Image" id="fallbackImage"
+        class="absolute top-0 left-0 w-full h-full object-cover z-5">
+    <video id="backgroundVideo" preload="none" autoplay loop muted playsinline
+        class="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 z-0"
+        style="object-fit: cover;">
         <source src="assets/videos/slogan.mp4" type="video/mp4">
     </video>
 
     <!-- Text overlay -->
-    <div class="max-w-3xl absolute top-1/2 left-1/2 w-full 
-    px-12 -translate-x-1/2 -translate-y-1/2 text-center z-20">
-        <div class="text-6xl sm:text-7xl font-bold text-neutral-200">
-            {{ site.slogan }}</div>
+    <div class="pt-5 max-w-3xl absolute top-1/2 left-1/2 
+        w-full px-5 -translate-x-1/2 -translate-y-1/2 text-center z-20">
+        <div class="text-6xl md:text-7xl  font-bold text-neutral-200">{{ site.slogan }}</div>
     </div>
 </div>

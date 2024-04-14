@@ -23,8 +23,6 @@ module.exports = {
               },
             },
             h1: {
-              marginTop: theme('spacing.10'),
-              marginBottom: theme('spacing.5'),
               color: theme('colors.neutral.100'),
               fontSize: theme('fontSize.2xl'),
               '@screen md': {
@@ -63,6 +61,11 @@ module.exports = {
               '@screen lg': {
                 fontSize: theme('fontSize.xl'),
               },
+            },
+            img: {
+              marginTop: '1em',
+              marginBottom: '1em',
+              width: '100%', // Set images to be 100% width
             },
           },
         },

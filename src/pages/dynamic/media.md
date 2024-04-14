@@ -3,6 +3,7 @@ title: Media
 permalink: /media/
 order: 2
 hidden: false
+layout: page 
 ---
 # Media 
 

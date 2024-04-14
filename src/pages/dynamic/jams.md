@@ -3,6 +3,7 @@ title: Jam Session
 permalink: /jams/
 order: 1
 hidden: false
+layout: page 
 ---
 # Join Our Monthly Jam Sessions at Cable Factory!
 

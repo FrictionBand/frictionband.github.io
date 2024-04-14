@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   // Passthrough copy: site assets
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/assets/videos");
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+
 
   // Passthrough copy: media attachments
   eleventyConfig.addPassthroughCopy("src/media");
