@@ -1,7 +1,7 @@
 ---
 title: Home
 permalink: /
-order: 0
+order: -1
 hidden: false
 layout: home
 ---

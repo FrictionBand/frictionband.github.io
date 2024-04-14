@@ -1,12 +1,18 @@
-<div class="mb-44 md:mb-48 lg:mb-72">
-    <div class="absolute w-full h-48 lg:h-96 overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-neutral-900 z-[-1]"></div>
-        <video autoplay loop muted playsinline
-            class="absolute top-0 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 z-[-2]">
-            <source src="assets/videos/slogan.mp4" type="video/mp4">
-        </video>
-        <div
-            class="max-w-xl mx-auto w-full px-12 pt-8 lg:pt-20 text-4xl md:text-5xl text-center font-bold text-neutral-200">
-            {{ site.slogan}}</div>
+<div class="relative overflow-hidden" style="height: 65vh; min-height: 28rem; max-height: 35rem;">
+    <!-- Background gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b 
+    from-transparent to-neutral-900 z-10"></div>
+
+    <!-- Video -->
+    <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 
+    w-full h-full -translate-x-1/2 -translate-y-1/2 z-0" style="object-fit: cover;">
+        <source src="assets/videos/slogan.mp4" type="video/mp4">
+    </video>
+
+    <!-- Text overlay -->
+    <div class="max-w-3xl absolute top-1/2 left-1/2 w-full 
+    px-12 -translate-x-1/2 -translate-y-1/2 text-center z-20">
+        <div class="text-6xl sm:text-7xl font-bold text-neutral-200">
+            {{ site.slogan }}</div>
     </div>
 </div>

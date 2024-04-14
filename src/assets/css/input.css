@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.eleventy-plugin-youtube-embed {
+  margin-bottom: 1rem;
+}

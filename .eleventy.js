@@ -20,8 +20,8 @@ module.exports = function (eleventyConfig) {
   // COLLECTIONS
 
   // Sort pages by frontmatter 'order'
-  eleventyConfig.addCollection("page", function (collections) {
-    return collections.getFilteredByTag("page").sort(function (a, b) {
+  eleventyConfig.addCollection("pages", function (collections) {
+    return collections.getFilteredByTag("pages").sort(function (a, b) {
       return a.data.order - b.data.order;
     });
   });
