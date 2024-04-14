@@ -1,4 +1,4 @@
-<div class=" bg-black bg-opacity-50 h-18">
+<div class=" bg-black bg-opacity-20 h-18">
     <nav class="flex items-center justify-between max-w-3xl mx-auto w-full">
 
         <!-- Friction logo (functions as home link as well) -->
@@ -40,10 +40,17 @@
     </button>
     <!-- Menu Items -->
     <nav>
-        <ul>
-            {% set mobileNavi = true %}
-            {% include "partials/_navi_links.njk" %}
-            <div class="mt-12">{% include "partials/_social.html" %}</div>
-        </ul>
+        <!-- Include Home link and special "gigs" link to jump in the page -->
+        <a href="{{ site.baseUrl }}/" class="p-5 uppercase font-extrabold items-center 
+        block text-center  text-gray-300 hover:text-sky-400">
+            Home
+        </a>
+        <a id="gigs-link" href="{{ site.baseUrl }}/#gigs" class="p-5 uppercase font-extrabold items-center 
+        block text-center  text-gray-300 hover:text-sky-400">
+            Upcoming Gigs
+        </a>
+        {% set mobileNavi = true %}
+        {% include "partials/_navi_links.njk" %}
+        <div class="mt-12">{% include "partials/_social.html" %}</div>
     </nav>
 </div>

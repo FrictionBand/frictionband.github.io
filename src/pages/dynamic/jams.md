@@ -1,7 +1,7 @@
 ---
 title: Jam Session
 permalink: /jams/
-order: 1
+order: 3
 hidden: false
 layout: page 
 ---
