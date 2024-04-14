@@ -1,9 +1,10 @@
-<div class=" bg-black bg-opacity-20 h-18">
+<div class=" bg-black h-16 fixed w-full z-50">
     <nav class="flex items-center justify-between max-w-3xl mx-auto w-full">
 
         <!-- Friction logo (functions as home link as well) -->
-        <a href="{{ site.baseUrl }}/" class="inline-block w-40 p-5 uppercase font-semibold text-xl tracking-wider 
-            {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}">
+        <a href="{{ site.baseUrl }}/" class="inline-block p-4 uppercase font-semibold text-xl tracking-wider 
+            {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+            style="width: 150px;">
             {% include "svg/logo.svg" %}
         </a>
 
@@ -16,7 +17,7 @@
 
         <!-- Mobile navigation toggle for small screens -->
         <div class="flex justify-end sm:hidden">
-            <button id="menuToggle" class="p-5 text-xl text-gray-300 hover:text-sky-400">
+            <button id="menuToggle" class="p-4 text-xl text-gray-300 hover:text-sky-400">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -35,17 +36,17 @@
 <!-- Full-screen Overlay Mobile Menu -->
 <div id="mobileMenu" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex justify-center items-center ">
     <!-- Close Button -->
-    <button id="menuClose" class="p-5 absolute top-0 right-0 text-gray-300 text-2xl">
+    <button id="menuClose" class="p-4 absolute top-0 right-0 text-gray-300 text-2xl">
         <i class="fas fa-times"></i> <!-- Close icon -->
     </button>
     <!-- Menu Items -->
     <nav>
         <!-- Include Home link and special "gigs" link to jump in the page -->
-        <a href="{{ site.baseUrl }}/" class="p-5 uppercase font-extrabold items-center 
+        <a href="{{ site.baseUrl }}/" class="p-4 uppercase font-extrabold items-center 
         block text-center  text-gray-300 hover:text-sky-400">
             Home
         </a>
-        <a id="gigs-link" href="{{ site.baseUrl }}/#gigs" class="p-5 uppercase font-extrabold items-center 
+        <a id="gigs-link" href="{{ site.baseUrl }}/#gigs" class="p-4 uppercase font-extrabold items-center 
         block text-center  text-gray-300 hover:text-sky-400">
             Upcoming Gigs
         </a>
