@@ -34,6 +34,7 @@
   <script src="{{ site.baseUrl }}/assets/js/menu.js" defer></script>
   <script src="{{ site.baseUrl }}/assets/js/email.js" defer></script>
   <script src="{{ site.baseUrl }}/assets/js/tobii.min.js" defer></script>
+  <script src="{{ site.baseUrl }}/assets/js/video.js" defer></script>
   <script>
     // Init Lightroom plugin for media gallery
     const tobii = new Tobii({
@@ -42,32 +43,7 @@
       zoom: false
     })
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const video = document.getElementById('backgroundVideo');
-      const fallbackImage = document.getElementById('fallbackImage');
 
-      // Function to hide the fallback image
-      function hideFallbackImage() {
-        fallbackImage.style.display = 'none';
-      }
-
-      // Try to play the video and listen for the canplaythrough event
-      if (video) {
-        video.addEventListener('canplaythrough', hideFallbackImage); // Ideal for ensuring full buffer
-        video.play().then(() => {
-          console.log("Video autoplayed successfully.");
-          hideFallbackImage(); // Hide fallback image if autoplay succeeds
-        }).catch(error => {
-          console.log("Autoplay failed due to browser policy. Error: ", error.message);
-          // Keep showing fallback image if autoplay is blocked
-        });
-      } else {
-        console.log("Video element not found. Ensure the ID is correct and the element exists in the DOM.");
-      }
-    });
-
-  </script>
 
 </body>
 
