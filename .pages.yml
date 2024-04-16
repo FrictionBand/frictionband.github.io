@@ -55,17 +55,20 @@ content:
         type: string
         label: Location
       - name: gmaps
+        label: Google Maps link
         type: string
         required: false
-        description: Google Maps link (optional), must be a valid link  
+        description: optional, must be a valid link  
       - name: fblink
+        label: Facebook event link
         type: string
         required: false
-        description: Facebook event link (optional), must be a valid link 
+        description: optional, must be a valid link 
       - name: weblink
+        label: Website event link
         type: string
         required: false
-        description: Website event link (optional), must be a valid link 
+        description: optional, must be a valid link 
       - name: body
         label: Description
         type: rich-text
