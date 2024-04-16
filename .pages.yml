@@ -49,10 +49,11 @@ content:
         type: date
       - name: time
         type: string
+        label: Time
         description: Time of the gig, e.g. 18-20
       - name: location
         type: string
-        description: Location
+        label: Location
       - name: gmaps
         type: string
         required: false
