@@ -58,17 +58,17 @@ content:
         label: Google Maps link
         type: string
         required: false
-        description: optional, must be a valid link  
+        description: Optional, must be a valid link  
       - name: fblink
         label: Facebook event link
         type: string
         required: false
-        description: optional, must be a valid link 
+        description: Optional, must be a valid link 
       - name: weblink
         label: Website event link
         type: string
         required: false
-        description: optional, must be a valid link 
+        description: Optional, must be a valid link 
       - name: body
         label: Description
         type: rich-text
