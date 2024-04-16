@@ -12,6 +12,9 @@ content:
       - name: title
         label: Title
         type: string
+      - name: date
+        label: Publication date
+        type: date
       - name: permalink
         label: Permalink
         type: string
@@ -32,6 +35,40 @@ content:
         label: Body
         type: rich-text
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
+
+  - name: gigs
+    label: Gigs
+    type: collection
+    path: 'src/gigs'
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Creation date
+        type: date
+      - name: time
+        type: string
+        description: Time of the gig, e.g. 18-20
+      - name: location
+        type: string
+        description: Location
+      - name: gmaps
+        type: string
+        required: false
+        description: Google Maps link (optional), must be a valid link  
+      - name: fblink
+        type: string
+        required: false
+        description: Facebook event link (optional), must be a valid link 
+      - name: weblink
+        type: string
+        required: false
+        description: Website event link (optional), must be a valid link 
+      - name: body
+        label: Description
+        type: rich-text
+        description: Write a sentence or so with a description and any additional info.
 
   - name: home
     label: Home page
