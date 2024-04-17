@@ -1,8 +1,9 @@
 ---
 title: Bio
 permalink: /bio/
-order: 3
+order: 2
 layout: page
+enableLightbox: false
 hidden: false
 ---
 # About Friction
