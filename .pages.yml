@@ -12,9 +12,6 @@ content:
       - name: title
         label: Title
         type: string
-      - name: date
-        label: Publication date
-        type: date
       - name: permalink
         label: Permalink
         type: string
@@ -39,6 +36,14 @@ content:
         label: Body
         type: rich-text
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
+    view:
+      fields: [ title, order ]
+      primary: title
+      sort: [ order, title ]
+      default:
+        search: ''
+        sort: order
+        order: asc
 
   - name: gigs
     label: Gigs
@@ -50,7 +55,7 @@ content:
         label: Title
         type: string
       - name: date
-        label: Creation date
+        label: Date
         type: date
       - name: time
         type: string
@@ -78,6 +83,14 @@ content:
         label: Description
         type: rich-text
         description: Write a sentence or so with a description and any additional info.
+    view:
+      fields: [ title, date, location ]
+      primary: title
+      sort: [ date, title ]
+      default:
+        search: ''
+        sort: date
+        order: asc
 
   - name: home
     label: Home page
