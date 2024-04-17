@@ -38,18 +38,81 @@
 
   {% include "partials/_footer.njk" %}
 
-  <script src="{{ site.baseUrl }}/assets/js/menu.js" defer></script>
-  <script src="{{ site.baseUrl }}/assets/js/email.js" defer></script>
-  <script src="{{ site.baseUrl }}/assets/js/tobii.min.js" defer></script>
-  <script src="{{ site.baseUrl }}/assets/js/video.js" defer></script>
+  <script src="{{ site.baseUrl }}/assets/js/tobii.min.js"></script>
+  <script src="{{ site.baseUrl }}/assets/js/menu.js"></script>
+  <script src="{{ site.baseUrl }}/assets/js/email.js"></script>
   <script>
-    // Init Lightroom plugin for media gallery
-    const tobii = new Tobii({
-      // captions: false,
-      counter: false,
-      zoom: false
-    })
+
+    var enableLightbox = true;  // Set this based on your specific condition
+
+    function setupLightboxLinks() {
+      if (enableLightbox) {
+
+        const images = document.querySelectorAll('img');  // Select all image elements
+
+        // Wrap images into groups
+
+        let currentGroup = [];
+        let lastImage = null;
+
+        function wrapImages(images) {
+          if (images.length > 0) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'columns-2 md:columns-3 not-prose mt-5';
+            images[0].parentNode.insertBefore(wrapper, images[0]);
+
+            images.forEach(img => {
+              wrapper.appendChild(img);
+            });
+          }
+        }
+
+        images.forEach((img, index) => {
+          if (lastImage && img.previousElementSibling === lastImage) {
+            currentGroup.push(img);
+          } else {
+            wrapImages(currentGroup);
+            currentGroup = [img];
+          }
+          lastImage = img;
+
+          // If it's the last image and there's a group, wrap it
+          if (index === images.length - 1) {
+            wrapImages(currentGroup);
+          }
+        });
+
+        // Turn images into lightroom links
+        images.forEach(img => {
+          // Only wrap images that are not already inside an anchor tag
+          if (img.parentNode.tagName !== 'A') {
+            const wrapper = document.createElement('a');
+            wrapper.setAttribute('href', img.src);  // Set href to the image src or a larger image URL
+            wrapper.setAttribute('class', 'lightbox');  // Add the 'lightbox' class
+
+            // Insert the wrapper into the DOM and move the img inside it
+            img.parentNode.insertBefore(wrapper, img);
+            wrapper.appendChild(img);
+          }
+        });
+
+        // Init Lightroom plugin for media gallery
+        const tobii = new Tobii({
+          // captions: false,
+          counter: false,
+          zoom: false
+        })
+
+      }
+    }
+
+    // Call the function when the document is ready
+    document.addEventListener('DOMContentLoaded', setupLightboxLinks);
+
   </script>
+  {% if item.data.title === "Home" %}
+  <script src="{{ site.baseUrl }}/assets/js/video.js"></script>
+  {% endif %}
 
 
 </body>
