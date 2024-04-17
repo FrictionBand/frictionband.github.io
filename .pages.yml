@@ -107,6 +107,7 @@ content:
     label: Site settings
     path: src/_data/site.json
     type: file
+    icon: settings
     fields:
       - name: title
         label: Website title
