@@ -104,7 +104,7 @@ content:
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
 
   - name: site
-    label: Site-wide Settings
+    label: Site Configuration
     path: src/_data/site.json
     type: file
     icon: settings-2
@@ -112,11 +112,24 @@ content:
       - name: title
         label: Website title
         type: string
+        description: The title of the site, shown on search engine results and in the browser tab title
       - name: description
         label: Website description
         type: string
-        description: Will be provused for any page with no description.
+        description: Description of the site, used mainly for search engines
       - name: keywords
         label: Website keywords
         type: string
         description: Comma-separated list of keywords for search engines
+      - name: slogan
+        label: Slogan
+        type: string
+        description: The slogan that is shown on the home page
+      - name: url
+        type: string
+        hidden: true
+        description: The root URL of the website
+      - name: baseUrl
+        type: string
+        hidden: true
+        description: The path prefix, e.g. /friction-website/ if the website is hosted under <url>/friction-website/
