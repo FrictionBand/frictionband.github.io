@@ -27,6 +27,10 @@ content:
         type: string
         hidden: true
         default: "page" 
+      - name: enableLightbox
+        label: Enable Image Gallary
+        type: boolean
+        description: If you enable this, groups of consecutive pictures are wrapped into a column layout and will open in a media gallery when clicked. This is specifically meant for the "media" page.
       - name: hidden
         label: Hidden
         type: boolean

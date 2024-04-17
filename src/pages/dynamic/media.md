@@ -5,6 +5,7 @@ permalink: /media/
 order: 2
 layout: page
 hidden: false
+enableLightbox: true
 ---
 # Media
 
