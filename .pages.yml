@@ -104,10 +104,10 @@ content:
         description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
 
   - name: site
-    label: Site settings
+    label: Site-wide Settings
     path: src/_data/site.json
     type: file
-    icon: settings
+    icon: settings-2
     fields:
       - name: title
         label: Website title
