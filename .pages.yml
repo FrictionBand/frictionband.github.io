@@ -82,6 +82,10 @@ content:
       fields: [ title, date, location ]
       primary: title
       sort: [ date, title ]
+      default:
+        search: ''
+        sort: date
+        order: asc
 
   - name: home
     label: Home page
