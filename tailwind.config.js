@@ -2,6 +2,12 @@
 module.exports = {
   darkMode: 'class',
   content: ["./src/**/*.{njk,md}"],
+  safelist: [
+    'columns-2',
+    'md:columns-3',
+    'not-prose',
+    'mt-5',
+  ],
   theme: {
     extend: {
       fontFamily: {
