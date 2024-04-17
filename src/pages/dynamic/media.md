@@ -1,11 +1,10 @@
 ---
 title: Media
-date: 2024-04-17
 permalink: /media/
-order: 2
+order: 1
 layout: page
-hidden: false
 enableLightbox: true
+hidden: false
 ---
 # Media
 
