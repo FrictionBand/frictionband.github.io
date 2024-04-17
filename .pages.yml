@@ -124,7 +124,7 @@ content:
       - name: slogan
         label: Slogan
         type: string
-        description: The slogan that is shown on the home page
+        description: The slogan that is shown on the home page. Be careful to change this as the current layout is somewhat relying on a certain length of this slogan (e.g. a too long slogan will probably break the layout of the home page).
       - name: url
         type: string
         hidden: true
