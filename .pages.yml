@@ -50,7 +50,7 @@ content:
         label: Title
         type: string
       - name: date
-        label: Creation date
+        label: Date
         type: date
       - name: time
         type: string
