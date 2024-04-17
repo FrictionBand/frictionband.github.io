@@ -107,7 +107,7 @@ content:
     label: Site Configuration
     path: src/_data/site.json
     type: file
-    icon: settings-2
+    icon: cog
     fields:
       - name: title
         label: Website title
