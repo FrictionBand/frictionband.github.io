@@ -78,6 +78,10 @@ content:
         label: Description
         type: rich-text
         description: Write a sentence or so with a description and any additional info.
+    view:
+      fields: [ title, date, location ]
+      primary: title
+      sort: [ date, title ]
 
   - name: home
     label: Home page
