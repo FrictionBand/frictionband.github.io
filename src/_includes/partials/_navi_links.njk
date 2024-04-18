@@ -1,3 +1,21 @@
+<!-- Include Home link for mobile navigation -->
+{% if mobileNavi == true %}
+<a href="{{ site.baseUrl }}/" class="p-5 uppercase font-extrabold items-center 
+block text-center text-gray-300 hover:text-sky-400">
+    Home
+</a>
+{% endif %}
+
+<!-- If there are gigs, include special "gigs" link to jump in the page -->
+{% if collections.gigs | length > 0 %}
+<a href="{{ site.baseUrl }}/#gigs" {% if mobileNavi==true %} id="gigs-link" {% endif %} class="p-5 uppercase font-extrabold items-center 
+{% if mobileNavi == false %} inline-flex {% else %} block text-center {% endif %}
+ text-gray-300 hover:text-sky-400">
+    Gigs
+</a>
+{% endif %}
+
+<!-- Iterate all other pages -->
 {% for item in collections.pages %}
 {% if item.data.title !== "Home" and item.data.hidden != true %}
 <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 uppercase font-extrabold items-center 

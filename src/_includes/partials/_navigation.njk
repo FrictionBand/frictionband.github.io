@@ -9,13 +9,7 @@
         </a>
 
         <!-- Top navigation for bigger screens -->
-        <div class="hidden sm:flex justify-end">
-            <a href="{{ site.baseUrl }}/#gigs" class="p-4 uppercase font-extrabold items-center 
-            inline-flex text-gray-300 hover:text-sky-400">
-                Gigs
-            </a>
-            {% include "partials/_navi_links.njk" %}
-        </div>
+        <div class="hidden sm:flex justify-end">{% include "partials/_navi_links.njk" %}</div>
 
         <!-- Mobile navigation toggle for small screens -->
         <div class="flex justify-end sm:hidden">
@@ -26,10 +20,7 @@
 
         <!-- Mobile navigation for non-JS users -->
         <noscript>
-            <div class="block">
-                {% include "partials/_navi_links.njk" %}
-            </div>
-
+            <div class="block sm:hidden">{% include "partials/_navi_links.njk" %}</div>
         </noscript>
 
     </nav>
@@ -37,21 +28,14 @@
 
 <!-- Full-screen Overlay Mobile Menu -->
 <div id="mobileMenu" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex justify-center items-center ">
+
     <!-- Close Button -->
     <button id="menuClose" class="p-4 absolute top-0 right-0 text-gray-300 text-2xl">
         <i class="fas fa-times"></i> <!-- Close icon -->
     </button>
+
     <!-- Menu Items -->
     <nav>
-        <!-- Include Home link and special "gigs" link to jump in the page -->
-        <a href="{{ site.baseUrl }}/" class="p-4 uppercase font-extrabold items-center 
-        block text-center  text-gray-300 hover:text-sky-400">
-            Home
-        </a>
-        <a id="gigs-link" href="{{ site.baseUrl }}/#gigs" class="p-4 uppercase font-extrabold items-center 
-        block text-center  text-gray-300 hover:text-sky-400">
-            Upcoming Gigs
-        </a>
         {% set mobileNavi = true %}
         {% include "partials/_navi_links.njk" %}
         <div class="mt-12">{% include "partials/_social.html" %}</div>
