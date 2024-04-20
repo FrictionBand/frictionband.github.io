@@ -9,7 +9,7 @@ block text-center text-gray-300 hover:text-sky-400">
 <!-- If there are gigs, include special "gigs" link to jump in the page -->
 {% if collections.gigs | length > 0 %}
 <a href="{{ site.baseUrl }}/#gigs" {% if mobileNavi==true %} id="gigs-link" {% endif %} class="p-5 uppercase font-extrabold items-center 
-{% if mobileNavi == false %} inline-flex {% else %} block text-center {% endif %}
+{% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
  text-gray-300 hover:text-sky-400">
     Gigs
 </a>
@@ -19,7 +19,7 @@ block text-center text-gray-300 hover:text-sky-400">
 {% for item in collections.pages %}
 {% if item.data.title !== "Home" and item.data.hidden != true %}
 <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 uppercase font-extrabold items-center 
-    {% if mobileNavi == false %} inline-flex {% else %} block text-center {% endif %}
+    {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
     {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
     {{ item.data.title }}
 </a>
