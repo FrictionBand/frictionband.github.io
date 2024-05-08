@@ -57,6 +57,16 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).setLocale('fi').toLocaleString(DateTime.DATE_SHORT);
   });
 
+  // Filters a collection to keep only items that occur in the future
+  eleventyConfig.addFilter('filterFutureDates', function (collection) {
+    return collection.filter(item => {
+      const itemDate = DateTime.fromJSDate(new Date(item.date));
+      const now = DateTime.local();
+      const diff = itemDate.diff(now).toObject().milliseconds;
+      return diff > 0;
+    });
+  });
+
   eleventyConfig.addFilter("newlineToBreak", function (value) {
     return value.replace(/\n/g, '<br>');
   });
