@@ -4,47 +4,6 @@ media:
 
 content:
 
-  - name: pages
-    label: Pages
-    type: collection
-    path: 'src/pages/dynamic'
-    fields:
-      - name: title
-        label: Title
-        type: string
-      - name: permalink
-        label: Permalink
-        type: string
-        description: The link path for this site, e.g. "/bio/" makes the site available under "https://<website url>/bio/" The slash / in the end is important, it's not gonna work without for some reason.
-      - name: order
-        type: number
-        label: Navigation order
-        description: The links in the navigation will be shown in the order given here. Make sure each site has a different positive number so the ordering works.
-      - name: layout
-        type: string
-        hidden: true
-        default: "page" 
-      - name: enableLightbox
-        label: Enable Image Gallary
-        type: boolean
-        description: If you enable this, groups of consecutive pictures are wrapped into a column layout and will open in a media gallery when clicked. This is specifically meant for the "media" page.
-      - name: hidden
-        label: Hidden
-        type: boolean
-        description: You can hide a site from the navigation if you activate this. Then it will still be accessible by directly visiting the url of the site.
-      - name: body
-        label: Body
-        type: rich-text
-        description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
-    view:
-      fields: [ title, order ]
-      primary: title
-      sort: [ order, title ]
-      default:
-        search: ''
-        sort: order
-        order: asc
-
   - name: gigs
     label: Gigs
     type: collection
@@ -90,6 +49,47 @@ content:
       default:
         search: ''
         sort: date
+        order: asc
+
+  - name: pages
+    label: Pages
+    type: collection
+    path: 'src/pages/dynamic'
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: permalink
+        label: Permalink
+        type: string
+        description: The link path for this site, e.g. "/bio/" makes the site available under "https://<website url>/bio/" The slash / in the end is important, it's not gonna work without for some reason.
+      - name: order
+        type: number
+        label: Navigation order
+        description: The links in the navigation will be shown in the order given here. Make sure each site has a different positive number so the ordering works.
+      - name: layout
+        type: string
+        hidden: true
+        default: "page" 
+      - name: enableLightbox
+        label: Enable Image Gallary
+        type: boolean
+        description: If you enable this, groups of consecutive pictures are wrapped into a column layout and will open in a media gallery when clicked. This is specifically meant for the "media" page.
+      - name: hidden
+        label: Hidden
+        type: boolean
+        description: You can hide a site from the navigation if you activate this. Then it will still be accessible by directly visiting the url of the site.
+      - name: body
+        label: Body
+        type: rich-text
+        description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
+    view:
+      fields: [ title, order ]
+      primary: title
+      sort: [ order, title ]
+      default:
+        search: ''
+        sort: order
         order: asc
 
   - name: home
