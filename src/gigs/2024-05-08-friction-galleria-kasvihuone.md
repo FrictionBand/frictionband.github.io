@@ -1,7 +1,7 @@
 ---
 title: "Friction @ Galleria Kasvihuone "
 date: 2024-06-04
-time: "17:00 "
+time: "18:00 "
 location: "Siltavuorenpenger, Helsinki "
 gmaps: https://maps.app.goo.gl/yuBF3oTS2HXFizA17?g_st=ic
 ---
