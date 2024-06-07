@@ -7,6 +7,12 @@ layout: home
 ---
 # Latest
 
+## Galleria Kasvihuone opening 2024
+
+Once again Friction opened the season of the Galleria Kasvihuone project for this year. The project is a blend of art, research, education, fun and of course gardening! This year's installation will stay in its new place for two years, you can read more about the project here [http://galleriakasvihuone.fi](http://galleriakasvihuone.fi). We were honored to play a fun little roof terrace garden gig:
+
+[https://youtu.be/0QuO0-dcGbQ](https://youtu.be/0QuO0-dcGbQ)
+
 ## Sáré Kon Kon – Friction Live at Kekri 2023
 
 Check out our live performance during last year's Kekri Festival
