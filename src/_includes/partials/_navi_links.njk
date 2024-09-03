@@ -1,5 +1,5 @@
 <!-- Include Home link for mobile navigation -->
-{% if mobileNavi == true %}
+{% if mobileNavi %}
 <a href="{{ site.baseUrl }}/" class="p-5 uppercase font-extrabold items-center 
 block text-center text-gray-300 hover:text-sky-400">
     Home
@@ -7,13 +7,14 @@ block text-center text-gray-300 hover:text-sky-400">
 {% endif %}
 
 <!-- If there are gigs, include special "gigs" link to jump in the page -->
-{% if collections.gigs | length > 0 %}
-<a href="{{ site.baseUrl }}/#gigs" {% if mobileNavi==true %} id="gigs-link" {% endif %} class="p-5 uppercase font-extrabold items-center 
+{% set hasGigs = collections.gigs | filterFutureDates | length > 0 %}
+<a href="{{ site.baseUrl }}/#gigs" id="gigs-link"
+class="p-5 uppercase font-extrabold items-center 
+{% if not hasGigs %} hidden {% endif %}
 {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
  text-gray-300 hover:text-sky-400">
     Gigs
 </a>
-{% endif %}
 
 <!-- Iterate all other pages -->
 {% for item in collections.pages %}

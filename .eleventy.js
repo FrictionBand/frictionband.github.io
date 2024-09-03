@@ -59,12 +59,19 @@ module.exports = function (eleventyConfig) {
 
   // Filters a collection to keep only items that occur in the future
   eleventyConfig.addFilter('filterFutureDates', function (collection) {
-    return collection.filter(item => {
+    if (!collection) {
+      console.log('filterFutureDates: Collection is undefined');
+      return [];
+    }
+
+    filtered = collection.filter(item => {
       const itemDate = DateTime.fromJSDate(new Date(item.date));
       const now = DateTime.local();
       const diff = itemDate.diff(now).toObject().milliseconds;
       return diff > 0;
     });
+
+    return filtered
   });
 
   eleventyConfig.addFilter("newlineToBreak", function (value) {
