@@ -1,11 +1,9 @@
 ---
 title: Kaapeli Jam hosted by Friction
-date: 2024-09-06
-time: 18:00 - 20:00
+date: 2024-10-04
+time: 17:30 - 19:00
 location: Konttori, Cable Factory, Helsinki
 gmaps: https://maps.app.goo.gl/rJxX52hhUxfvNuxS6
-fblink: https://www.facebook.com/share/tRaJLVBMRmkPXfXX
-weblink: https://www.kaapelitehdas.fi/kaapelitehtaan-konttori
 ---
 Every first Friday of the month at Cable Factory Helsinki (Kaapelitehtaan Konttori)
 
