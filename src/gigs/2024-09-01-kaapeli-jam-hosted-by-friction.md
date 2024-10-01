@@ -1,17 +1,18 @@
 ---
-title: Kaapeli Jam hosted by Friction
+title: Groove & Afrobeat Jam Session at Cable Factory
 date: 2024-10-04
 time: 17:30 - 19:00
 location: Konttori, Cable Factory, Helsinki
 gmaps: https://maps.app.goo.gl/rJxX52hhUxfvNuxS6
+fblink: https://www.facebook.com/events/2092002751216472
+weblink: https://www.kaapelitehdas.fi/fi/tapahtumat/groove-ja-afrobeat-jam-session/
 ---
-Every first Friday of the month at Cable Factory Helsinki (Kaapelitehtaan Konttori)
+Every first Friday of the month, 17:30 - 19:00
 
-Groove & Afrobeat Jam Session
+At Cable Factory Helsinki, Kaapelitehtaan Konttori
 
-Friction Band 18:00  
-Open Jam session 18:30 - 20:00
+Free Entry, accessible for all.  
+Happy Hour 17:30-19:00 - beers 5€.  
+Bring your own instrument to play or simply enjoy improvised music.
 
-Free entry, accessible for all.
-
-Join us for a jam session — whether you want to play along or just hang out and enjoy some live, improvised music. Musicians of all levels are welcome to bring their instruments, and everyone else can simply relax and listen!
+Hosted by Friction, more at [www.friction-helsinki.com](http://www.friction-helsinki.com)
