@@ -1,7 +1,6 @@
 name: Eleventy Build
-on: [push]
-
 on:
+  push:
   schedule:
     - cron: "0 0 * * *" # Redeploy daily at midnight UTC
 
