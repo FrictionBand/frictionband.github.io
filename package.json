@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all -p dev:*",
-    "build": "run-s build:*",
+    "dev": "npx npm-run-all -p dev:*",
+    "build": "npx run-s build:*",
     "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev:css": "tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --watch",
+    "dev:css": "npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --watch",
     "build:11ty": "npx @11ty/eleventy",
-    "build:css": "tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css"
+    "build:css": "npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "npm-run-all": "^4.1.5",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.14"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^4.0.2",
