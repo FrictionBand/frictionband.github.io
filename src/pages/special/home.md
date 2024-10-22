@@ -7,24 +7,26 @@ layout: home
 ---
 # Latest
 
-## Galleria Kasvihuone opening 2024
+## Friction is back at Kekri Festival on Suomenlinna on 2.11.2024
 
-Once again Friction opened the season of the Galleria Kasvihuone project for this year. The project is a blend of art, research, education, fun and of course gardening! This year's installation will stay in its new place for two years, you can read more about the project here [http://galleriakasvihuone.fi](http://galleriakasvihuone.fi). We were honored to play a fun little roof terrace garden gig:
+We are honored to once again be part of the amazing Viaporin Kekri Festival this year!
 
-[https://youtu.be/0QuO0-dcGbQ](https://youtu.be/0QuO0-dcGbQ)
+> Kekri is an ancient Finnish celebration at the end of the harvest season and the cycle of the year. Kekri is celebrated with plenty of food and drink, honoring the dead and giving thanks for the harvest and the past year.
+> 
+> In Viapor’s kekri, based on old traditions, a common urban event suitable for this time has been created for the residents of Suomenlinna, the people of Helsinki and those who visit the beloved UNESCO World Heritage Site of Suomenlinna. Viapori’s kekri is an event full of light and Suomenlinna art, culture and flavors.
+> 
+> <p style="text-align: start">Viaporin kekri is organised in cooperation with Haaga-Helia’s restonomy students and local entrepreneurs, associations and artists. The organizer of the event is the Suomenlinna administration.</p>
 
-## Sáré Kon Kon – Friction Live at Kekri 2023
+You can find more information about the event here: [https://www.suomenlinna.fi/en/en-viaporin-kekri-2024/](https://www.suomenlinna.fi/en/en-viaporin-kekri-2024/). We will once again play in the ancient **Tenalji von Fersen** hall in the **beer festival** part of the event where local breweries showcase their latest produce. Entrance is free, and we will play 3 sets, likely ~16:00, ~18:00 and ~20:00.
 
-Check out our live performance during last year's Kekri Festival
+We had a lot of fun last year:
 
-[https://www.youtube.com/watch?v=xSkVQajnRLo](https://www.youtube.com/watch?v=xSkVQajnRLo)
+[https://youtu.be/Dd4TDrNdVuA](https://youtu.be/Dd4TDrNdVuA)
 
-## Kaapeli Jam hosted by Friction
+See you there on 2.11. 🔥
 
-Every first Friday of the month, we are now hosting an cumbia and afrobeat jam session at Cable Factory in Helsinki. We'll be opening the evening at 18:00 and from 18:30 the stage is open for anyone interested to play! You can read more about the event [here](/jams/).
+## Join our monthly Groove and Afrobeat Jam Session at Cable Factory
 
-## Friction's first live stream
+Our monthly jam session at Café Konttori in Cable Factory has been going steady. Every first Friday of the month we invite players to join us for an easy-going open stage jam session. The next dates will be 1.11. and 13.12 (since the 6.12. is Independence Day). Come jam with us!
 
-We recently did our first YouTube live stream, straight from our rehearsal room. Check it out here:
-
-[https://www.youtube.com/watch?v=8eK\_g-Q\_-xI](https://www.youtube.com/watch?v=8eK_g-Q_-xI)
+![](/media/site/Jam%20Session%20Square.jpg)
