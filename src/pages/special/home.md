@@ -7,7 +7,7 @@ layout: home
 ---
 # Latest
 
-## Friction is back at Kekri Festival on Suomenlinna on 2.11.2024
+## Friction back at Kekri on Suomenlinna in 2024
 
 We are honored to once again be part of the amazing Viaporin Kekri Festival this year!
 
