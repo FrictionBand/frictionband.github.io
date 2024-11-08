@@ -11,7 +11,7 @@ Every first Friday of the month, 17:30 - 19:00
 
 At Cable Factory Helsinki, Kaapelitehtaan Konttori
 
-Free Entry, accessible for all.  
+Free Entry, accessible for all!  
 Happy Hour 17:30-19:00 - beers 5€.  
 Bring your own instrument to play or simply enjoy improvised music.
 
