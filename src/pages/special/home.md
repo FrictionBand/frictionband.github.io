@@ -7,13 +7,9 @@ layout: home
 ---
 # Latest
 
-## See you at Elämän Lähde
-
-We're playing a mini-gig on 30.11. in Lapinlahti Lähti. The multi-generational city event features RockHubs neighborhood bands who are enthusiastic about the music hobby and connect generations. Friction will join as invited artists. Free entry, see you there at 16:00.
-
 ## Thank you Kekri 2024!
 
-We were honored to once again be part of the amazing Viaporin Kekri Festival this year on 2.11.2024!
+We were honored to once again be part of the amazing Viaporin Kekri Festival this year!
 
 ![](/media/site/kekri24/DSCF7704.jpg)
 
