@@ -7,14 +7,8 @@ layout: home
 ---
 # Latest
 
-## Thank you Kekri 2024!
+## Jam Season is on again – every first Friday at Cable Factory
 
-We were honored to once again be part of the amazing Viaporin Kekri Festival this year!
+Happy new year! And happy jamming! We are back with our monthly jam session at Café Konttori in Cable Factory / Kaapelitehdas. Every first Friday of the month we invite players to join us for an easy-going open stage jam session. The next dates will be 10.1., 7.2. and 7.3.2025. Come jam with us!
 
-![](/media/site/kekri24/DSCF7704.jpg)
-
-## Join our monthly Groove and Afrobeat Jam Session at Cable Factory
-
-Our monthly jam session at Café Konttori in Cable Factory has been going steady. Every first Friday of the month we invite players to join us for an easy-going open stage jam session. The next date will be 13.12 (since the 6.12. is Independence Day). Come jam with us!
-
-![](/media/site/Jam%20Session%20Square.jpg)
+![](/media/site/Jam%20Session%20Square-1.jpg)
