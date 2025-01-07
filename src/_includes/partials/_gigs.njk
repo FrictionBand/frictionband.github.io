@@ -32,14 +32,14 @@
     {# Facebook link #}
     {% if gig.data.fblink %}
     <li class="text-neutral-300"><i class="fab fa-facebook-f w-5 text-center"></i> <a href="{{ gig.data.fblink }}"
-        class="text-sky-500 hover:text-sky-400">Facebook link</a>
+        class="text-sky-500 hover:text-sky-400">{{ gig.data.fblink }}</a>
     </li>
     {% endif %}
 
     {# Web link #}
     {% if gig.data.weblink %}
     <li class="text-neutral-300"><i class="fa-solid fa-link w-5 text-center"></i> <a href="{{ gig.data.weblink }}"
-        class="text-sky-500 hover:text-sky-400">Event website</a>
+        class="text-sky-500 hover:text-sky-400">{{ gig.data.weblink }}</a>
     </li>
     {% endif %}
   </ul>
