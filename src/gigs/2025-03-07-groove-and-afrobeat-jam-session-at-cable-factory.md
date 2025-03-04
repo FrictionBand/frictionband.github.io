@@ -1,5 +1,5 @@
 ---
-title: Groove & Afrobeat Jam Session at Cable Factory
+title: "Groove & Afrobeat Jam Session at Cable Factory: March 2025"
 date: 2025-03-07
 time: 17:30 - 19:00
 location: Konttori, Cable Factory, Helsinki
