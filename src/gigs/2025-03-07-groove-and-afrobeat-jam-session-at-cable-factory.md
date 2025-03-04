@@ -13,5 +13,3 @@ At Cable Factory Helsinki, Kaapelitehtaan Konttori
 Free Entry, accessible for all!  
 Happy Hour 17:30-19:00 - beers 5€.  
 Bring your own instrument to play or simply enjoy improvised music.
-
-Hosted by Friction, more at [www.friction-helsinki.com/jams](https://www.friction-helsinki.com/jams/)
