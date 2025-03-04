@@ -4,7 +4,6 @@ date: 2025-03-07
 time: 17:30 - 19:00
 location: Konttori, Cable Factory, Helsinki
 gmaps: https://maps.app.goo.gl/rJxX52hhUxfvNuxS6
-fblink: https://www.facebook.com/events/2092002751216472
 weblink: https://www.kaapelitehdas.fi/fi/tapahtumat/groove-ja-afrobeat-jam-session/
 ---
 Every first Friday of the month, 17:30 - 19:00
