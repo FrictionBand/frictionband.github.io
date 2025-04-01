@@ -14,4 +14,4 @@ After our performance, the stage opens up to all until 19:00. Whether you’re a
 
 Come feel the groove of our community-driven gatherings and help us turn every session into a celebration of music and culture. No matter your experience level, bring your instrument, your passion, and your friends to the Cable Factory and be a part of something truly special. See you there.
 
-![](/media/site/Jam%20Session%20Square-2.jpg)
+![](/media/site/Jam%20Session%20Square.png)
