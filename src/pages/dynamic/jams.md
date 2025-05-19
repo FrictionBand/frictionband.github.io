@@ -8,10 +8,10 @@ hidden: false
 ---
 # Join Our Monthly Jam Sessions at Cable Factory!
 
-Every first Friday of the month, dive into the pulsating rhythms of Cumbia and the electrifying beats of Afrobeat at the iconic Cable Factory in Helsinki. Our evening kicks off at 17:30 setting the stage for what’s to come.
+Join us every first Friday at the Cable Factory in Helsinki for a jam session, playing Cumbia, Afrobeat, Jazz, Groove or whatever else is on your mind. We get started at 17:30, warming up and opening the stage until 20:00. Whether you wanna come play an instrument, sing or perhaps just sit back with a drink and our jam sessions are a great place for meeting like-minded music lovers.
 
-After our performance, the stage opens up to all until 19:00. Whether you’re a musician eager to share your skills, or simply a music lover wanting to enjoy live, spontaneous performances, our jam sessions are the perfect place to connect and create unforgettable musical experiences.
+Feel the energy of the community and help make each session a proper celebration of music and culture. Whatever your skill level, grab your instrument, bring your mates, and head down to the Cable Factory for something genuinely special. Hope to see you there!
 
-Come feel the groove of our community-driven gatherings and help us turn every session into a celebration of music and culture. No matter your experience level, bring your instrument, your passion, and your friends to the Cable Factory and be a part of something truly special. See you there.
+Next dates: 06.06.2025, and after the summer break we'll continue every first Friday of the month!
 
-![](/media/site/Jam%20Session%20Square.png)
+![](/media/site/2025-05-19%2009.26.38.jpg)
