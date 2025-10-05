@@ -12,6 +12,10 @@ Join us every first Friday at the Cable Factory in Helsinki for a jam session, p
 
 Feel the energy of the community and help make each session a proper celebration of music and culture. Whatever your skill level, grab your instrument, bring your mates, and head down to the Cable Factory for something genuinely special. Hope to see you there!
 
-Next dates: 7, November, 2025
+### Next dates:
+
+7th November, 2025
+
+5th December, 2025
 
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
