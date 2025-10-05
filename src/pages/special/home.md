@@ -15,9 +15,7 @@ Join us and our very special guest drummer Chico Matada, for an intimate set at 
 
 ## Come jam with us – every first Friday at Cable Factory Kahvibaari
 
-We have an ongoing monthly residency and open jam session at Kahvibaari in Kaapelitehdas (Cable Factory, Helsinki). Every first Friday of the month we hava a live performance showcase some of our latest songs, before opening the stage to invite players of all ages and skill level to join us for an easy-going open stage jam session primarily focused on groove music, jazz, latin and afrobeat. Entry is always free and there is happy hour prices at the bar.
-
-The next jam is on the 11.7.2025, 17:30-20:00.
+We have an ongoing monthly residency and open jam session at Kahvibaari in Kaapelitehdas (Cable Factory, Helsinki). Every first Friday of the month we hava a live performance showcase some of our latest songs, before opening the stage to invite players of all ages and skill level to join us for an easy-going open stage jam session primarily focused on groove music, jazz, latin and afrobeat. Entry is always free and there is happy hour prices at the bar. The next jam is on the 11.7.2025, 17:30-20:00.
 
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
 
