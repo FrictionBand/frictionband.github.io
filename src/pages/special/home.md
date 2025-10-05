@@ -9,11 +9,7 @@ layout: home
 
 ## Global Club Nights @Sampo: Friction Groove Collective ft. Chico Matada
 
-Join us and our very special guest drummer Chico Matada, for an intimate set at the Global Club Nights (GCN): a concert and club series dedicated to promoting and celebrating global music in Finland.
-
-Fri 10.10.2025 at 20:00 (doors open at 19.00) at the Puppet Theatre Sampo (Erottajankatu 7, Helsinki).
-
-**Ticket Office:** Nukketeatteri Sampo, [https://teatteri.sampofestival.fi/\_\_/global-club-nights-10-10-25-friction-band/](https://teatteri.sampofestival.fi/__/global-club-nights-10-10-25-friction-band/)
+Join us and our very special guest drummer Chico Matada, for an intimate set at the Global Club Nights (GCN): a concert and club series dedicated to promoting and celebrating global music in Finland. Fri 10.10.2025 at 20:00 (doors open at 19.00) at the Puppet Theatre Sampo (Erottajankatu 7, Helsinki).Tickets available at [https://teatteri.sampofestival.fi/\_\_/global-club-nights-10-10-25-friction-band/](https://teatteri.sampofestival.fi/__/global-club-nights-10-10-25-friction-band/)
 
 ![](/media/gallery/IMG_0644.jpeg)
 
