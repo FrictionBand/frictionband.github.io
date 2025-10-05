@@ -7,15 +7,15 @@ layout: home
 ---
 # Upcoming Gigs
 
-## Fri 10.10.2025—Global Club Nights @Sampo
+## 10\. October 2025—Global Club Nights @Sampo
 
-Join us and our very special guest drummer Chico Matada, for an intimate set at the Global Club Nights: a concert and club series dedicated to promoting and celebrating global music in Finland. Puppet Theatre Sampo (Erottajankatu 7, Helsinki). Doors open at 19:00, showtime at 20:00. Tickets available via [Sampo](https://teatteri.sampofestival.fi/__/global-club-nights-10-10-25-friction-band/).
+Join us and our very special guest drummer Chico Matada, for an intimate set of Ethiojazz, Latin & Afrobeat at the Global Club Nights: a concert and club series dedicated to promoting and celebrating global music in Finland. Puppet Theatre Sampo (Erottajankatu 7, Helsinki). Doors open at 19:00, showtime at 20:00. Tickets available via [Sampo](https://teatteri.sampofestival.fi/__/global-club-nights-10-10-25-friction-band/).
 
 ![](/media/gallery/IMG_0644.jpeg)
 
-## Fri 1.7.2025—Groove/ Afrobeat Open Jam@Cable Factory Kahvibaari
+## 7\. November 2025—Groove/ Afrobeat Open Jam@Cable Factory Kahvibaari
 
-We have an ongoing monthly residency and open jam session at Kahvibaari in Kaapelitehdas (Cable Factory, Helsinki). Every first Friday of the month Friction Groove Collective performs a short showcase, highlighting our latest repertoire, before opening the stage to invite players of all ages and skill level to join us for an easy-going open stage jam session primarily focused on groove music, jazz, latin and afrobeat. Entry is always free and there is happy hour prices at the bar. The next jam is on the 11.7.2025, 17:30-20:00.
+We continue our ongoing residency and open jam session at Kahvibaari in Kaapelitehdas (Cable Factory, Helsinki). Every first Friday of the month Friction Groove Collective performs a short showcase concert, before opening the stage to invite players of all ages and skill level to join us for an easy-going open stage jam session primarily focused on groove based music, Jazz, Latin and Afrobeat. Entry is free and happy hour prices apply at the bar. The next jam is on the 07.11 2025; between 17:30-20:00. Welcome!
 
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
 
@@ -29,6 +29,6 @@ We were thrilled to be featured on the Espa Stage as part of the 2025 Espan Lava
 
 ## Friction at Kekri Suomenlinna
 
-Friction performed as part of the Viaporin Kekri—All saints day—festivities on Suomenlinna Island between 2020 and 2024.
+Friction has performed as part of the Viaporin Kekri—All saints day—festivities on Suomenlinna Island between 2020 and 2024.
 
 [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
