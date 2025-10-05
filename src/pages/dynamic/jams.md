@@ -14,8 +14,9 @@ Feel the energy of the community and help make each session a proper celebration
 
 ### Next dates:
 
-7th November, 2025
-
-5th December, 2025
+*   7th November, 2025
+    
+*   5th December, 2025
+    
 
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
