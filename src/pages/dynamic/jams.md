@@ -12,6 +12,6 @@ Join us every first Friday at the Cable Factory in Helsinki for a jam session, p
 
 Feel the energy of the community and help make each session a proper celebration of music and culture. Whatever your skill level, grab your instrument, bring your mates, and head down to the Cable Factory for something genuinely special. Hope to see you there!
 
-Next dates: 06.06.2025, and after the summer break we'll continue every first Friday of the month!
+Next dates: 11.07.2025, we'll continue every first Friday of the month!
 
 ![](/media/site/2025-05-19%2009.26.38.jpg)
