@@ -31,4 +31,4 @@ We were thrilled to be featured on the Espa Stage as part of the 2025 Espan Lava
 
 Friction performed as part of the Viaporin Kekri—All saints day—festivities on Suomenlinna Island between 2020 and 2024.
 
-## [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
+[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
