@@ -5,20 +5,36 @@ order: 0
 hidden: false
 layout: home
 ---
-# Latest
+# Upcoming Gigs
 
-## Friction at Espan Lava 2025
+## Global Club Nights @Sampo: Friction Groove Collective ft. Chico Matada
 
-Come see us at Espan Lava Open Stage this year, on 10.06.2025! It's a beautiful spot in the middle of Helsinki and we'll be kick off summer season with a free concert! Find out more here [https://www.espanlava.fi/en/events/event/F9E398BE44EAF18A788D0A078929DCEF/Friction\_Helsinki](https://www.espanlava.fi/en/events/event/F9E398BE44EAF18A788D0A078929DCEF/Friction_Helsinki)
+Join us and our very special guest drummer Chico Matada, for an intimate set at the Global Club Nights (GCN): a concert and club series dedicated to promoting and celebrating global music in Finland.
 
-![](/media/site/Leo)
+Fri 10.10.2025 at 20:00 (doors open at 19.00) at the Puppet Theatre Sampo (Erottajankatu 7, Helsinki).
 
-## Come jam with us – every first Friday at Cable Factory
+**Ticket Office:** Nukketeatteri Sampo, [https://teatteri.sampofestival.fi/\_\_/global-club-nights-10-10-25-friction-band/](https://teatteri.sampofestival.fi/__/global-club-nights-10-10-25-friction-band/)
 
-We are back with our monthly jam session at Kahvibaari in Kaapelitehdas (Cable Factory). Every first Friday of the month we invite players to join us for an easy-going open stage jam session. The next jam is on the 6.6.2025, and that'll be the last before the summer break!
+![](/media/gallery/IMG_0644.jpeg)
+
+## Come jam with us – every first Friday at Cable Factory Kahvibaari
+
+We have an ongoing monthly residency and open jam session at Kahvibaari in Kaapelitehdas (Cable Factory, Helsinki). Every first Friday of the month we hava a live performance showcase some of our latest songs, before opening the stage to invite players of all ages and skill level to join us for an easy-going open stage jam session primarily focused on groove music, jazz, latin and afrobeat. Entry is always free and there is happy hour prices at the bar.
+
+The next jam is on the 11.7.2025, 17:30-20:00.
 
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
 
-## Live Impressions
+# Past Live Highlights
 
-[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
+## Friction at Espan Lava 2025
+
+We were thrilled to be featured on the Espa Stage as part of the 2025 Espan Lava open stage series presented by Savoy Theatre.
+
+[https://www.youtube.com/watch?v=4\_lDoSUh7JI](https://www.youtube.com/watch?v=4_lDoSUh7JI)
+
+## Friction at Kekri Suomenlinna
+
+Friction performed as part of the Viaporin Kekri—All saints day—festivities on Suomenlinna Island between 2020 and 2024.
+
+## [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
