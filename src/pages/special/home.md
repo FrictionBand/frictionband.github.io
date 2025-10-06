@@ -31,7 +31,7 @@ We continue our ongoing residency and open jam session at [Kahvibaari in Kaapeli
 
 We were thrilled to be featured on the Espa Stage as part of the 2025 Espan Lava open stage series presented by Savoy Theatre.
 
-[https://www.youtube.com/watch?v=4\_lDoSUh7JI](https://www.youtube.com/watch?v=4_lDoSUh7JI)
+[https://youtu.be/gXSlWjQ5NOo?si=1I9\_puRWOY3gVTbR&t=29](https://youtu.be/gXSlWjQ5NOo?si=1I9_puRWOY3gVTbR&t=29)
 
 ## Friction at Kekri Suomenlinna
 
