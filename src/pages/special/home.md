@@ -7,12 +7,6 @@ layout: home
 ---
 # Upcoming Gigs
 
-## 10\. October 2025—Global Club Nights @Sampo
-
-Join us and our very special guest drummer Chico Matada, for an intimate set of Ethio-jazz, Latin & Afrobeat at the Global Club Nights: a concert and club series dedicated to promoting and celebrating global music in Finland. Puppet Theatre Sampo (Erottajankatu 7, Helsinki). Doors open at 19:00, showtime at 20:00. Tickets available via [Sampo](https://teatteri.sampofestival.fi/__/global-club-nights-10-10-25-friction-band/).
-
-![](/media/gallery/IMG_0644.jpeg)
-
 ## 7\. November 2025—Groove/ Afrobeat Open Jam@Cable Factory Kahvibaari
 
 We continue our ongoing residency and open jam session at [Kahvibaari in Kaapelitehdas](https://www.kaapelitehdas.fi/en/performances) (Cable Factory, Helsinki). Every first Friday of the month Friction Groove Collective performs a short showcase concert, before opening the stage to invite players of all ages and skill level to join us for an easy-going open stage jam session primarily focused on groove based music, jazz, latin and afrobeat. Entry is free and happy hour prices apply at the bar. The next jam is on the 7th, November, 2025; between 17:30-20:00. Welcome!
