@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx npm-run-all -p dev:*",
-    "build": "npx run-s build:*",
-    "dev:11ty": "npx @11ty/eleventy --serve",
-    "dev:css": "npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --watch",
-    "build:11ty": "npx @11ty/eleventy",
-    "build:css": "npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,15 @@
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 const embedEverything = require("eleventy-plugin-embed-everything");
 
 module.exports = function (eleventyConfig) {
+
+  // BUILD TAILWIND CSS
+  // Run Tailwind CSS build before Eleventy starts
+  eleventyConfig.on("eleventy.before", async () => {
+    execSync("npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --minify", { stdio: "inherit" });
+  });
 
   // PASSTHROUGH
 
@@ -11,6 +18,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/videos");
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/favicon");
+  eleventyConfig.addPassthroughCopy("src/assets/css");
 
   // Passthrough copy: media attachments
   eleventyConfig.addPassthroughCopy("src/media");
@@ -89,6 +97,11 @@ module.exports = function (eleventyConfig) {
   // EMBED PLUGIN
 
   eleventyConfig.addPlugin(embedEverything);
+
+  // WATCH TARGETS
+  // Watch Tailwind config and CSS input for changes
+  eleventyConfig.addWatchTarget("src/assets/css/");
+  eleventyConfig.addWatchTarget("tailwind.config.js");
 
   return {
     dir: {
