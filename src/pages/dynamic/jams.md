@@ -12,5 +12,6 @@ Join us every first Friday of the month at the [Cable Factory's Kahvibaari,](htt
 
 Feel the energy of the community and help make each session a proper celebration of music and culture. Whatever your skill level, grab your instrument, bring your mates, and head down to the Cable Factory for something genuinely special. Hope to see you there!
     
+Find the date for the next jams session in [upcoming gigs](/#gigs).
 
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
