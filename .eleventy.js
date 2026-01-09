@@ -81,6 +81,23 @@ module.exports = function (eleventyConfig) {
     return filtered
   });
 
+  // Filters a collection to keep only items that occur today or in the future, comparing at the day level
+  eleventyConfig.addFilter('filterTodayOrLater', function (collection) {
+    if (!collection) {
+      console.log('filterTodayOrLater: Collection is undefined');
+      return [];
+    }
+
+    const today = DateTime.local().startOf('day');
+
+    filtered = collection.filter(item => {
+      const itemDate = DateTime.fromJSDate(new Date(item.date)).startOf('day');
+      return itemDate >= today;
+    });
+
+    return filtered
+  });
+
   eleventyConfig.addFilter("newlineToBreak", function (value) {
     return value.replace(/\n/g, '<br>');
   });

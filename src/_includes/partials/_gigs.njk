@@ -1,4 +1,4 @@
-{% if collections.gigs | filterFutureDates | length > 0 %}
+{% if collections.gigs | filterTodayOrLater | length > 0 %}
 <section>
 
   <div class="prose">
@@ -7,7 +7,7 @@
 
   {% set currentDate = "now" | postDate %}
 
-  {% for gig in collections.gigs | filterFutureDates %}
+  {% for gig in collections.gigs | filterTodayOrLater %}
 
   {# Event date and title #}
   <h2 class="mb-2 text-neutral-100 font-semibold">{{ gig.data.date | postDate }} - {{ gig.data.title }}
