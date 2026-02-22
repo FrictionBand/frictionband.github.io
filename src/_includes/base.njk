@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang | default('en') }}">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,6 +10,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseUrl }}/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseUrl }}/assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="{{ site.baseUrl }}/assets/favicon/site.webmanifest">
+
+  <!-- hreflang for language alternates -->
+  {% if lang %}
+  <link rel="alternate" hreflang="en" href="{{ page.url | replace('/fi/', '/en/') }}">
+  <link rel="alternate" hreflang="fi" href="{{ page.url | replace('/en/', '/fi/') }}">
+  {% endif %}
 
   <!-- stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -49,7 +55,7 @@
   <script src="{{ site.baseUrl }}/assets/js/tobii.min.js"></script>
   <script src="{{ site.baseUrl }}/assets/js/lightbox.js"></script>
 
-  {% if item.data.title === "Home" %}
+  {% if layout === "home" %}
   <script src="{{ site.baseUrl }}/assets/js/video.js"></script>
   {% endif %}
 

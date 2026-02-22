@@ -1,9 +1,10 @@
+{% set homePath = '/' + (lang | default('en')) + '/' %}
 <div id="menu" class="bg-black h-16 fixed w-full z-50 hidden">
     <nav class="bg-black flex items-center justify-between max-w-3xl mx-auto w-full">
 
         <!-- Friction logo (functions as home link as well) -->
-        <a href="{{ site.baseUrl }}/" id="logo" class="inline-block p-4 uppercase font-semibold text-xl tracking-wider 
-        {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+        <a href="{{ site.baseUrl }}{{ homePath }}" id="logo" class="inline-block p-4 uppercase font-semibold text-xl tracking-wider
+        {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
             style="width: 150px;">
             {% include "svg/logo.svg" %}
         </a>
@@ -27,8 +28,8 @@
         <nav class="bg-black max-w-3xl mx-auto w-full">
 
             <!-- Friction logo (functions as home link as well) -->
-            <a href="{{ site.baseUrl }}/" id="logo" class="inline-flex p-3 uppercase font-semibold text-xl tracking-wider 
-            {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+            <a href="{{ site.baseUrl }}{{ homePath }}" id="logo" class="inline-flex p-3 uppercase font-semibold text-xl tracking-wider
+            {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
                 style="height: 50px;">
                 {% include "svg/logo.svg" %}
             </a>

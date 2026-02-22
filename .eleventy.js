@@ -29,11 +29,25 @@ module.exports = function (eleventyConfig) {
 
   // COLLECTIONS
 
-  // Sort pages by frontmatter 'order'
+  // All pages sorted by 'order'
   eleventyConfig.addCollection("pages", function (collections) {
     return collections.getFilteredByTag("pages").sort(function (a, b) {
       return a.data.order - b.data.order;
     });
+  });
+
+  // English pages only
+  eleventyConfig.addCollection("pagesEn", function (collections) {
+    return collections.getFilteredByTag("pages")
+      .filter(item => item.data.lang === "en")
+      .sort((a, b) => a.data.order - b.data.order);
+  });
+
+  // Finnish pages only
+  eleventyConfig.addCollection("pagesFi", function (collections) {
+    return collections.getFilteredByTag("pages")
+      .filter(item => item.data.lang === "fi")
+      .sort((a, b) => a.data.order - b.data.order);
   });
 
   eleventyConfig.addCollection("gallery", function (collectionApi) {

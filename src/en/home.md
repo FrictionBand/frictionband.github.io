@@ -1,6 +1,6 @@
 ---
 title: Home
-permalink: /
+permalink: /en/
 order: 0
 hidden: false
 layout: home
