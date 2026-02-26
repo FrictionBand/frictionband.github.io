@@ -1,7 +1,7 @@
 ---
 title: Jam-sessio
 permalink: /fi/jams/
-order: 3
+order: 2
 enableLightbox: false
 hidden: false
 ---

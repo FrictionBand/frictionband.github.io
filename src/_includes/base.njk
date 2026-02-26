@@ -12,9 +12,12 @@
   <link rel="manifest" href="{{ site.baseUrl }}/assets/favicon/site.webmanifest">
 
   <!-- hreflang for language alternates -->
-  {% if lang %}
-  <link rel="alternate" hreflang="en" href="{{ page.url | replace('/fi/', '/en/') }}">
-  <link rel="alternate" hreflang="fi" href="{{ page.url | replace('/en/', '/fi/') }}">
+  {% if lang == 'en' %}
+  <link rel="alternate" hreflang="en" href="{{ page.url }}">
+  <link rel="alternate" hreflang="fi" href="/fi{{ page.url }}">
+  {% elif lang == 'fi' %}
+  <link rel="alternate" hreflang="en" href="{{ page.url | replace('/fi', '') }}">
+  <link rel="alternate" hreflang="fi" href="{{ page.url }}">
   {% endif %}
 
   <!-- stylesheet -->

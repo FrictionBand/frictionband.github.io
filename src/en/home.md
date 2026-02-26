@@ -1,9 +1,10 @@
 ---
 title: Home
-permalink: /en/
+permalink: /
 order: 0
 hidden: false
 layout: home
+slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 ---
 # Past Live Highlights
 

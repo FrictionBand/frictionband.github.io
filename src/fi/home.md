@@ -4,6 +4,7 @@ permalink: /fi/
 order: 0
 hidden: false
 layout: home
+slogan: "Afrobeat, Ethio-Jazz ja Cumbia -kollektiivi Helsingistä"
 ---
 # Aiempia keikkoja
 

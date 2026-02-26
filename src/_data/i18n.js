@@ -14,6 +14,10 @@ module.exports = {
       button: "Get in touch via email",
       noscript: "Get in touch via email: friction.helsinki at gmail dot com",
     },
+    footer: {
+      pressKit: "Press Kit",
+      legal: "Legal",
+    },
   },
   fi: {
     nav: {
@@ -29,6 +33,10 @@ module.exports = {
     contact: {
       button: "Ota yhteyttä sähköpostilla",
       noscript: "Ota yhteyttä sähköpostilla: friction.helsinki at gmail dot com",
+    },
+    footer: {
+      pressKit: "Pressipaketti",
+      legal: "Juridinen ilmoitus",
     },
   },
 };

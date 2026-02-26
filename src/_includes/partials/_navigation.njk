@@ -1,4 +1,4 @@
-{% set homePath = '/' + (lang | default('en')) + '/' %}
+{% set homePath = '/fi/' if lang == 'fi' else '/' %}
 <div id="menu" class="bg-black h-16 fixed w-full z-50 hidden">
     <nav class="bg-black flex items-center justify-between max-w-3xl mx-auto w-full">
 
