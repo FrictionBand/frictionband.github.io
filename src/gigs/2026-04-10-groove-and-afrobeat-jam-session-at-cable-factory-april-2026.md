@@ -2,6 +2,7 @@
 title: "Open Jam @ Cable Factory Kahvibaari"
 date: 2026-04-10
 time: 17:30 - 20:00
+shortDescription: Our monthly open jam session at Kaapelitehdas. Come and jam with us!
 location: Kahvibaari, Cable Factory, Helsinki
 gmaps: https://maps.app.goo.gl/Xra21KuKk93WzB3JA
 weblink: https://www.groovehub.io/events/groove-afrobeat-jam-session

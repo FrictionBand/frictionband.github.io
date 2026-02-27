@@ -11,8 +11,11 @@ module.exports = {
       upcoming: "Upcoming Gigs",
     },
     contact: {
-      button: "Get in touch via email",
-      noscript: "Get in touch via email: friction.helsinki at gmail dot com",
+      button: "Shoot us an email",
+      noscript: "Email: friction.helsinki at gmail dot com",
+    },
+    book: {
+      button: "Learn what we offer",
     },
     footer: {
       pressKit: "Press Kit",
@@ -33,6 +36,9 @@ module.exports = {
     contact: {
       button: "Ota yhteyttä sähköpostilla",
       noscript: "Ota yhteyttä sähköpostilla: friction.helsinki at gmail dot com",
+    },
+    book: {
+      button: "Varaa Friction keikalle",
     },
     footer: {
       pressKit: "Pressipaketti",

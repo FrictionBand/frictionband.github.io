@@ -14,7 +14,7 @@
 <!-- Home link (shown always) -->
 <a href="{{ '/' if currentLang == 'en' else '/fi/' }}" class="p-5 uppercase font-extrabold items-center
     {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
-    {% if page.url === '/' or page.url === '/fi/' %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
+    {% if page.url === '/' or page.url === '/fi/' %}text-primary-100{% else %}text-gray-300 hover:text-primary-500{% endif %}">
     {{ t.nav.home }}
 </a>
 
@@ -25,7 +25,7 @@
 class="p-5 uppercase font-extrabold items-center
 {% if not hasGigs %} hidden {% endif %}
 {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
- text-gray-300 hover:text-sky-400">
+ text-gray-300 hover:text-primary-500">
     {{ t.nav.gigs }}
 </a>
 
@@ -40,7 +40,7 @@ class="p-5 uppercase font-extrabold items-center
 {% if item.data.title !== "Home" and item.data.title !== "Etusivu" and item.data.hidden != true %}
 <a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 uppercase font-extrabold items-center
     {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
-    {% if item.url === page.url %}text-sky-100{% else %}text-gray-300 hover:text-sky-400{% endif %}">
+    {% if item.url === page.url %}text-primary-100{% else %}text-gray-300 hover:text-primary-500{% endif %}">
     {{ item.data.title }}
 </a>
 {% endif %}
@@ -49,6 +49,6 @@ class="p-5 uppercase font-extrabold items-center
 <!-- Language switcher -->
 <a href="{{ otherUrl }}" class="p-5 uppercase font-extrabold items-center
     {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
-    text-gray-300 hover:text-sky-400">
+    text-gray-300 hover:text-primary-500">
     {{ t.langSwitch.label }}
 </a>

@@ -4,7 +4,7 @@
 
         <!-- Friction logo (functions as home link as well) -->
         <a href="{{ site.baseUrl }}{{ homePath }}" id="logo" class="inline-block p-4 uppercase font-semibold text-xl tracking-wider
-        {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+        {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-primary-500{% endif %}"
             style="width: 150px;">
             {% include "svg/logo.svg" %}
         </a>
@@ -14,7 +14,7 @@
 
         <!-- Mobile navigation toggle for small screens -->
         <div class="flex justify-end sm:hidden">
-            <button id="menuToggle" class="hidden p-4 text-xl text-gray-300 hover:text-sky-400">
+            <button id="menuToggle" class="hidden p-4 text-xl text-gray-300 hover:text-primary-500">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -29,7 +29,7 @@
 
             <!-- Friction logo (functions as home link as well) -->
             <a href="{{ site.baseUrl }}{{ homePath }}" id="logo" class="inline-flex p-3 uppercase font-semibold text-xl tracking-wider
-            {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+            {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-primary-500{% endif %}"
                 style="height: 50px;">
                 {% include "svg/logo.svg" %}
             </a>

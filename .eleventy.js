@@ -133,7 +133,12 @@ module.exports = function (eleventyConfig) {
   const i18nData = require("./src/_data/i18n.js");
 
   const nunjucks = require('nunjucks');
-  eleventyConfig.addShortcode("contact", function (lang) {
+  // `contact` shortcode: accepts optional `label` (string) and optional `lang`.
+  // Usage examples in Nunjucks markdown:
+  //   {% contact "Get in touch" %}
+  //   {% contact "Ota yhteyttä", "fi" %}
+  // If `label` is omitted, we fall back to i18n strings.
+  eleventyConfig.addShortcode("contact", function (label, lang) {
     const ctxLang = lang || (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
     // Load the template file for the shortcode
     const tplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'contact.njk');
@@ -143,16 +148,195 @@ module.exports = function (eleventyConfig) {
     } catch (e) {
       // fallback: render an inline button
       const t = (i18nData[ctxLang] && i18nData[ctxLang].contact) ? i18nData[ctxLang].contact : i18nData.en.contact;
-      return `<section class="text-center my-16"><button class="email hidden bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-400 transition-colors">${t.button}</button><noscript><p class="text-neutral-300">${t.noscript}</p></noscript></section>`;
+      const labelText = label || t.button;
+      const noscriptText = (i18nData[ctxLang] && i18nData[ctxLang].contact && i18nData[ctxLang].contact.noscript) ? i18nData[ctxLang].contact.noscript : (i18nData.en && i18nData.en.contact && i18nData.en.contact.noscript) || '';
+      return `<section class="text-center my-16"><button class="email hidden bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${labelText}</button><noscript><p class="text-neutral-300">${noscriptText}</p></noscript></section>`;
     }
 
-    // Render the Nunjucks template string with minimal context
+    // Render the Nunjucks template string with minimal context; pass label/noscript through
     const rendered = nunjucks.renderString(tpl, {
       i18n: i18nData,
       lang: ctxLang,
+      label: label,
+      noscript: undefined,
       page: (this && this.page) || {}
     });
     return rendered;
+  });
+
+  // Book shortcode: renders the booking button (language-aware)
+  eleventyConfig.addShortcode("book", function (lang) {
+    const ctxLang = lang || (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
+    const tplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'book.njk');
+    let tpl = '';
+    try {
+      tpl = fs.readFileSync(tplPath, 'utf8');
+    } catch (e) {
+      // fallback inline anchor using i18n data if available
+      const t = (i18nData[ctxLang] && i18nData[ctxLang].book) ? i18nData[ctxLang].book : (i18nData.en && i18nData.en.book) ? i18nData.en.book : { button: (ctxLang === 'fi' ? 'Varaa Friction keikalle' : 'Book us') };
+      const href = ctxLang === 'fi' ? '/fi/book/' : '/book/';
+      return `<section class="text-center my-16"><a href="${href}" class="inline-block bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${t.button}</a></section>`;
+    }
+    const rendered = require('nunjucks').renderString(tpl, { lang: ctxLang, i18n: i18nData });
+    return rendered;
+  });
+
+  // Lead paired-shortcode: prominent introductory paragraph
+  eleventyConfig.addPairedShortcode("lead", function (content, lang) {
+    const ctxLang = lang || (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
+    const tplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'lead.njk');
+    let tpl = '';
+    try {
+      tpl = fs.readFileSync(tplPath, 'utf8');
+    } catch (e) {
+      // fallback inline paragraph
+      return `<p class="text-lg md:text-xl font-semibold text-neutral-100 leading-tight">${content}</p>`;
+    }
+
+    return nunjucks.renderString(tpl, { content: content, text: content, i18n: i18nData, lang: ctxLang });
+  });
+
+  // CTA shortcode: renders Book + Contact buttons together
+  eleventyConfig.addShortcode("cta", function () {
+    const ctxLang = (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
+    const bookTplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'book.njk');
+    const contactTplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'contact.njk');
+    let bookTpl = '';
+    let contactTpl = '';
+    try {
+      bookTpl = fs.readFileSync(bookTplPath, 'utf8');
+    } catch (e) {
+      bookTpl = '';
+    }
+    try {
+      contactTpl = fs.readFileSync(contactTplPath, 'utf8');
+    } catch (e) {
+      contactTpl = '';
+    }
+
+    const bookHtml = bookTpl ? nunjucks.renderString(bookTpl, { i18n: i18nData, lang: ctxLang }) : '';
+    const contactHtml = contactTpl ? nunjucks.renderString(contactTpl, { i18n: i18nData, lang: ctxLang }) : '';
+
+    return `<section class="my-8"><div class="flex flex-col md:flex-row items-center gap-4 justify-center"><div class="w-full md:w-auto">${bookHtml}</div><div class="w-full md:w-auto">${contactHtml}</div></div></section>`;
+  });
+
+  // Gigs shortcode: render upcoming gigs, optional limit parameter
+  eleventyConfig.addShortcode("gigs", function (limit, showDescription) {
+    const ctxLang = (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
+    const { DateTime } = require('luxon');
+    // Collections can be available directly on `this.collections` or inside `this.ctx.collections`
+    let allGigs = [];
+    try {
+      if (this && this.collections && this.collections.gigs) {
+        allGigs = this.collections.gigs;
+      } else if (this && this.ctx && this.ctx.collections && this.ctx.collections.gigs) {
+        allGigs = this.ctx.collections.gigs;
+      } else if (global && global.collections && global.collections.gigs) {
+        allGigs = global.collections.gigs;
+      }
+    } catch (e) {
+      allGigs = [];
+    }
+
+    // Filter to today or later (day-level)
+    const today = DateTime.local().startOf('day');
+    const future = allGigs.filter(item => {
+      try {
+        const itemDate = DateTime.fromJSDate(new Date(item.date)).startOf('day');
+        return itemDate >= today;
+      } catch (e) {
+        return false;
+      }
+    }).sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    const count = (typeof limit === 'number' || (typeof limit === 'string' && limit.match(/^\d+$/))) ? parseInt(limit, 10) : null;
+    // showDescription defaults to true; allow passing 'false' or false
+    let showDesc = true;
+    if (typeof showDescription !== 'undefined') {
+      if (typeof showDescription === 'string') {
+        const s = showDescription.toLowerCase();
+        showDesc = !(s === 'false' || s === '0' || s === 'no');
+      } else {
+        showDesc = Boolean(showDescription);
+      }
+    }
+    const items = count ? future.slice(0, count) : future;
+
+    if (!items || items.length === 0) return '';
+
+    // Render via shortcodes/gigs.njk so markup lives in one place
+    const tplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'gigs.njk');
+    try {
+      const tpl = fs.readFileSync(tplPath, 'utf8');
+
+      // Prepare simplified items for template
+      const prepared = items.map(gig => {
+        // Always format dates using Finnish locale for consistent presentation
+        const locale = 'fi';
+        let dateStr = '';
+        try {
+          dateStr = DateTime.fromJSDate(new Date(gig.date)).setLocale(locale).toLocaleString(DateTime.DATE_SHORT);
+        } catch (e) {
+          dateStr = gig.date || '';
+        }
+        return {
+          dateStr,
+          title: (gig.data && gig.data.title) ? gig.data.title : '',
+          // short description/frontmatter teaser (new field)
+          short: (gig.data && gig.data.shortDescription) ? gig.data.shortDescription : null,
+          // full content (rendered template content or raw content)
+          content: gig.templateContent || gig.content || '',
+          time: (gig.data && gig.data.time) ? gig.data.time : null,
+          gmaps: (gig.data && gig.data.gmaps) ? gig.data.gmaps : null,
+          location: (gig.data && gig.data.location) ? gig.data.location : null,
+          fblink: (gig.data && gig.data.fblink) ? gig.data.fblink : null,
+          weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
+        };
+      });
+
+      return nunjucks.renderString(tpl, { items: prepared, i18n: i18nData, lang: ctxLang, showDescription: showDesc });
+    } catch (e) {
+      // fallback to inline rendering
+      const heading = (i18nData[ctxLang] && i18nData[ctxLang].gigs && i18nData[ctxLang].gigs.upcoming) ? i18nData[ctxLang].gigs.upcoming : (i18nData.en && i18nData.en.gigs && i18nData.en.gigs.upcoming) || 'Upcoming Gigs';
+      let out = `<section><div class="prose"><h1 class="mt-16 mb-10" id="gigs">${heading}</h1></div>`;
+      for (const gig of items) {
+        // Use Finnish locale for date formatting
+        const locale = 'fi';
+        let dateStr = '';
+        try {
+          dateStr = DateTime.fromJSDate(new Date(gig.date)).setLocale(locale).toLocaleString(DateTime.DATE_SHORT);
+        } catch (e) {
+          dateStr = gig.date || '';
+        }
+        const title = (gig.data && gig.data.title) ? gig.data.title : '';
+        const short = (gig.data && gig.data.shortDescription) ? gig.data.shortDescription : null;
+        const content = gig.templateContent || gig.content || '';
+        out += `\n\n<h2 class="mb-2 text-neutral-100 font-semibold">${dateStr} - ${title}</h2>`;
+        if (short) {
+          out += `\n\n<div class="text-neutral-300 mb-2">${short}</div>`;
+        }
+        // full content only shown when showDescription is true
+        if (showDesc && content) {
+          out += `\n\n<div class="text-neutral-300 mb-2">${content}</div>`;
+        }
+        out += `\n<ul class="mb-8">`;
+        if (gig.data && gig.data.time) {
+          out += `<li class="text-neutral-300"><i class="fa-regular fa-clock w-5 text-center"></i> <span class=" ">${gig.data.time}</span></li>`;
+        }
+        if (gig.data && gig.data.gmaps) {
+          out += `<li class="text-neutral-300"><i class="fas fa-map-marker-alt w-5 text-center"></i> <a href="${gig.data.gmaps}" class="text-primary-600 hover:text-primary-500">${gig.data.location || gig.data.gmaps}</a></li>`;
+        }
+        if (gig.data && gig.data.fblink) {
+          out += `<li class="text-neutral-300"><i class="fab fa-facebook-f w-5 text-center"></i> <a href="${gig.data.fblink}" class="text-primary-600 hover:text-primary-500">${gig.data.fblink}</a></li>`;
+        }
+        if (gig.data && gig.data.weblink) {
+          out += `<li class="text-neutral-300"><i class="fa-solid fa-link w-5 text-center"></i> <a href="${gig.data.weblink}" class="text-primary-600 hover:text-primary-500">${gig.data.weblink}</a></li>`;
+        }
+        out += `</ul>`;
+      }
+      out += `</section>`;
+      return out;
+    }
   });
 
   // WATCH TARGETS
