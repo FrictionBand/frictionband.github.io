@@ -180,15 +180,18 @@ module.exports = function (eleventyConfig) {
     return rendered;
   });
 
-  // Email (no-JS) shortcode: inline mailto fallback (no separate template file)
-  // Requires a `text` parameter which will be used as the link text.
-  // Usage: {% email_no_js "Contact us" %}
-  eleventyConfig.addShortcode("email_no_js", function (text) {
+  // Noscript text shortcode: inline content that only appears when JS is disabled.
+  // Requires a `text` parameter which will be used as the noscript content.
+  // Usage: {% noscript_text "Contact us" %}
+  const noscriptShortcode = function (text) {
     if (!text || String(text).trim().length === 0) {
-      throw new Error('email_no_js shortcode requires a non-empty text parameter');
+      throw new Error('noscript_text shortcode requires a non-empty text parameter');
     }
     return `<noscript><p class="text-neutral-300">${String(text)}</p></noscript>`;
-  });
+  };
+
+  // Register new name
+  eleventyConfig.addShortcode("noscript_text", noscriptShortcode);
 
   // Lead paired-shortcode: prominent introductory paragraph
   eleventyConfig.addPairedShortcode("lead", function (content, lang) {

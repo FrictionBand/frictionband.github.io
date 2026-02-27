@@ -24,7 +24,7 @@ Friction erottuu tavallisesta coverbändistä yhdistämällä afrobeatia, cumbia
 
 {% cta "Lue lisää", "Varaa Friction" %}
 
-{% email_no_js "Ota yhteyttä: </br> **friction.helsinki @ gmail dot com**" %}  
+{% noscript_text "Ota yhteyttä: </br> **friction.helsinki @ gmail dot com**" %}  
 
 [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
 

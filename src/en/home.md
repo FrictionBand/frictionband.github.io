@@ -26,7 +26,7 @@ Friction stands out from your average cover band by blending afrobeat, cumbia, s
 
 {% cta "Learn more", "Get in touch" %}
 
-{% email_no_js "Get in touch via email: </br> **friction.helsinki @ gmail dot com**" %}  
+{% noscript_text "Get in touch via email: </br> **friction.helsinki @ gmail dot com**" %}  
 
 
 [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)

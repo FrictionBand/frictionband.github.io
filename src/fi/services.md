@@ -37,4 +37,4 @@ Kiinnostuitko bändin varaamisesta keikal­lesi tai tapahtumaasi? Kerro meille l
 
 {% contact "Ota yhteyttä" %}
 
-{% email_no_js "**friction.helsinki @ gmail dot com**" %}
+{% noscript_text "**friction.helsinki @ gmail dot com**" %}
