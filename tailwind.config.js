@@ -11,8 +11,11 @@ module.exports = {
 
   // Safelist: classes that Tailwind should always include even if not found in content.
   safelist: [
+    'columns-1', // single-column (mobile gallery)
     'columns-2', // used on long lists / multi-column layouts
+    'md:columns-2', // two-column layout at md breakpoint
     'md:columns-3', // three-column layout at md breakpoint
+    'lg:columns-3', // three-column layout at lg breakpoint
     'not-prose', // exclude typographic prose rules where needed
     '10', // margin utility used dynamically
     // Button utilities (used in shortcode string in .eleventy.js)

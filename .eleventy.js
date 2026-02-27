@@ -217,7 +217,7 @@ module.exports = function (eleventyConfig) {
     const bookHtml = bookTpl ? nunjucks.renderString(bookTpl, { i18n: i18nData, lang: ctxLang }) : '';
     const contactHtml = contactTpl ? nunjucks.renderString(contactTpl, { i18n: i18nData, lang: ctxLang }) : '';
 
-    return `<section class="my-8"><div class="flex flex-col md:flex-row items-center gap-4 justify-center"><div class="w-full md:w-auto">${bookHtml}</div><div class="w-full md:w-auto">${contactHtml}</div></div></section>`;
+    return `<section class="my-8"><div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-center"><div class="md:w-auto">${bookHtml}</div><div class="md:w-auto">${contactHtml}</div></div></section>`;
   });
 
   // Gallery shortcode: accepts multiple image paths and renders a masonry grid
@@ -233,7 +233,7 @@ module.exports = function (eleventyConfig) {
     // CSS `columns` gives a masonry-like layout natively — no Masonry.js needed.
     // Each item uses `break-inside-avoid` so images never split across columns.
     // `.lightbox` class is picked up by Tobii (already loaded via base.njk).
-    let out = `<div class="columns-2 md:columns-3 gap-2 not-prose mt-10">`;
+    let out = `<div class="columns-1 md:columns-2 lg:columns-3 gap-2 not-prose mt-10">`;
     for (const src of images) {
       const safeSrc = src.replace(/"/g, '%22');
       out += `<a href="${safeSrc}" class="lightbox block mb-2 break-inside-avoid"><img src="${safeSrc}" alt="" class="w-full object-cover" loading="lazy"></a>`;
