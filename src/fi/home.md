@@ -12,10 +12,11 @@ Friction on helsinkiläinen rytmimusiikin livebändi, joka yhdistää afrobeatia
 {% endlead %}
 
 Etsitkö jotain muuta kuin perus-coverbändiä? Friction sopii erityisesti tapahtumiin, joissa halutaan rytmiä, groovea ja kansainvälistä fiilistä:
-  •  Kaupunkifestarit ja korttelijuhlat
-  •  Klubi-illat ja teematapahtumat
-  •  Yritysjuhlat ja asiakastilaisuudet
-  •  Kulttuuritapahtumat, joissa halutaan tuoda esiin Helsingin monikulttuurista rytmimaisemaa
+
+- Kaupunkifestarit ja korttelijuhlat
+- Klubi-illat ja teematapahtumat
+- Yritysjuhlat ja asiakastilaisuudet
+- Kulttuuritapahtumat, joissa halutaan tuoda esiin Helsingin monikulttuurista rytmimaisemaa
 
 Bändi skaalautuu tilaisuuden mukaan: kompaktista klubikokoonpanosta täyteen 8–12 hengen show’hun torvineen.
 
