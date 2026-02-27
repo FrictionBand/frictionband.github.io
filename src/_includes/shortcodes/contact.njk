@@ -1,6 +1,6 @@
 {# contact shortcode: allow overriding the button text via `label` parameter; when omitted
    use a fixed placeholder 'contact' (no i18n). Button remains JS-only (hidden by default). #}
 {% set labelText = label or 'contact' %}
-<section class="text-center my-12 md:my-16 mx-2">
+<section class="text-center my-12 mx-2">
     <button class="js-only-contact email hidden bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">{{ labelText }}</button>
 </section>

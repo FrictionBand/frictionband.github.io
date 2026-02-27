@@ -1,6 +1,6 @@
 ---
 title: Palvelut
-permalink: /fi/book/
+permalink: /fi/services/
 order: 1
 hidden: false
 ---
@@ -16,7 +16,6 @@ Friction on livebändi, joka on luotu tapahtumiin, joissa energia ja tanssittavu
 - **Ammattimainen tuotanto**: Voimme tuoda mukanamme PA:n ja perusvalot tai sopeutua talon tekniikkaan. Aikataulut, lava­suunnittelu ja kommunikointi hoituvat selkeästi ja ajoissa.
 
 [https://youtu.be/gXSlWjQ5NOo?si=1I9\_puRWOY3gVTbR&t=29](https://youtu.be/gXSlWjQ5NOo?si=1I9_puRWOY3gVTbR&t=29)
-
 
 
 ## Ohjelmisto ja keikkapaketit
@@ -38,5 +37,4 @@ Kiinnostuitko bändin varaamisesta keikal­lesi tai tapahtumaasi? Kerro meille l
 
 {% contact "Ota yhteyttä" %}
 
-{% email_no_js "**friction.helsinki @ gmail dot com**" %}  
-
+{% email_no_js "**friction.helsinki @ gmail dot com**" %}

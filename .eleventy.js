@@ -172,7 +172,7 @@ module.exports = function (eleventyConfig) {
       tpl = fs.readFileSync(tplPath, 'utf8');
     } catch (e) {
       // fallback inline anchor using a fixed placeholder 'services' (no i18n)
-      const href = ctxLang === 'fi' ? '/fi/book/' : '/book/';
+      const href = ctxLang === 'fi' ? '/fi/services/' : '/services/';
       const labelText = 'services';
       return `<section class="text-center my-16"><a href="${href}" class="inline-block bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${labelText}</a></section>`;
     }
