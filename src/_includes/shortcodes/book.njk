@@ -1,5 +1,5 @@
 {% set t = i18n[lang | default('en')].book %}
-<section class="text-center my-16">
+<section class="text-center my-4 md:my-16">
   {% if lang == 'fi' %}
     <a href="/fi/book/" class="inline-block bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">{{ t.button }}</a>
   {% else %}
