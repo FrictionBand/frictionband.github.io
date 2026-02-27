@@ -14,7 +14,7 @@ module.exports = {
     'columns-2', // used on long lists / multi-column layouts
     'md:columns-3', // three-column layout at md breakpoint
     'not-prose', // exclude typographic prose rules where needed
-    'mt-5', // margin utility used dynamically
+    '10', // margin utility used dynamically
     // Button utilities (used in shortcode string in .eleventy.js)
     'bg-primary-800', // primary background color (dark variant)
     'hover:bg-primary-600', // primary background on hover (lighter)
@@ -27,6 +27,16 @@ module.exports = {
     'rounded-full', // pill-shaped buttons
     'transition-colors', // smooth color transitions
     'hidden' // used to hide email button until JS reveals it
+    ,
+    // Gallery utilities used in the `gallery` shortcode (runtime-rendered HTML)
+    'lightbox',       // class on <a> links picked up by Tobii
+    'break-inside-avoid', // prevents items splitting across CSS columns
+    'gap-2',          // gutter between columns
+    'mb-2',           // bottom margin on each gallery item
+    'mt-10',          // top margin for gallery wrapper (used by gallery shortcode)
+    'block',          // display:block on gallery anchors
+    'w-full',         // images fill column width
+    'object-cover'    // images crop to fill
   ],
 
   // Theme customizations

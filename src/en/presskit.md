@@ -9,4 +9,4 @@ hidden: true
 
 For press enquiries, photos, and band information please get in touch via email.
 
-{% contact %}
+{% contact "Send us an email" %}

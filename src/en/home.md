@@ -29,8 +29,6 @@ Friction stands out from your average cover band by blending afrobeat, cumbia, s
 
 [https://youtu.be/gXSlWjQ5NOo?si=1I9\_puRWOY3gVTbR&t=29](https://youtu.be/gXSlWjQ5NOo?si=1I9_puRWOY3gVTbR&t=29)
 
-## Upcoming Gigs
-
 {% gigs 3, false %}
 
 ## From Helsinki Across Finland
@@ -43,9 +41,13 @@ Possible partners or organizers
 A few short quotes from feedback, if available ("The band ignited the audience from the very first song" etc.)
 
 
-
-
-
+{% gallery 
+"/media/gallery/Guerilla-Outdoor-Gig-in-Jätkäsaari.jpeg", 
+"/media/gallery/IMG_0645.jpeg", 
+"/media/gallery/IMG_0652.jpeg", 
+"/media/gallery/Live-at-Kekri-Festival-2023.jpg", 
+"/media/gallery/Summer-Gigging-in-Kalasatama.jpeg"
+%}
 
 
 

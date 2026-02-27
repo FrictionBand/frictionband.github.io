@@ -220,6 +220,28 @@ module.exports = function (eleventyConfig) {
     return `<section class="my-8"><div class="flex flex-col md:flex-row items-center gap-4 justify-center"><div class="w-full md:w-auto">${bookHtml}</div><div class="w-full md:w-auto">${contactHtml}</div></div></section>`;
   });
 
+  // Gallery shortcode: accepts multiple image paths and renders a masonry grid
+  // Usage: {% gallery "/media/gallery/img1.jpg", "/media/gallery/img2.jpg" %}
+  eleventyConfig.addShortcode("gallery", function () {
+    // `arguments` contains all passed image paths
+    const args = Array.prototype.slice.call(arguments);
+    // Filter out any undefined/null values
+    const images = args.filter(Boolean).map(src => String(src).trim());
+    if (!images || images.length === 0) return '';
+
+    // Build the gallery HTML: wrapper div with `grid not-prose mt-10`, each item is a link with class `lightbox grid-item`
+    // CSS `columns` gives a masonry-like layout natively — no Masonry.js needed.
+    // Each item uses `break-inside-avoid` so images never split across columns.
+    // `.lightbox` class is picked up by Tobii (already loaded via base.njk).
+    let out = `<div class="columns-2 md:columns-3 gap-2 not-prose mt-10">`;
+    for (const src of images) {
+      const safeSrc = src.replace(/"/g, '%22');
+      out += `<a href="${safeSrc}" class="lightbox block mb-2 break-inside-avoid"><img src="${safeSrc}" alt="" class="w-full object-cover" loading="lazy"></a>`;
+    }
+    out += `</div>`;
+    return out;
+  });
+
   // Gigs shortcode: render upcoming gigs, optional limit parameter
   eleventyConfig.addShortcode("gigs", function (limit, showDescription) {
     const ctxLang = (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';

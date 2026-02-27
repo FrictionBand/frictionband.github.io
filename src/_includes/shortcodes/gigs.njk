@@ -1,6 +1,10 @@
 {% if items and items | length > 0 %}
 <section>
 
+  <div class="prose">
+    <h2 class="mt-16 mb-10" id="gigs">{{ i18n[lang | default('en')].gigs.upcoming }}</h2>
+  </div>
+
   {% for gig in items %}
 
   <h4 class="mb-1 text-neutral-100 font-semibold">{{ gig.dateStr }} - {{ gig.title }}</h4>
