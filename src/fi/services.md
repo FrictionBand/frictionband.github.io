@@ -1,6 +1,6 @@
 ---
 title: Palvelut
-permalink: /fi/services/
+permalink: /fi/palvelut/
 order: 1
 hidden: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: Juridinen ilmoitus
-permalink: /fi/legal/
+permalink: /fi/juridinen-ilmoitus/
 hidden: true
 ---
 # Juridinen ilmoitus

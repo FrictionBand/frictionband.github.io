@@ -1,6 +1,6 @@
 ---
 title: Pressipaketti
-permalink: /fi/presskit/
+permalink: /fi/pressipaketti/
 hidden: true
 ---
 # Pressipaketti

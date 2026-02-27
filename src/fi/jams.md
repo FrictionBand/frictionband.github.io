@@ -1,6 +1,6 @@
 ---
 title: Jamit
-permalink: /fi/jams/
+permalink: /fi/jamit/
 order: 2
 enableLightbox: false
 hidden: false
