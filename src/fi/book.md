@@ -15,7 +15,9 @@ Friction on livebändi, joka on luotu tapahtumiin, joissa energia ja tanssittavu
 - **Elävä improvisaatio**: Rytmit ja sovitukset hengittävät yleisön mukana. Jokainen keikka on ainutkertainen – klubilla voidaan venyttää groovea, yritysjuhlissa pitää fokus tanssittavissa biiseissä.
 - **Ammattimainen tuotanto**: Voimme tuoda mukanamme PA:n ja perusvalot tai sopeutua talon tekniikkaan. Aikataulut, lava­suunnittelu ja kommunikointi hoituvat selkeästi ja ajoissa.
 
-[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
+[https://youtu.be/gXSlWjQ5NOo?si=1I9\_puRWOY3gVTbR&t=29](https://youtu.be/gXSlWjQ5NOo?si=1I9_puRWOY3gVTbR&t=29)
+
+
 
 ## Ohjelmisto ja keikkapaketit
 

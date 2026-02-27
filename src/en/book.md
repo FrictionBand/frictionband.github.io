@@ -17,7 +17,7 @@ Choose the unique Friction
 - **Live improvisation**: The rhythms and arrangements breathe with the audience. Every gig is unique — at a club we can stretch the groove, at corporate events we keep the focus on danceable tracks.
 - **Professional production:** We can bring our own PA and basic lighting, or adapt to the venue's equipment. Schedules, stage planning, and communication are handled clearly and on time.
 
-[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
+[https://youtu.be/gXSlWjQ5NOo?si=1I9\_puRWOY3gVTbR&t=29](https://youtu.be/gXSlWjQ5NOo?si=1I9_puRWOY3gVTbR&t=29)
 
 ## Repertoire and Gig Packages
 

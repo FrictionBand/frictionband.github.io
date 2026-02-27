@@ -24,7 +24,7 @@ Friction erottuu tavallisesta coverbändistä yhdistämällä afrobeatia, cumbia
 
 {% cta %}
 
-[https://youtu.be/gXSlWjQ5NOo?si=1I9\_puRWOY3gVTbR&t=29](https://youtu.be/gXSlWjQ5NOo?si=1I9_puRWOY3gVTbR&t=29)
+[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
 
 {% gigs 3, false %}
 

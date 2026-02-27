@@ -34,11 +34,11 @@ module.exports = {
       upcoming: "Tulevat keikat",
     },
     contact: {
-      button: "Ota yhteyttä sähköpostilla",
+      button: "Ota yhteyttä",
       noscript: "Ota yhteyttä sähköpostilla: friction.helsinki at gmail dot com",
     },
     book: {
-      button: "Varaa Friction keikalle",
+      button: "Varaa Friction",
     },
     footer: {
       pressKit: "Pressipaketti",

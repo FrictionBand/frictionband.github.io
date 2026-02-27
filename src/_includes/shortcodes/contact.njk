@@ -3,7 +3,7 @@
 {% set labelText = label or t.button %}
 {# Use passed `noscript` if provided, otherwise fall back to i18n noscript #}
 {% set noscriptText = noscript or t.noscript %}
-<section class="text-center my-4 md:my-16">
+<section class="text-center my-4 md:my-16 mx-2">
     <button class="email hidden bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">{{ labelText }}</button>
     <noscript>
         <p class="text-neutral-300">{{ noscriptText }}</p>

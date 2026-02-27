@@ -37,6 +37,7 @@ module.exports = {
     'gap-2',          // gutter between columns
     'mb-2',           // bottom margin on each gallery item
     'mt-10',          // top margin for gallery wrapper (used by gallery shortcode)
+    'mx-2',           // between cta buttons
     'block',          // display:block on gallery anchors
     'w-full',         // images fill column width
     'object-cover'    // images crop to fill

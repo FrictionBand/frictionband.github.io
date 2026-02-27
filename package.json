@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "watch:tailwind": "npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --watch",
+    "dev:11ty": "npx @11ty/eleventy --serve",
+    "dev": "npm-run-all --parallel watch:tailwind dev:11ty",
+    "build:css": "npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --minify",
+    "build": "npm run build:css && npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
