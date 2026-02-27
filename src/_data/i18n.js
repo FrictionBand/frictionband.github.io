@@ -25,7 +25,7 @@ module.exports = {
       gigs: "Keikat",
     },
     langSwitch: {
-      label: "In English",
+      label: "English",
     },
     gigs: {
       upcoming: "Tulevat keikat",

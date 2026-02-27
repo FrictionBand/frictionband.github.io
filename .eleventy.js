@@ -129,6 +129,32 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(embedEverything);
 
+  // Shortcodes
+  const i18nData = require("./src/_data/i18n.js");
+
+  const nunjucks = require('nunjucks');
+  eleventyConfig.addShortcode("contact", function (lang) {
+    const ctxLang = lang || (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
+    // Load the template file for the shortcode
+    const tplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'contact.njk');
+    let tpl = '';
+    try {
+      tpl = fs.readFileSync(tplPath, 'utf8');
+    } catch (e) {
+      // fallback: render an inline button
+      const t = (i18nData[ctxLang] && i18nData[ctxLang].contact) ? i18nData[ctxLang].contact : i18nData.en.contact;
+      return `<section class="text-center my-16"><button class="email hidden bg-sky-500 text-white px-6 py-2 rounded-full hover:bg-sky-400 transition-colors">${t.button}</button><noscript><p class="text-neutral-300">${t.noscript}</p></noscript></section>`;
+    }
+
+    // Render the Nunjucks template string with minimal context
+    const rendered = nunjucks.renderString(tpl, {
+      i18n: i18nData,
+      lang: ctxLang,
+      page: (this && this.page) || {}
+    });
+    return rendered;
+  });
+
   // WATCH TARGETS
   // Watch Tailwind config and CSS input for changes
   eleventyConfig.addWatchTarget("src/assets/css/");
@@ -139,5 +165,6 @@ module.exports = function (eleventyConfig) {
       input: "src",
       output: "_site"
     },
+    markdownTemplateEngine: "njk",
   }
 };

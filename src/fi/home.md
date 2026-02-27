@@ -6,6 +6,9 @@ hidden: false
 layout: home
 slogan: "Afrobeat, Ethio-Jazz ja Cumbia -kollektiivi Helsingistä"
 ---
+
+
+
 # Aiempia keikkoja
 
 ## Friction Espan Lavalla 2025
@@ -19,3 +22,5 @@ Olimme iloisia vierailuesiintymisestämme Espan Lavalla osana Savoy-teatterin j�
 Friction esiintyi Viaporin Kekri -festivaalilla Suomenlinnan saarella vuosina 2020–2024.
 
 [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
+
+{% contact %}

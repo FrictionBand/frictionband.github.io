@@ -7,6 +7,15 @@ module.exports = {
     'md:columns-3',
     'not-prose',
     'mt-5',
+    // Contact button utilities (used in shortcode string in .eleventy.js)
+    'bg-sky-500',
+    'hover:bg-sky-400',
+    'text-white',
+    'px-6',
+    'py-2',
+    'rounded-full',
+    'transition-colors',
+    'hidden'
   ],
   theme: {
     extend: {

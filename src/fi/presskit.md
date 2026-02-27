@@ -9,4 +9,4 @@ hidden: true
 
 Lehdistötiedusteluihin, kuviin ja bändi-informaatioon liittyvissä asioissa ota yhteyttä sähköpostilla.
 
-{% include "partials/_contact.njk" %}
+{% contact %}

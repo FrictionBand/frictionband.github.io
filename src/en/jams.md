@@ -1,5 +1,5 @@
 ---
-title: Jam Session
+title: Jams
 permalink: /jams/
 order: 2
 enableLightbox: false

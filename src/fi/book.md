@@ -1,5 +1,5 @@
 ---
-title: Tilaa meidät
+title: Palvelut
 permalink: /fi/book/
 order: 1
 hidden: false
@@ -15,4 +15,4 @@ Haluatko tuoda maailman groovea tapahtumaasi? Soitamme mielellämme sinulle.
 
 ## Ota yhteyttä
 
-{% include "partials/_contact.njk" %}
+{% contact %}

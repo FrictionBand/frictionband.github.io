@@ -1,5 +1,5 @@
 ---
-title: Book Us
+title: Services
 permalink: /book/
 order: 1
 hidden: false
@@ -15,4 +15,4 @@ Looking to bring world groove to your event? We'd love to play for you.
 
 ## Get in touch
 
-{% include "partials/_contact.njk" %}
+{% contact %}

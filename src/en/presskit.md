@@ -9,4 +9,4 @@ hidden: true
 
 For press enquiries, photos, and band information please get in touch via email.
 
-{% include "partials/_contact.njk" %}
+{% contact %}

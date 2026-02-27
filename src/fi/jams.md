@@ -1,5 +1,5 @@
 ---
-title: Jam-sessio
+title: Jamit
 permalink: /fi/jams/
 order: 2
 enableLightbox: false
