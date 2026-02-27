@@ -33,5 +33,6 @@ Friction is an alternative to a traditional party band when you want rhythm musi
 
 Interested to book us for your gig or occasion? We'd love to hear more: 
 
-{% contact %}
+{% contact "Get in touch" %}
 
+{% email_no_js "**friction.helsinki @ gmail dot com**" %}  

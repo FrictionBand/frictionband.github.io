@@ -24,7 +24,9 @@ The band scales to the occasion: from a compact club lineup to a full 8–12 per
 Friction stands out from your average cover band by blending afrobeat, cumbia, ska, funk, and Ethio-jazz into a genuinely danceable, forward-rolling groove — with a truly international sound, live improvisation that responds to every crowd, and professional production from setup to stage.
 
 
-{% cta %}
+{% cta "Learn more", "Get in touch" %}
+
+{% email_no_js "Get in touch via email: </br> **friction.helsinki @ gmail dot com**" %}  
 
 
 [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)

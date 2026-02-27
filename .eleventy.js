@@ -146,10 +146,9 @@ module.exports = function (eleventyConfig) {
     try {
       tpl = fs.readFileSync(tplPath, 'utf8');
     } catch (e) {
-      // fallback: render an inline button
-      const t = (i18nData[ctxLang] && i18nData[ctxLang].contact) ? i18nData[ctxLang].contact : i18nData.en.contact;
-      const labelText = label || t.button;
-      const noscriptText = (i18nData[ctxLang] && i18nData[ctxLang].contact && i18nData[ctxLang].contact.noscript) ? i18nData[ctxLang].contact.noscript : (i18nData.en && i18nData.en.contact && i18nData.en.contact.noscript) || '';
+      // fallback: render an inline button using fixed placeholders (no i18n)
+      const labelText = label || 'contact';
+      const noscriptText = 'contact: friction.helsinki at gmail dot com';
       return `<section class="text-center my-16"><button class="email hidden bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${labelText}</button><noscript><p class="text-neutral-300">${noscriptText}</p></noscript></section>`;
     }
 
@@ -172,13 +171,23 @@ module.exports = function (eleventyConfig) {
     try {
       tpl = fs.readFileSync(tplPath, 'utf8');
     } catch (e) {
-      // fallback inline anchor using i18n data if available
-      const t = (i18nData[ctxLang] && i18nData[ctxLang].book) ? i18nData[ctxLang].book : (i18nData.en && i18nData.en.book) ? i18nData.en.book : { button: (ctxLang === 'fi' ? 'Varaa Friction keikalle' : 'Book us') };
+      // fallback inline anchor using a fixed placeholder 'services' (no i18n)
       const href = ctxLang === 'fi' ? '/fi/book/' : '/book/';
-      return `<section class="text-center my-16"><a href="${href}" class="inline-block bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${t.button}</a></section>`;
+      const labelText = 'services';
+      return `<section class="text-center my-16"><a href="${href}" class="inline-block bg-primary-600 text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${labelText}</a></section>`;
     }
     const rendered = require('nunjucks').renderString(tpl, { lang: ctxLang, i18n: i18nData });
     return rendered;
+  });
+
+  // Email (no-JS) shortcode: inline mailto fallback (no separate template file)
+  // Requires a `text` parameter which will be used as the link text.
+  // Usage: {% email_no_js "Contact us" %}
+  eleventyConfig.addShortcode("email_no_js", function (text) {
+    if (!text || String(text).trim().length === 0) {
+      throw new Error('email_no_js shortcode requires a non-empty text parameter');
+    }
+    return `<noscript><p class="text-neutral-300">${String(text)}</p></noscript>`;
   });
 
   // Lead paired-shortcode: prominent introductory paragraph
@@ -197,7 +206,9 @@ module.exports = function (eleventyConfig) {
   });
 
   // CTA shortcode: renders Book + Contact buttons together
-  eleventyConfig.addShortcode("cta", function () {
+  // Accepts optional parameters: bookLabel, contactLabel
+  // Usage: {% cta %} or {% cta "Book text", "Contact text" %}
+  eleventyConfig.addShortcode("cta", function (bookLabel, contactLabel) {
     const ctxLang = (this && this.ctx && this.ctx.lang) || (this.page && this.page.data && this.page.data.lang) || 'en';
     const bookTplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'book.njk');
     const contactTplPath = path.join(__dirname, 'src', '_includes', 'shortcodes', 'contact.njk');
@@ -214,8 +225,9 @@ module.exports = function (eleventyConfig) {
       contactTpl = '';
     }
 
-    const bookHtml = bookTpl ? nunjucks.renderString(bookTpl, { i18n: i18nData, lang: ctxLang }) : '';
-    const contactHtml = contactTpl ? nunjucks.renderString(contactTpl, { i18n: i18nData, lang: ctxLang }) : '';
+    const bookHtml = bookTpl ? nunjucks.renderString(bookTpl, { i18n: i18nData, lang: ctxLang, label: bookLabel }) : '';
+    // If contactLabel not provided, use fixed placeholder 'contact'
+    const contactHtml = contactTpl ? nunjucks.renderString(contactTpl, { i18n: i18nData, lang: ctxLang, label: (contactLabel || 'contact') }) : '';
 
     return `<section class="my-8"><div class="flex flex-col md:flex-row items-center gap-2 md:gap-4 justify-center"><div class="md:w-auto">${bookHtml}</div><div class="md:w-auto">${contactHtml}</div></div></section>`;
   });

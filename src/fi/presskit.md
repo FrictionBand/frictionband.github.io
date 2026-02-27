@@ -9,4 +9,6 @@ hidden: true
 
 Lehdistötiedusteluihin, kuviin ja bändi-informaatioon liittyvissä asioissa ota yhteyttä sähköpostilla.
 
-{% contact %}
+{% contact "Ota yhteyttä" %}
+
+{% email_no_js "Ota yhteyttä: **friction.helsinki @ gmail dot com**" %}  

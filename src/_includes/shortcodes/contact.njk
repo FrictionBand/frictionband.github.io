@@ -1,11 +1,6 @@
-{% set t = i18n[lang | default('en')].contact %}
-{# Use passed `label` if provided, otherwise fall back to i18n text #}
-{% set labelText = label or t.button %}
-{# Use passed `noscript` if provided, otherwise fall back to i18n noscript #}
-{% set noscriptText = noscript or t.noscript %}
-<section class="text-center my-4 md:my-16 mx-2">
-    <button class="email hidden bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">{{ labelText }}</button>
-    <noscript>
-        <p class="text-neutral-300">{{ noscriptText }}</p>
-    </noscript>
+{# contact shortcode: allow overriding the button text via `label` parameter; when omitted
+   use a fixed placeholder 'contact' (no i18n). Button remains JS-only (hidden by default). #}
+{% set labelText = label or 'contact' %}
+<section class="text-center my-12 md:my-16 mx-2">
+    <button class="js-only-contact email hidden bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">{{ labelText }}</button>
 </section>

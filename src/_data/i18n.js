@@ -11,11 +11,11 @@ module.exports = {
       upcoming: "Upcoming Gigs",
     },
     contact: {
-      button: "Shoot us an email",
-      noscript: "Email: friction.helsinki at gmail dot com",
+      button: "Get in touch",
+      noscript: "Get in touch: friction.helsinki at gmail dot com",
     },
     book: {
-      button: "Learn what we offer",
+      button: "Learn more",
     },
     footer: {
       pressKit: "Press Kit",
