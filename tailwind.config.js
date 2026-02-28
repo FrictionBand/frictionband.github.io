@@ -18,19 +18,32 @@ module.exports = {
     'lg:columns-3', // three-column layout at lg breakpoint
     'not-prose', // exclude typographic prose rules where needed
     '10', // margin utility used dynamically
-    // Button utilities (used in shortcode string in .eleventy.js)
-    'bg-primary-800', // primary background color (dark variant)
-    'hover:bg-primary-600', // primary background on hover (lighter)
-    'text-primary-800', // primary text color
-    'hover:text-primary-600', // primary text color on hover
-    'text-primary-100', // light primary text (used for headings/active nav)
-    'text-white', // white text for buttons
-    'px-6', // horizontal padding used on CTA buttons
-    'py-2', // vertical padding used on CTA buttons
-    'rounded-full', // pill-shaped buttons
-    'transition-colors', // smooth color transitions
-    'hidden' // used to hide email button until JS reveals it
-    ,
+    // Shortcode HTML utilities (used in .eleventy.js string templates — not scanned by Tailwind)
+    // Buttons (contact, link_button, cta shortcodes)
+    'bg-primary-600',       // button background
+    'hover:bg-primary-500', // button hover background
+    'text-white',           // button text
+    'hover:text-white',     // keep text white on hover
+    'inline-block',         // link button display
+    'px-6',                 // horizontal padding
+    'py-2',                 // vertical padding
+    'rounded-full',         // pill shape
+    'transition-colors',    // smooth color transitions
+    'hidden',               // hides email button until JS reveals it
+    // Section spacing (contact, link_button, cta shortcodes)
+    'my-4',                 // link_button section margin
+    'md:my-16',             // link_button section margin (large screens)
+    'my-8',                 // cta section margin
+    'my-12',                // contact section margin
+    // CTA layout
+    'gap-4',                // gap between cta buttons
+    'flex-row',
+    'flex-wrap',
+    'w-auto',
+    // Lead paragraph
+    'italic',
+    'leading-tight',
+    'mb-12',
     // Gallery utilities used in the `gallery` shortcode (runtime-rendered HTML)
     'lightbox',       // class on <a> links picked up by Tobii
     'break-inside-avoid', // prevents items splitting across CSS columns
@@ -70,7 +83,7 @@ module.exports = {
               textDecoration: 'none', // remove underline
               fontWeight: 'normal', // keep link weight normal
               '&:hover': {
-                color: theme('colors.primary.600'), // hover link color 
+                color: theme('colors.primary.600'), // hover link color
               },
             },
             h1: {

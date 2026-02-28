@@ -22,13 +22,13 @@ Bändi skaalautuu tilaisuuden mukaan: kompaktista klubikokoonpanosta täyteen 8�
 
 Friction erottuu tavallisesta coverbändistä yhdistämällä afrobeatia, cumbiaa, skaa, funkia ja Ethio-jazzia aidosti tanssittavaksi, eteenpäin vyöryväksi grooveksi — kansainvälisellä soundilla, yleisön mukana elävällä live-improvisaatiolla ja ammattimaisella tuotannolla rakennuksesta lavalle.
 
-{% cta "Lue lisää", "Varaa Friction" %}
+{% cta "/fi/palvelut/", "Lue lisää", "Varaa Friction" %}
 
 {% noscript_text "Ota yhteyttä: </br> **friction.helsinki @ gmail dot com**" %}  
 
 [https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
 
-{% gigs 3, false %}
+{% gigs 3, false, "Tulevat keikat" %}
 
 ## Keikkoja Helsingistä ympäri Suomen
 
