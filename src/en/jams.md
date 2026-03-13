@@ -1,16 +1,42 @@
 ---
 title: Jams
 permalink: /jams/
-order: 2
-enableLightbox: false
+order: 3
+enableLightbox: true
 hidden: false
 ---
-# Join Our Monthly Jam Sessions at Cable Factory!
+# Monthly Jam Sessions at Cable Factory
 
-Join us every first Friday of the month at the [Cable Factory's Kahvibaari,](https://www.kaapelitehdas.fi/en/cable-factorys-kahvibaari) in Helsinki, for a jam session, playing Cumbia, Afrobeat, Jazz, Groove or whatever else is on your mind. We get started at 17:30, warming up and opening the stage until 20:00. Whether you wanna come play an instrument, sing or perhaps just sit back with a drink and our jam sessions are a great place for meeting like-minded music lovers.
+Every first Friday of the month, Friction Groove Collective hosts an open jam session at [Cable Factory's Kahvibaari](https://www.kaapelitehdas.fi/en/cable-factorys-kahvibaari) in Helsinki. We kick off with a short showcase concert, then open the stage for a relaxed, groove-based jam session. Entry is free and happy hour prices apply at the bar.
+
+[https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
+
+## What to Expect
+
+- **Time**: 17:30 – 20:00
+- **Format**: Friction plays a short set, then the stage opens to everyone
+- **Music**: Primarily groove-based — afrobeat, cumbia, jazz, Latin, funk, and whatever else is in the air
+- **Backline provided**: Amplifiers, percussion, piano, PA system, and microphones are available
+- **Skill level**: All levels welcome — whether you're a seasoned player or just starting out
+- **Just listening?** Absolutely — grab a drink and enjoy the music
+
+No sign-up required. Just bring your instrument and show up.
+
+{% gigs 3, false, "Upcoming Sessions", "jam" %}
+
+You can also find our jam sessions on [Groovehub](https://www.groovehub.io/events/groove-afrobeat-jam-session).
+
+## Come Join Us
 
 Feel the energy of the community and help make each session a proper celebration of music and culture. Whatever your skill level, grab your instrument, bring your mates, and head down to the Cable Factory for something genuinely special. Hope to see you there!
 
-Find the date for the next jam session in [upcoming gigs](/#gigs). You can also find our jam session on [Groovehub](https://www.groovehub.io/events/groove-afrobeat-jam-session).
+{% gallery
+"/media/gallery/Jamming-at-Cafe-Konttori-in-Kaapelitehdas-Helsinki.jpeg",
+"/media/gallery/friction-cable-factory-jam-2026-03-13-001.jpeg",
+"/media/gallery/friction-cable-factory-jam-2026-03-13-002.jpeg",
+"/media/gallery/friction-cable-factory-jam-2026-03-13-003.jpeg",
+"/media/gallery/friction-helsinki-jam-session-drawing-2025-05-19.jpg",
+"/media/gallery/friction-helsinki-jam-session-art-2026-03-13.jpeg",
+"/media/gallery/friction-helsinki-jam-session-billboard-2026-03-13.jpeg"
+%}
 
-[https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)

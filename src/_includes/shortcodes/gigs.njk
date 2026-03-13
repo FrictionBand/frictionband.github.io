@@ -25,15 +25,15 @@
     {% endif %}
 
     {% if gig.gmaps %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fas fa-map-marker-alt w-5 text-center"></i><a href="{{ gig.gmaps }}" class="text-primary-600 hover:text-primary-500">{{ gig.location or gig.gmaps }}</a></li>
+    <li class="text-neutral-300 flex items-center gap-2"><i class="fas fa-map-marker-alt w-5 text-center"></i><a href="{{ gig.gmaps }}" class="text-primary-400 hover:text-primary-300">{{ gig.location or gig.gmaps }}</a></li>
     {% endif %}
 
     {% if gig.fblink %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fab fa-facebook-f w-5 text-center"></i><a href="{{ gig.fblink }}" class="text-primary-600 hover:text-primary-500">{{ gig.fblink }}</a></li>
+    <li class="text-neutral-300 flex items-center gap-2"><i class="fab fa-facebook-f w-5 text-center"></i><a href="{{ gig.fblink }}" class="text-primary-400 hover:text-primary-300">{{ gig.fblink }}</a></li>
     {% endif %}
 
     {% if gig.weblink %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fa-solid fa-link w-5 text-center"></i><a href="{{ gig.weblink }}" class="text-primary-600 hover:text-primary-500">{{ gig.weblink }}</a></li>
+    <li class="text-neutral-300 flex items-center gap-2"><i class="fa-solid fa-link w-5 text-center"></i><a href="{{ gig.weblink }}" class="text-primary-400 hover:text-primary-300">{{ gig.weblink }}</a></li>
     {% endif %}
   </ul>
 

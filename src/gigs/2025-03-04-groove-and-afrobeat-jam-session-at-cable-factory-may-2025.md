@@ -1,4 +1,5 @@
 ---
+type: jam
 title: "Groove & Afrobeat Jam Session at Cable Factory: May 2025"
 date: 2025-05-02
 time: 17:30 - 19:00

@@ -61,7 +61,7 @@ module.exports = {
     extend: {
       // Add a `primary` color alias that maps to Tailwind's `amber` palette.
       colors: {
-        primary: colors.amber, // primary.50 .. primary.900 map to amber shades
+        primary: colors.sky, // primary.50 .. primary.900 map to sky shades
       },
 
       // Custom fonts
@@ -79,11 +79,11 @@ module.exports = {
               color: theme('colors.neutral.100'), // stronger text color for <strong>
             },
             a: {
-              color: theme('colors.primary.700'), // link color
+              color: theme('colors.primary.400'), // link color — bright enough for dark backgrounds
               textDecoration: 'none', // remove underline
               fontWeight: 'normal', // keep link weight normal
               '&:hover': {
-                color: theme('colors.primary.600'), // hover link color
+                color: theme('colors.primary.300'), // hover link color
               },
             },
             h1: {

@@ -191,8 +191,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // Gigs shortcode: render upcoming gigs.
-  // Usage: {% gigs 3, false, "Upcoming Gigs" %}
-  eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading) {
+  // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %}
+  eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type) {
     if (!heading) throw new Error('gigs shortcode requires a heading parameter');
     const { DateTime } = require('luxon');
 
@@ -207,7 +207,10 @@ module.exports = function (eleventyConfig) {
     const today = DateTime.local().startOf('day');
     const future = allGigs.filter(item => {
       const itemDate = DateTime.fromJSDate(new Date(item.date)).startOf('day');
-      return itemDate >= today;
+      if (itemDate < today) return false;
+      // Optional type filter (e.g. type: "jam")
+      if (type && item.data && item.data.type !== type) return false;
+      return true;
     }).sort((a, b) => new Date(a.date) - new Date(b.date));
 
     const count = (typeof limit === 'number' || (typeof limit === 'string' && limit.match(/^\d+$/))) ? parseInt(limit, 10) : null;

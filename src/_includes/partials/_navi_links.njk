@@ -11,18 +11,11 @@
   {% set otherUrl = '/fi/' %}
 {% endif %}
 
-<!-- Home link (shown always) -->
-<a href="{{ '/' if currentLang == 'en' else '/fi/' }}" class="p-5 uppercase font-extrabold items-center
-    {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
-    {% if page.url === '/' or page.url === '/fi/' %}text-primary-100{% else %}text-gray-300 hover:text-primary-500{% endif %}">
-    {{ t.nav.home }}
-</a>
-
 <!-- If there are gigs, include special "gigs" jump link -->
 {% set hasGigs = collections.gigs | filterTodayOrLater | length > 0 %}
 {% set gigsUrl = '/fi/#gigs' if currentLang == 'fi' else '/#gigs' %}
 <a href="{{ gigsUrl }}" id="gigs-link"
-class="p-5 uppercase font-extrabold items-center
+class="p-5 uppercase font-extrabold whitespace-nowrap items-center
 {% if not hasGigs %} hidden {% endif %}
 {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
  text-gray-300 hover:text-primary-500">
@@ -38,7 +31,7 @@ class="p-5 uppercase font-extrabold items-center
 
 {% for item in navPages %}
 {% if item.data.title !== "Home" and item.data.title !== "Etusivu" and item.data.hidden != true %}
-<a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 uppercase font-extrabold items-center
+<a href="{{ site.baseUrl }}{{ item.url }}" class="p-5 uppercase font-extrabold whitespace-nowrap items-center
     {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
     {% if item.url === page.url %}text-primary-100{% else %}text-gray-300 hover:text-primary-500{% endif %}">
     {{ item.data.title }}
@@ -47,7 +40,7 @@ class="p-5 uppercase font-extrabold items-center
 {% endfor %}
 
 <!-- Language switcher -->
-<a href="{{ otherUrl }}" class="p-5 uppercase font-extrabold items-center
+<a href="{{ otherUrl }}" class="p-5 uppercase font-extrabold whitespace-nowrap items-center
     {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
     text-gray-300 hover:text-primary-500">
     {{ t.langSwitch.label }}
