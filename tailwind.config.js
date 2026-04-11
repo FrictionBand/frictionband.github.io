@@ -44,6 +44,7 @@ module.exports = {
     'italic',
     'leading-tight',
     'mb-12',
+    'mb-8',
     // Gallery utilities used in the `gallery` shortcode (runtime-rendered HTML)
     'lightbox',       // class on <a> links picked up by Tobii
     'break-inside-avoid', // prevents items splitting across CSS columns
@@ -56,6 +57,8 @@ module.exports = {
     'object-cover',   // images crop to fill
     // Hero overlap margins (used dynamically in page.njk Nunjucks expression)
     '-mt-16', '-mt-24', '-mt-32', '-mt-40', '-mt-48', '-mt-56', '-mt-64', '-mt-72', '-mt-80',
+    // Gig card thumbnail offset classes (conditionally applied in gigs.njk)
+    'mt-5', 'mt-8', 'mt-10', 'ml-5', 'pl-36', 'pl-44', 'pl-20', '-top-5', '-left-5', 'bottom-5',
   ],
 
   // Theme customizations

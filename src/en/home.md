@@ -34,7 +34,6 @@ slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 
 Every first Friday of the month, we host a groove and afrobeat jam session at [Cable Factory's Kahvibaari](https://www.kaapelitehdas.fi/en/cable-factorys-kahvibaari) in Helsinki. All instruments and skill levels are welcome — come play, sing, or just enjoy the music with a drink. Entry is free.
 
-![Jam Session at Cable Factory](/media/site/jam-session-poster.jpeg)
 
 {% link_button "/jams/", "Learn more about our jams" %}
 

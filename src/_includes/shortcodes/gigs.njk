@@ -1,42 +1,28 @@
 {% if items and items | length > 0 %}
-<section>
+<section class="overflow-visible">
 
   <div class="prose">
-    <h2 class="mt-16 mb-10" id="gigs">{{ heading }}</h2>
+    <h2 class="mt-16 mb-14" id="gigs">{{ heading }}</h2>
   </div>
 
   {% for gig in items %}
-
-  <h4 class="mb-1 text-neutral-100 font-semibold">{{ gig.dateStr }} - {{ gig.title }}</h4>
-
-  {# Always show short description when available (brief teaser) #}
-  {% if gig.short %}
-    <div class="text-neutral-300 mb-1">{{ gig.short | safe }}</div>
-  {% endif %}
-
-  {# Show the full description only when `showDescription` is true #}
-  {% if showDescription and gig.content %}
-    <div class="text-neutral-300 mb-1">{{ gig.content | safe }}</div>
-  {% endif %}
-
-  <ul class="mb-4 list-none pl-0 space-y-1">
-    {% if gig.time %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fa-regular fa-clock w-5 text-center"></i><span>{{ gig.time }}</span></li>
+  <a href="{{ gig.url }}" class="relative block border border-neutral-700 hover:border-neutral-500 p-5 mb-12 transition-colors no-underline group {{ 'mt-8 ml-5 pl-44' if gig.image else '' }}">
+    {% if gig.image %}
+    <div class="absolute -top-5 bottom-5 -left-5 overflow-hidden border border-neutral-600" style="width:160px;">
+      <img src="{{ gig.image }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;margin:0;">
+    </div>
     {% endif %}
-
-    {% if gig.gmaps %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fas fa-map-marker-alt w-5 text-center"></i><a href="{{ gig.gmaps }}" class="text-primary-400 hover:text-primary-300">{{ gig.location or gig.gmaps }}</a></li>
-    {% endif %}
-
-    {% if gig.fblink %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fab fa-facebook-f w-5 text-center"></i><a href="{{ gig.fblink }}" class="text-primary-400 hover:text-primary-300">{{ gig.fblink }}</a></li>
-    {% endif %}
-
-    {% if gig.weblink %}
-    <li class="text-neutral-300 flex items-center gap-2"><i class="fa-solid fa-link w-5 text-center"></i><a href="{{ gig.weblink }}" class="text-primary-400 hover:text-primary-300">{{ gig.weblink }}</a></li>
-    {% endif %}
-  </ul>
-
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex-1 min-w-0">
+        <div class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-1">{{ gig.dateStr }}{% if gig.time %} · {{ gig.time }}{% endif %}</div>
+        <div class="text-base font-bold text-neutral-100 leading-snug">{{ gig.title }}</div>
+        {% if gig.location %}
+        <div class="text-sm text-neutral-400 mt-1 flex items-center gap-1"> {{ gig.location }}</div>
+        {% endif %}
+      </div>
+      <div class="text-neutral-500 group-hover:text-neutral-300 transition-colors flex-shrink-0 text-lg">→</div>
+    </div>
+  </a>
   {% endfor %}
 
 </section>

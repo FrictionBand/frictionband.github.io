@@ -236,6 +236,7 @@ module.exports = function (eleventyConfig) {
       }
       return {
         dateStr,
+        url: gig.url || null,
         title: (gig.data && gig.data.title) ? gig.data.title : '',
         short: (gig.data && gig.data.shortDescription) ? gig.data.shortDescription : null,
         content: gig.templateContent || gig.content || '',
@@ -244,6 +245,7 @@ module.exports = function (eleventyConfig) {
         location: (gig.data && gig.data.location) ? gig.data.location : null,
         fblink: (gig.data && gig.data.fblink) ? gig.data.fblink : null,
         weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
+        image: (gig.data && gig.data.image) ? gig.data.image : null,
       };
     });
 
