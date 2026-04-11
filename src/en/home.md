@@ -7,11 +7,7 @@ layout: home
 slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 ---
 
-{% lead %}
 Friction is a Helsinki-based live rhythm music collective that blends afrobeat, cumbia, Ethio-jazz, and funk groove into a hot, danceable sound. We bring full live energy to parties, clubs, and festivals. 
-{% endlead %}
-
-Friction scales from a compact cocktail lineup to a full 8–12 person show with horns — perfect for city festivals, club nights, corporate events, and cultural happenings. Wanna book us?
 
 {% cta "/services/", "Read more", "Get in touch via email" %}
 

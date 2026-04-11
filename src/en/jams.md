@@ -3,6 +3,7 @@ title: Jams
 permalink: /jams/
 order: 3
 enableLightbox: true
+heroImage: /media/gallery/friction-helsinki-jam-session-2026-03-13-002.jpeg
 hidden: false
 ---
 # Monthly Jam Sessions at Cable Factory

@@ -156,7 +156,7 @@ module.exports = function (eleventyConfig) {
   // Usage: {% lead %}...{% endlead %}
   eleventyConfig.addPairedShortcode("lead", function (content) {
     if (!content || !String(content).trim()) throw new Error('lead shortcode requires content');
-    return `<p class="text-lg md:text-xl font-semibold text-neutral-100 italic leading-tight mb-12">${content}</p>`;
+    return `<p class="text-lg md:text-xl font-semibold text-neutral-100 leading-tight mb-12">${content}</p>`;
   });
 
   // CTA shortcode: link button + contact button side by side.

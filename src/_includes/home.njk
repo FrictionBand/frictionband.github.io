@@ -2,7 +2,10 @@
 layout: base
 ---
 
-{% include "partials/_video.njk" %}
+{% set heroVideo = "/assets/videos/slogan.mp4" %}
+{% set heroImage = "/assets/images/video-fallback-image.jpg" %}
+{% set heroShowLogo = true %}
+{% include "partials/_hero.njk" %}
 
 <main class="items-center justify-between max-w-3xl mx-auto w-full p-5">
 
