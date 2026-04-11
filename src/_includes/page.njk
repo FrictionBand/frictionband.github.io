@@ -4,7 +4,7 @@ layout: base
 
 {% include "partials/_hero.njk" %}
 
-<main class="relative z-10 items-center justify-between max-w-3xl mx-auto w-full p-5 {{ '-mt-32' if (heroImage or heroVideo) else 'mt-6' }}">
+<main class="relative z-10 items-center justify-between max-w-3xl mx-auto w-full p-5 {{ 'mt-0' if (heroImage or heroVideo) else 'mt-6' }}">
 
     <div class="w-full prose">{{content| safe}}</div>
 

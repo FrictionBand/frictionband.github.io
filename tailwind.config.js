@@ -53,7 +53,9 @@ module.exports = {
     'mx-2',           // between cta buttons
     'block',          // display:block on gallery anchors
     'w-full',         // images fill column width
-    'object-cover'    // images crop to fill
+    'object-cover',   // images crop to fill
+    // Hero overlap margins (used dynamically in page.njk Nunjucks expression)
+    '-mt-16', '-mt-24', '-mt-32', '-mt-40', '-mt-48', '-mt-56', '-mt-64', '-mt-72', '-mt-80',
   ],
 
   // Theme customizations
