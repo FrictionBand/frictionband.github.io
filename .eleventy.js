@@ -180,7 +180,7 @@ module.exports = function (eleventyConfig) {
     // CSS `columns` gives a masonry-like layout natively — no Masonry.js needed.
     // Each item uses `break-inside-avoid` so images never split across columns.
     // `.lightbox` class is picked up by Tobii (already loaded via base.njk).
-    let out = `<div class="columns-1 md:columns-2 lg:columns-3 gap-2 not-prose mt-10">`;
+    let out = `<div class="columns-2 md:columns-2 lg:columns-3 gap-2 not-prose mt-10">`;
     for (const src of images) {
       const safeSrc = src.replace(/"/g, '%22');
       out += `<a href="${safeSrc}" class="lightbox block mb-2 break-inside-avoid"><img src="${safeSrc}" alt="" class="w-full object-cover" loading="lazy"></a>`;
