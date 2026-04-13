@@ -1,8 +1,8 @@
 ---
-title: Book Us
+title: Contact
 permalink: /services/
-order: 1
-hidden: true
+order: 3
+hidden: false
 ---
 
 

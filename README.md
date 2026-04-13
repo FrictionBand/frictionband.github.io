@@ -38,3 +38,32 @@ If you need the raw command used by the Cloudflare build step (runs Tailwind the
 ```bash
 npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --minify && npx @11ty/eleventy
 ```
+
+## TODO
+
+### Whole Site / general
+
+- New logo also in the navigation bar? If not then at least update font
+- Gallery should be mason layout even on phone
+- Check the same photos aren't reused in several places
+- Translate pages to Finnish (when done otherwise)
+
+### Booking / Contact
+
+- Instead of email link on home page, own booking/contact page with contact form + details
+
+### Single gig page
+
+- Footer with small band bio for search engines and embedding? Like Umo
+- Embedded map view?  
+- Remove tiny date from header and move into info box
+- Add a bunch of gig photo placeholders (maybe take pictures of instrument closeups?) 
+- "Back to all concerts" link
+
+### Jam Session
+
+- Improve text
+
+### About Friction
+
+- Too much text

@@ -18,7 +18,7 @@ You can book Friction for concerts, festivals, corporate parties! We bring profe
 
 ## Friction Groove Collective
 
-[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
+<https://www.youtube.com/watch?v=Dd4TDrNdVuA>
 
 {% gallery 
 "/media/gallery/Live-at-Kekri-Festival-2023.jpg", 
@@ -30,7 +30,7 @@ You can book Friction for concerts, festivals, corporate parties! We bring profe
 
 The Helsinki-based Friction Groove Collective has been performing in Finland's capital region for the better part of a decade, playing a primarily afrobeat, jazz, and Latin cumbia influenced repertoire, with occasional added Near Eastern and North African flavours.
 
-[More about Friction →](/jams/)
+[More about Friction →](/about/)
 
 
 <!-- {% link_button "/about/", "More about the band" %} -->

@@ -12,9 +12,7 @@ The Helsinki-based Friction Groove Collective has been performing in Finland's c
 
 It's safe to say that the name Friction is more than a little tongue in cheek, as the group is a dynamically evolving collective made up of passionate musicians, harmoniously blending diverse genres and cultural backgrounds. With over a dozen musicians often contributing to their live performances, Friction has an expansive and layered sound — a rich horn section, a multilayered percussion section, wide ranging electric guitar textures, and catchy basslines. There's a lot going on, but it's all firmly rooted in a range of infectious grooves from around the world.
 
-[https://www.youtube.com/watch?v=Dd4TDrNdVuA](https://www.youtube.com/watch?v=Dd4TDrNdVuA)
-
-## On the Road
+<https://www.youtube.com/watch?v=xSkVQajnRLo>
 
 We've played Viaporin Kekri Festival on Suomenlinna (five years running), Espan Lava, Global Club Nights at Puppet Theatre Sampo, the Cable Factory, and outdoor stages in Kalasatama and Jätkäsaari — plus the occasional dance event, gallery opening, and whatever else sounded interesting.
 {% gallery 
