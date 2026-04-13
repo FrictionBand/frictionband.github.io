@@ -2,8 +2,25 @@
 title: Book Us
 permalink: /services/
 order: 1
-hidden: false
+hidden: true
 ---
+
+
+
+You can book Friction for concerts, festivals, corporate parties!
+
+We provide first-class professionalism for any kind of event and offer music from blues to new classical music, from Count Basie to Miles Davis. We bring the atmosphere and technology – you will only need to take care of the invitations or ticket sales.
+
+UMO Helsinki Jazz Orchestra has satisfied the needs of Pori Jazz Festival and OSCE summit meeting, and highlighted the events of Sony, ABB, Bank of Finland – and everything in between.
+
+Do contact us, and we can tailor a high-quality music programme to suit your specific event requirements.
+
+Further information and inquiries:
+Chris Holtslag 
+Artistic Director
++358 40 471 2738
+booking@friction-helsinki.com
+
 # Live Band for Parties, Clubs, and City Festivals
 
 Friction is a live rhythm band built for events where energy and danceability matter. Whether it's a city festival, club night, corporate party, or cultural event, we bring afrobeat, cumbia, funk, and groove to any stage — scaling from a compact club setup to a full 8–12 piece show with horns.

@@ -12,15 +12,18 @@
 {% endif %}
 
 <!-- If there are gigs, include special "gigs" jump link -->
+
+{% set showGigs = false %}
 {% set hasGigs = collections.gigs | filterTodayOrLater | length > 0 %}
 {% set gigsUrl = '/fi/#gigs' if currentLang == 'fi' else '/#gigs' %}
 <a href="{{ gigsUrl }}" id="gigs-link"
 class="p-5 uppercase font-extrabold whitespace-nowrap items-center
-{% if not hasGigs %} hidden {% endif %}
+{% if not hasGigs or not showGigs %} hidden {% endif %}
 {% if mobileNavi == true %} block text-center {% else %} inline-flex {% endif %}
  text-gray-300 hover:text-primary-500">
     {{ t.nav.gigs }}
 </a>
+
 
 <!-- Iterate pages for the current language -->
 {% if currentLang == 'fi' %}

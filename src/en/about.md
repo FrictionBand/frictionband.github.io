@@ -1,5 +1,5 @@
 ---
-title: Collective
+title: About Friction
 permalink: /about/
 order: 2
 hidden: false
@@ -16,7 +16,6 @@ It's safe to say that the name Friction is more than a little tongue in cheek, a
 ## On the Road
 
 We've played Viaporin Kekri Festival on Suomenlinna (five years running), Espan Lava, Global Club Nights at Puppet Theatre Sampo, the Cable Factory, and outdoor stages in Kalasatama and Jätkäsaari — plus the occasional dance event, gallery opening, and whatever else sounded interesting.
-
 {% gallery 
 "/media/gallery/Live-at-Kekri-Festival-2023.jpg",
 "/media/gallery/The-Guitars-at-Kekri-2023.jpeg",

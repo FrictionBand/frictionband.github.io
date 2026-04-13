@@ -152,13 +152,6 @@ module.exports = function (eleventyConfig) {
     return `<noscript><p class="text-neutral-300">${String(text)}</p></noscript>`;
   });
 
-  // Lead paired-shortcode: prominent introductory paragraph.
-  // Usage: {% lead %}...{% endlead %}
-  eleventyConfig.addPairedShortcode("lead", function (content) {
-    if (!content || !String(content).trim()) throw new Error('lead shortcode requires content');
-    return `<p class="text-lg md:text-xl font-semibold text-neutral-100 leading-tight mb-12">${content}</p>`;
-  });
-
   // CTA shortcode: link button + contact button side by side.
   // Usage: {% cta "/services/", "Learn more", "Get in touch" %}
   eleventyConfig.addShortcode("cta", function (linkHref, linkText, contactText) {
@@ -166,6 +159,11 @@ module.exports = function (eleventyConfig) {
     const linkBtn = `<a href="${linkHref}" class="inline-block bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${linkText}</a>`;
     const contactBtn = `<button class="js-only-contact email hidden bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${contactText}</button>`;
     return `<section class="my-8 md:my-16"><div class="flex flex-row flex-wrap items-center gap-4 justify-center"><div class="w-auto">${linkBtn}</div><div class="w-auto">${contactBtn}</div></div></section>`;
+  });
+
+  // Right-align paired shortcode. Usage: {% right %}content{% endright %}
+  eleventyConfig.addPairedShortcode("right", function (content) {
+    return `<div class="text-right">${content}</div>`;
   });
 
   // Gallery shortcode: accepts multiple image paths and renders a masonry grid

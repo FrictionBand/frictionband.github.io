@@ -55,10 +55,13 @@ module.exports = {
     'block',          // display:block on gallery anchors
     'w-full',         // images fill column width
     'object-cover',   // images crop to fill
+    'text-right',     // right shortcode alignment
     // Hero overlap margins (used dynamically in page.njk Nunjucks expression)
     '-mt-16', '-mt-24', '-mt-32', '-mt-40', '-mt-48', '-mt-56', '-mt-64', '-mt-72', '-mt-80',
     // Gig card thumbnail offset classes (conditionally applied in gigs.njk)
     'mt-5', 'mt-8', 'mt-10', 'ml-5', 'pl-36', 'pl-44', 'pl-20', '-top-5', '-left-5', 'bottom-5',
+    'md:mt-8', 'md:ml-5', 'md:pl-44',
+    'sm:mt-8', 'sm:ml-5', 'sm:pl-44',
   ],
 
   // Theme customizations
