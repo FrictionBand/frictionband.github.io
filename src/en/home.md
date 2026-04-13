@@ -16,7 +16,7 @@ You can book Friction for concerts, festivals, corporate parties! We bring profe
 {% noscript_text "Get in touch via email: </br> **booking @ friction-helsinki dot com**" %}
 
 
-## Friction Groove Collective
+## They Came, They Saw, They Grooved
 
 <https://www.youtube.com/watch?v=Dd4TDrNdVuA>
 
