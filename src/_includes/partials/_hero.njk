@@ -27,6 +27,11 @@
             class="md:w-96 mx-auto drop-shadow-lg">
         <div class="text-sm md:text-base font-semibold tracking-widest uppercase text-neutral-300 drop-shadow max-w-xs md:max-w-sm leading-relaxed">
             {{ slogan if slogan else site.slogan }}</div>
+        <!-- Audio play button -->
+        <button id="hero-play-btn" aria-label="Play music"
+            class="mt-2 w-12 h-12 rounded-full border-2 border-neutral-300 text-neutral-300 hover:border-white hover:text-white flex items-center justify-center transition-colors bg-transparent">
+            <i class="fa-solid fa-play text-sm ml-0.5"></i>
+        </button>
     </div>
     {% endif %}
 </div>

@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
 
   // Passthrough copy: site assets
   eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/assets/audio");
   eleventyConfig.addPassthroughCopy("src/assets/videos");
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/favicon");
@@ -248,6 +249,18 @@ module.exports = function (eleventyConfig) {
     });
 
     return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc });
+  });
+
+  // Inject enablejsapi=1 into all YouTube embeds so postMessage events work
+  eleventyConfig.addTransform('youtube-enablejsapi', function (content, outputPath) {
+    if (!outputPath || !outputPath.endsWith('.html')) return content;
+    return content.replace(
+      /(<iframe\b[^>]*\bsrc=")(https:\/\/www\.youtube(?:-nocookie)?\.com\/embed\/[^"]*?)("[^>]*>)/gi,
+      function (match, before, src, after) {
+        if (src.includes('enablejsapi')) return match;
+        return before + src + (src.includes('?') ? '&' : '?') + 'enablejsapi=1' + after;
+      }
+    );
   });
 
   // WATCH TARGETS

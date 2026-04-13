@@ -60,7 +60,37 @@
 
   <script src="{{ site.baseUrl }}/assets/js/video.js"></script>
 
+  <!-- Sticky audio player (hidden until play is triggered) -->
+  <div id="audio-player-bar"
+      class="fixed bottom-0 left-0 right-0 z-50 bg-neutral-900"
+      style="transform: translateY(100%); transition: transform 0.3s ease;">
+    <!-- Gradient shadow + border above the bar -->
+    <div class="absolute inset-x-0 -top-8 h-8 pointer-events-none border-b border-neutral-700"
+        style="background: linear-gradient(to bottom, transparent, rgba(23,23,23,0.6));"></div>
+    <div class="max-w-3xl mx-auto px-5 py-3 flex items-center gap-4">
+      <!-- Play/pause -->
+      <button id="player-playpause" aria-label="Play/pause"
+          class="w-9 h-9 rounded-full border border-neutral-500 text-neutral-300 hover:text-white hover:border-white flex items-center justify-center flex-shrink-0 transition-colors">
+        <i id="player-icon" class="fa-solid fa-play text-xs ml-0.5"></i>
+      </button>
+      <!-- Track info -->
+      <div class="flex-1 min-w-0">
+        <div class="text-xs text-neutral-100 truncate"><span class="font-semibold">Friction</span> <span class="text-neutral-400">— Live medley</span></div>
+        <!-- Progress bar -->
+        <div class="mt-1.5 h-1 bg-neutral-700 rounded-full w-full">
+          <div id="player-progress" class="h-full bg-primary-500 rounded-full" style="width: 0%;"></div>
+        </div>
+      </div>
+      <!-- Close -->
+      <button id="player-close" aria-label="Close player"
+          class="text-neutral-500 hover:text-neutral-300 flex-shrink-0 transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <audio id="friction-audio" src="/assets/audio/medley.mp3" preload="metadata"></audio>
+  </div>
 
+  <script src="{{ site.baseUrl }}/assets/js/player.js"></script>
 </body>
 
 </html>

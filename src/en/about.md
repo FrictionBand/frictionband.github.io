@@ -3,7 +3,8 @@ title: About Friction
 permalink: /about/
 order: 2
 hidden: false
-enableLightbox: true
+heroImage: /media/gallery/photo_2026-03-13 09.26.09.jpeg
+
 ---
 # About Friction
 

@@ -4,8 +4,12 @@ This is the website for the band Friction from Helsinki.
 
 ## Development
 
-In VSCode, when prompted, reopen in a Dev Container. Or run via GitHub Codespaces. 
-Then serve with `npx @11ty/eleventy --serve`.
+In VSCode, when prompted, reopen in a Dev Container. Or run via GitHub Codespaces.
+Then run `npm run dev`.
+
+> **Note:** The `serve` package is used as the local dev server (instead of Eleventy's
+> built-in `--serve`) because it supports HTTP range requests, which are required for
+> audio seeking in the media player.
 
 ### NPM scripts
 
