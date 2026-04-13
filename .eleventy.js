@@ -251,18 +251,6 @@ module.exports = function (eleventyConfig) {
     return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc });
   });
 
-  // Inject enablejsapi=1 into all YouTube embeds so postMessage events work
-  eleventyConfig.addTransform('youtube-enablejsapi', function (content, outputPath) {
-    if (!outputPath || !outputPath.endsWith('.html')) return content;
-    return content.replace(
-      /(<iframe\b[^>]*\bsrc=")(https:\/\/www\.youtube(?:-nocookie)?\.com\/embed\/[^"]*?)("[^>]*>)/gi,
-      function (match, before, src, after) {
-        if (src.includes('enablejsapi')) return match;
-        return before + src + (src.includes('?') ? '&' : '?') + 'enablejsapi=1' + after;
-      }
-    );
-  });
-
   // WATCH TARGETS
   // Watch Tailwind config and CSS input for changes
   eleventyConfig.addWatchTarget("src/assets/css/");

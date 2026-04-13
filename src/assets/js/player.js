@@ -138,37 +138,16 @@
   });
 
   // ── YouTube pause integration ──────────────────────────────────────────────
-  // Only bother if there are YouTube iframes on this page.
-  function getYouTubeIframes() {
-    return Array.prototype.slice.call(document.querySelectorAll('iframe')).filter(function (f) {
-      var s = f.src || '';
-      return s.indexOf('youtube.com/embed') >= 0 || s.indexOf('youtube-nocookie.com/embed') >= 0;
-    });
-  }
-
-  if (getYouTubeIframes().length > 0) {
-    // Chain onto any existing onYouTubeIframeAPIReady handler
-    var prevYTReady = window.onYouTubeIframeAPIReady || null;
-    window.onYouTubeIframeAPIReady = function () {
-      if (prevYTReady) prevYTReady();
-      getYouTubeIframes().forEach(function (iframe, i) {
-        if (!iframe.id) iframe.id = 'yt-friction-' + i;
-        try {
-          new YT.Player(iframe.id, {
-            events: {
-              onStateChange: function (e) {
-                if (e.data === 1 /* PLAYING */) {
-                  audio.pause();
-                  setIcon(false);
-                }
-              }
-            }
-          });
-        } catch (ex) {}
-      });
-    };
-    var tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.head.appendChild(tag);
-  }
+  // When the user clicks inside a YouTube iframe to play, focus moves into it
+  // and window.blur fires. Check if the newly focused element is a YT iframe.
+  window.addEventListener('blur', function () {
+    var active = document.activeElement;
+    if (!active || active.tagName !== 'IFRAME') return;
+    var src = active.src || '';
+    if (src.indexOf('youtube.com') === -1 && src.indexOf('youtube-nocookie.com') === -1) return;
+    if (!audio.paused) {
+      audio.pause();
+      setIcon(false);
+    }
+  });
 })();
