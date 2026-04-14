@@ -43,8 +43,8 @@ npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --m
 
 ### Whole Site / general
 
+- Rename page urls (jams -> jam-session, services -> contact)
 - New logo also in the navigation bar? If not then at least update font
-- Gallery should be mason layout even on phone
 - Check the same photos aren't reused in several places
 - Translate pages to Finnish (when done otherwise)
 

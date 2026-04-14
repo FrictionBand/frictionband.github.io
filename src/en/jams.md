@@ -2,7 +2,6 @@
 title: Jam Session
 permalink: /jams/
 order: 3
-enableLightbox: true
 heroImage: /media/gallery/photo_2026-04-13 14.31.56.jpeg
 hidden: false
 ---
@@ -23,7 +22,7 @@ Every first Friday of the month, Friction Groove Collective hosts an open jam se
 
 No sign-up required. Just bring your instrument and show up.
 
-{% gigs 3, false, "Upcoming Sessions", "jam" %}
+{% gigs 3, false, "Upcoming Sessions", "jam", false %}
 
 You can also find our jam sessions on [Groovehub](https://www.groovehub.io/events/groove-afrobeat-jam-session).
 

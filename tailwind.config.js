@@ -61,7 +61,9 @@ module.exports = {
     // Gig card thumbnail offset classes (conditionally applied in gigs.njk)
     'mt-5', 'mt-8', 'mt-10', 'ml-5', 'pl-36', 'pl-44', 'pl-20', '-top-5', '-left-5', 'bottom-5',
     'md:mt-8', 'md:ml-5', 'md:pl-44',
-    'sm:mt-8', 'sm:ml-5', 'sm:pl-44',
+    'sm:mt-8', 'sm:ml-5', 'sm:pl-44', 'sm:min-h-[160px]',
+    'flex-col', // gig card layout
+    'cursor-pointer', // gig card when linking
   ],
 
   // Theme customizations

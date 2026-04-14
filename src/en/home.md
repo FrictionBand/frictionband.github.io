@@ -9,14 +9,12 @@ slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 
 {% gigs 3, false, "Upcoming Concerts" %}
 
-You can book Friction for concerts, festivals, corporate parties! We bring professionalism and a vibrant, danceable sound to any event. We've played rooftop gigs, tiny bars, doctoral graduations, for dancers and at city festivals. Please get in touch, we can tailor to suit your specific event. 
+You can book Friction – for concerts, festivals, corporate parties! We bring professionalism and a vibrant, danceable sound to any stage. We've played rooftop gigs, tiny bars, doctoral graduations, for dancers and at city festivals. Please get in touch, we can tailor to suit your specific event. 
 
 <!-- TODO: link to an email form here: -->
 {% contact "Email: booking@friction-helsinki.com" %}
 {% noscript_text "Get in touch via email: </br> **booking @ friction-helsinki dot com**" %}
 
-
-## They Came, They Saw, They Grooved
 
 <https://www.youtube.com/watch?v=Dd4TDrNdVuA>
 
@@ -37,7 +35,7 @@ The Helsinki-based Friction Groove Collective has been performing in Finland's c
 
 ## Join Our Open Jam Session at Cable Factory
 
-Every first Friday of the month, we host a groove and afrobeat jam session at Cable Factory's Kahvibaari in Helsinki. All instruments and skill levels are welcome — come play, sing, or just enjoy the music with a drink. Entry is free. 
+Every first Friday of the month, we host a Groove and Afrobeat Jam Session at Cable Factory's Kahvibaari in Helsinki. All instruments and skill levels are welcome — come play, sing, or just enjoy the music with a drink. Entry is free. 
 
 
 [More about our Jam Session →](/jams/)

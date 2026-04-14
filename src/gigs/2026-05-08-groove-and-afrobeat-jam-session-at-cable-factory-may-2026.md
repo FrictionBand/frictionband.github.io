@@ -1,6 +1,6 @@
 ---
 type: jam
-title: "Open Jam @ Cable Factory Kahvibaari"
+title: "Open Groove/Afrobeat Jam Session"
 date: 2026-05-08
 time: 17:30 - 20:00
 shortDescription: Our monthly open jam session at Kaapelitehdas. Come and jam with us!

@@ -2,7 +2,6 @@
 title: Jamit
 permalink: /fi/jamit/
 order: 2
-enableLightbox: false
 heroImage: /media/gallery/friction-helsinki-jam-session-2026-03-13-002.jpeg
 hidden: false
 ---

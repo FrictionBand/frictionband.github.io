@@ -190,8 +190,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // Gigs shortcode: render upcoming gigs.
-  // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %}
-  eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type) {
+  // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %} or {% gigs 3, false, "Upcoming Jams", "jam", false %}
+  eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type, linkCards) {
     if (!heading) throw new Error('gigs shortcode requires a heading parameter');
     const { DateTime } = require('luxon');
 
@@ -245,10 +245,12 @@ module.exports = function (eleventyConfig) {
         fblink: (gig.data && gig.data.fblink) ? gig.data.fblink : null,
         weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
         image: (gig.data && gig.data.image) ? gig.data.image : null,
+        type: (gig.data && gig.data.type) ? gig.data.type : null,
       };
     });
 
-    return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc });
+    const shouldLink = linkCards !== false && linkCards !== 'false';
+    return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc, linkCards: shouldLink });
   });
 
   // WATCH TARGETS
