@@ -5,7 +5,7 @@ module.exports = {
       gigs: "Gigs",
     },
     langSwitch: {
-      label: "Suomeksi",
+      label: "FI",
     },
     gigs: {
       upcoming: "Upcoming Gigs",
@@ -28,7 +28,7 @@ module.exports = {
       gigs: "Keikat",
     },
     langSwitch: {
-      label: "English",
+      label: "EN",
     },
     gigs: {
       upcoming: "Tulevat keikat",

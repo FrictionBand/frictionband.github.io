@@ -1,5 +1,5 @@
 ---
-title: About Friction
+title: About
 permalink: /about/
 order: 2
 hidden: false

@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
   // All pages sorted by 'order'
   eleventyConfig.addCollection("pages", function (collections) {
     return collections.getFilteredByTag("pages").sort(function (a, b) {
-      return a.data.order - b.data.order;
+      return (a.data.order ?? Infinity) - (b.data.order ?? Infinity);
     });
   });
 
@@ -41,14 +41,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("pagesEn", function (collections) {
     return collections.getFilteredByTag("pages")
       .filter(item => item.data.lang === "en")
-      .sort((a, b) => a.data.order - b.data.order);
+      .sort((a, b) => (a.data.order ?? Infinity) - (b.data.order ?? Infinity));
   });
 
   // Finnish pages only
   eleventyConfig.addCollection("pagesFi", function (collections) {
     return collections.getFilteredByTag("pages")
       .filter(item => item.data.lang === "fi")
-      .sort((a, b) => a.data.order - b.data.order);
+      .sort((a, b) => (a.data.order ?? Infinity) - (b.data.order ?? Infinity));
   });
 
   eleventyConfig.addCollection("gallery", function (collectionApi) {

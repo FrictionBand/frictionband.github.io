@@ -7,7 +7,7 @@ layout: home
 slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 ---
 
-{% gigs 3, false, "Upcoming Concerts" %}
+{% gigs 4, false, "Upcoming Concerts" %}
 
 You can book Friction – for concerts, festivals, corporate parties! We bring professionalism and a vibrant, danceable sound to any stage. We've played rooftop gigs, tiny bars, doctoral graduations, for dancers and at city festivals. Please get in touch, we can tailor to suit your specific event. 
 

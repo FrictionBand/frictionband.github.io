@@ -48,6 +48,10 @@ npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --m
 - Check the same photos aren't reused in several places
 - Translate pages to Finnish (when done otherwise)
 
+### Home
+
+- Gigs: "featured gig"
+
 ### Booking / Contact
 
 - Instead of email link on home page, own booking/contact page with contact form + details
