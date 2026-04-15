@@ -7,13 +7,11 @@ layout: home
 slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 ---
 
-{% gigs 4, false, "Upcoming Concerts" %}
+{% gigs 4, false, "Upcoming Concerts", "", true, "/concerts/" %}
 
-You can book Friction – for concerts, festivals, corporate parties! We bring professionalism and a vibrant, danceable sound to any stage. We've played rooftop gigs, tiny bars, doctoral graduations, for dancers and at city festivals. Please get in touch, we can tailor to suit your specific event. 
 
-<!-- TODO: link to an email form here: -->
-{% contact "Email: booking@friction-helsinki.com" %}
-{% noscript_text "Get in touch via email: </br> **booking @ friction-helsinki dot com**" %}
+You can book Friction – for concerts, festivals, corporate parties! We bring professionalism and a vibrant, danceable sound to any stage. We've played rooftop gigs, tiny bars, doctoral graduations, for dancers and at city festivals. We can tailor to suit your specific event. 
+[Get in touch →](/about/)
 
 
 <https://www.youtube.com/watch?v=Dd4TDrNdVuA>
@@ -26,27 +24,16 @@ You can book Friction – for concerts, festivals, corporate parties! We bring p
 "/media/gallery/IMG_0652.jpeg"
 %}
 
-The Helsinki-based Friction Groove Collective has been performing in Finland's capital region for the better part of a decade, playing a primarily afrobeat, jazz, and Latin cumbia influenced repertoire, with occasional added Near Eastern and North African flavours.
+Friction Groove Collective has been performing in Finland's capital region for the better part of a decade, playing a primarily afrobeat, jazz, and Latin cumbia influenced repertoire, with occasional added Near Eastern and North African flavours. [More about Friction →](/about/)
 
-[More about Friction →](/about/)
+
 
 
 <!-- {% link_button "/about/", "More about the band" %} -->
 
-## Join Our Open Jam Session at Cable Factory
+## Join Our Monthly Jam Session at Cable Factory
 
-Every first Friday of the month, we host a Groove and Afrobeat Jam Session at Cable Factory's Kahvibaari in Helsinki. All instruments and skill levels are welcome — come play, sing, or just enjoy the music with a drink. Entry is free. 
-
-
-[More about our Jam Session →](/jams/)
-<!-- {% right %}<a href="/jams/">Read more here →</a>{% endright %} -->
-
-<!-- {% gallery
-"/media/gallery/Jamming-at-Cafe-Konttori-in-Kaapelitehdas-Helsinki.jpeg",
-"/media/gallery/friction-cable-factory-jam-2026-03-13-001.jpeg",
-"/media/gallery/friction-cable-factory-jam-2026-03-13-002.jpeg",
-"/media/gallery/friction-cable-factory-jam-2026-03-13-003.jpeg"
-%} -->
+Every first Friday of the month, we host a Groove and Afrobeat Jam Session at Cable Factory's Kahvibaari in Helsinki. All instruments and skill levels are welcome — come play, sing, or just enjoy the music with a drink. Entry is free. [More about our Jam Session →](/jams/)
 
 
 

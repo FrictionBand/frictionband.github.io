@@ -55,5 +55,11 @@
 
   {% endfor %}
 
+  {% if hasMore %}
+  <div class="not-prose mt-2 mb-12">
+    <a href="{{ moreUrl }}" class="text-primary-400 hover:text-primary-300 transition-colors">See all upcoming concerts →</a>
+  </div>
+  {% endif %}
+
 </section>
 {% endif %}

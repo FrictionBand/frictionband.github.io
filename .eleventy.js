@@ -3,6 +3,25 @@ const path = require("path");
 const { execSync } = require("child_process");
 const embedEverything = require("eleventy-plugin-embed-everything");
 
+// Deterministic placeholder image picker.
+// Uses a djb2 hash of the gig URL so the same gig always gets the same image.
+function pickPlaceholder(gigUrl, type) {
+  const folder = type === 'jam' ? 'jams' : 'gigs';
+  const dir = path.join(__dirname, 'src', 'assets', 'images', 'placeholders', folder);
+  let files = [];
+  try {
+    files = fs.readdirSync(dir).filter(f => /\.(jpe?g|png|webp|gif)$/i.test(f));
+  } catch (e) { /* folder missing or empty */ }
+  if (!files.length) return null;
+  // djb2 hash
+  let hash = 5381;
+  for (let i = 0; i < gigUrl.length; i++) {
+    hash = ((hash << 5) + hash) ^ gigUrl.charCodeAt(i);
+    hash = hash >>> 0; // keep 32-bit unsigned
+  }
+  return `/assets/images/placeholders/${folder}/${files[hash % files.length]}`;
+}
+
 module.exports = function (eleventyConfig) {
 
   // BUILD TAILWIND CSS
@@ -190,8 +209,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // Gigs shortcode: render upcoming gigs.
-  // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %} or {% gigs 3, false, "Upcoming Jams", "jam", false %}
-  eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type, linkCards) {
+  // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %} or {% gigs 3, false, "Upcoming Jams", "jam", false %} or {% gigs 4, false, "Upcoming Concerts", "", true, "/concerts/" %}
+  eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type, linkCards, moreUrl) {
     if (!heading) throw new Error('gigs shortcode requires a heading parameter');
     const { DateTime } = require('luxon');
 
@@ -220,6 +239,7 @@ module.exports = function (eleventyConfig) {
         : Boolean(showDescription);
     }
     const items = count ? future.slice(0, count) : future;
+    const hasMore = !!(count && future.length > count && moreUrl);
 
     if (!items || items.length === 0) return '';
 
@@ -244,14 +264,14 @@ module.exports = function (eleventyConfig) {
         location: (gig.data && gig.data.location) ? gig.data.location : null,
         fblink: (gig.data && gig.data.fblink) ? gig.data.fblink : null,
         weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
-        image: (gig.data && gig.data.image) ? gig.data.image : null,
+        image: (gig.data && gig.data.image) ? gig.data.image : pickPlaceholder(gig.url || gig.data.title || '', gig.data && gig.data.type),
         type: (gig.data && gig.data.type) ? gig.data.type : null,
         featured: !!(gig.data && gig.data.featured),
       };
     });
 
     const shouldLink = linkCards !== false && linkCards !== 'false';
-    return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc, linkCards: shouldLink });
+    return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc, linkCards: shouldLink, hasMore, moreUrl: moreUrl || null });
   });
 
   // WATCH TARGETS
