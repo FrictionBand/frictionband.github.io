@@ -246,6 +246,7 @@ module.exports = function (eleventyConfig) {
         weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
         image: (gig.data && gig.data.image) ? gig.data.image : null,
         type: (gig.data && gig.data.type) ? gig.data.type : null,
+        featured: !!(gig.data && gig.data.featured),
       };
     });
 

@@ -7,11 +7,13 @@ layout: base
 
 <main class="relative z-10 max-w-3xl mx-auto w-full p-5 {{ 'mt-0' if image else 'mt-6' }}">
 
-  <div class="text-xs font-semibold tracking-widest uppercase text-neutral-400 mb-2 not-prose">{{ date | postDate }}</div>
   <h1 class="text-3xl md:text-4xl font-bold text-neutral-100 mb-8 leading-tight not-prose">{{ title }}</h1>
 
   <div class="border border-neutral-700 rounded-lg p-5 mb-8 not-prose">
     <ul class="space-y-3 list-none pl-0 m-0">
+      <li class="text-neutral-300 flex items-center gap-3">
+        <i class="fa-regular fa-calendar w-5 text-center"></i><span>{{ date | postDate }}</span>
+      </li>
       {% if time %}
       <li class="text-neutral-300 flex items-center gap-3">
         <i class="fa-regular fa-clock w-5 text-center"></i><span>{{ time }}</span>
