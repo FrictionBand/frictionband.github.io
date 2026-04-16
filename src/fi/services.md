@@ -35,6 +35,4 @@ Friction sopii vaihtoehdoksi perinteiselle bilebändille, kun halutaan rytmimusi
 
 Kiinnostuitko bändin varaamisesta keikal­lesi tai tapahtumaasi? Kerro meille lisää:
 
-{% contact "Ota yhteyttä" %}
-
-{% noscript_text "**friction.helsinki @ gmail dot com**" %}
+{% include "partials/_contact_form.njk" %}

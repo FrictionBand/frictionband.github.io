@@ -1,0 +1,82 @@
+{% set formLang = lang if lang else 'en' %}
+{% set ft = i18n[formLang].contactForm %}
+
+<form id="contact-form" class="not-prose space-y-5 mt-8">
+  {# Honeypot — bots fill this, humans don't #}
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
+
+  <div>
+    <label for="cf-name" class="block text-sm font-semibold text-neutral-300 mb-1">{{ ft.name }}</label>
+    <input id="cf-name" type="text" name="name" required autocomplete="name"
+      class="w-full bg-neutral-800 border border-neutral-600 text-neutral-100 placeholder-neutral-500 rounded px-4 py-2 focus:outline-none focus:border-primary-500 transition-colors">
+  </div>
+
+  <div>
+    <label for="cf-email" class="block text-sm font-semibold text-neutral-300 mb-1">{{ ft.email }}</label>
+    <input id="cf-email" type="email" name="email" required autocomplete="email"
+      class="w-full bg-neutral-800 border border-neutral-600 text-neutral-100 placeholder-neutral-500 rounded px-4 py-2 focus:outline-none focus:border-primary-500 transition-colors">
+  </div>
+
+  <div>
+    <label for="cf-message" class="block text-sm font-semibold text-neutral-300 mb-1">{{ ft.message }}</label>
+    <textarea id="cf-message" name="message" rows="5" required
+      class="w-full bg-neutral-800 border border-neutral-600 text-neutral-100 placeholder-neutral-500 rounded px-4 py-2 focus:outline-none focus:border-primary-500 transition-colors resize-y"></textarea>
+  </div>
+
+  <button type="submit"
+    class="bg-primary-600 hover:bg-primary-500 text-white font-semibold px-6 py-2 rounded-full transition-colors disabled:opacity-50">
+    {{ ft.send }}
+  </button>
+
+  <p id="cf-error" class="hidden text-red-400 font-semibold mt-4">{{ ft.error }}</p>
+</form>
+
+<p id="cf-success" class="hidden text-neutral-100 font-semibold mt-4">{{ ft.success }}</p>
+
+<p class="text-sm text-neutral-500 mt-6">{{ ft.orEmail }} <a href="mailto:contact@friction-helsinki.com" class="text-primary-400 hover:text-primary-300">contact@friction-helsinki.com</a></p>
+
+<noscript>
+  <p class="text-neutral-300 mt-4">{{ ft.noscript }} <a href="mailto:contact@friction-helsinki.com" class="text-primary-400 hover:text-primary-300">contact@friction-helsinki.com</a></p>
+</noscript>
+
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+
+    var data = {
+      access_key: '0140b0c4-ce30-477a-b23e-7e6bf71537f0',
+      subject: 'Friction website enquiry',
+      botcheck: form.elements['botcheck'].checked,
+      name: form.elements['name'].value,
+      email: form.elements['email'].value,
+      message: form.elements['message'].value,
+    };
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (res.success) {
+          form.style.display = 'none';
+          document.getElementById('cf-success').classList.remove('hidden');
+          document.getElementById('cf-error').classList.add('hidden');
+        } else {
+          throw new Error(res.message || 'unknown error');
+        }
+      })
+      .catch(function () {
+        document.getElementById('cf-error').classList.remove('hidden');
+        document.getElementById('cf-success').classList.add('hidden');
+        btn.disabled = false;
+      });
+  });
+})();
+</script>
