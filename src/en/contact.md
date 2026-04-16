@@ -1,6 +1,6 @@
 ---
 title: Contact
-permalink: /services/
+permalink: /contact/
 order: 4
 hidden: false
 ---

@@ -44,6 +44,7 @@ module.exports = {
     'italic',
     'leading-tight',
     'mb-12',
+    'mb-14',
     'mb-8',
     // Gallery utilities used in the `gallery` shortcode (runtime-rendered HTML)
     'lightbox',       // class on <a> links picked up by Tobii

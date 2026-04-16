@@ -9,7 +9,7 @@
 
   {% if gig.featured %}
   {# ── Featured gig: large full-bleed card ── #}
-  <a {% if linkCards %}href="{{ '/jams' if gig.type == 'jam' else gig.url }}"{% endif %} class="not-prose flex flex-col border-2 border-neutral-400 {% if linkCards %}hover:border-white transition-colors no-underline group cursor-pointer{% endif %} mb-12">
+  <a {% if linkCards %}href="{{ '/jam-session-at-cable-factory' if gig.type == 'jam' else gig.url }}"{% endif %} class="not-prose flex flex-col border-2 border-neutral-400 {% if linkCards %}hover:border-white transition-colors no-underline group cursor-pointer{% endif %} mb-12">
     {% if gig.image %}
     <div class="w-full overflow-hidden" style="height:320px;">
       <img src="{{ gig.image }}" alt="" style="width:100%;height:100%;object-fit:cover;margin:0;">
@@ -29,7 +29,7 @@
 
   {% else %}
   {# ── Regular gig card ── #}
-  <a {% if linkCards %}href="{{ '/jams' if gig.type == 'jam' else gig.url }}"{% endif %} class="not-prose relative flex flex-col border border-neutral-700 {% if linkCards %}hover:border-neutral-500 transition-colors no-underline group cursor-pointer{% endif %} mb-12 {{ 'sm:mt-8 sm:ml-5 sm:pl-44 sm:min-h-[160px]' if gig.image else '' }}">
+  <a {% if linkCards %}href="{{ '/jam-session-at-cable-factory' if gig.type == 'jam' else gig.url }}"{% endif %} class="not-prose relative flex flex-col border border-neutral-700 {% if linkCards %}hover:border-neutral-500 transition-colors no-underline group cursor-pointer{% endif %} mb-12 {{ 'sm:mt-8 sm:ml-5 sm:pl-44 sm:min-h-[160px]' if gig.image else '' }}">
     {% if gig.image %}
     {# Desktop: absolute offset thumbnail #}
     <div class="hidden sm:block absolute -top-5 bottom-5 -left-5 overflow-hidden border border-neutral-600" style="width:160px;">
@@ -56,7 +56,7 @@
   {% endfor %}
 
   {% if hasMore %}
-  <div class="not-prose mt-2 mb-12">
+  <div class="not-prose -mt-6 mb-14">
     <a href="{{ moreUrl }}" class="text-primary-400 hover:text-primary-300 transition-colors">See all upcoming concerts →</a>
   </div>
   {% endif %}

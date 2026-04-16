@@ -173,7 +173,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // CTA shortcode: link button + contact button side by side.
-  // Usage: {% cta "/services/", "Learn more", "Get in touch" %}
+  // Usage: {% cta "/contact/", "Learn more", "Get in touch" %}
   eleventyConfig.addShortcode("cta", function (linkHref, linkText, contactText) {
     if (!linkHref || !linkText || !contactText) throw new Error('cta shortcode requires linkHref, linkText, and contactText');
     const linkBtn = `<a href="${linkHref}" class="inline-block bg-primary-600 text-white hover:text-white px-6 py-2 rounded-full hover:bg-primary-500 transition-colors">${linkText}</a>`;

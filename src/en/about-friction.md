@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /about/
+permalink: /about-friction/
 order: 2
 hidden: false
 heroImage: /media/gallery/photo_2026-03-13 09.26.09.jpeg
@@ -14,7 +14,7 @@ It's safe to say that the name Friction is more than a little tongue in cheek, a
 
 <https://www.youtube.com/watch?v=xSkVQajnRLo>
 
-Friction has played a wide range of events over the years: the Viaporin Kekri Festival on Suomenlinna (five years running), Espan Lava Open Stage, Global Club Nights at Puppet Theatre Sampo, the Cable Factory, and outdoor stages in across Helsinki and Jätkäsaari and occasional street gigs, dance events, gallery openings or private events of all kinds across Finland.
+Friction has played a wide range of events over the years: the Viaporin Kekri Festival on Suomenlinna for five years in a row, Espan Lava Open Stage, Global Club Nights at Puppet Theatre Sampo, the Cable Factory, and outdoor stages in across Helsinki and Jätkäsaari and occasional street gigs, dance events, gallery openings or private events of all kinds across Finland.
 
 Want to book Friction for an event, or just want to say hello? 
-[Get in Touch →](/services/)
+[Get in Touch →](/contact/)

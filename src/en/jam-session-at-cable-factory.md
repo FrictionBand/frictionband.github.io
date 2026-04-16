@@ -1,6 +1,6 @@
 ---
 title: Jam Session
-permalink: /jams/
+permalink: /jam-session-at-cable-factory/
 order: 3
 heroImage: /media/gallery/photo_2026-04-13 14.31.56.jpeg
 hidden: false
