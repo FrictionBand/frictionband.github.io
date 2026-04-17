@@ -1,5 +1,5 @@
 {% if heroImage or heroVideo %}
-<div class="relative overflow-hidden bg-neutral-900 min-h-[55vh] sm:min-h-0 -mb-24 lg:-mb-48">
+<div class="relative overflow-hidden bg-neutral-900 min-h-[55vh] sm:min-h-0 {% if heroVideo %}-mb-36{% else %}-mb-48{% endif %} sm:-mb-24 lg:-mb-48">
 
     <!-- Gradient fade to page background -->
     <div class="absolute inset-0 z-10 pointer-events-none"
@@ -27,7 +27,7 @@
     {% endif %}
 
     {% if heroShowLogo %}
-    <div class="absolute top-[50%] sm:top-[45%] lg:top-[calc(50%-3rem)] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 flex flex-col items-center gap-2 sm:gap-3 lg:gap-4 w-[70vw] max-w-[15rem] sm:max-w-none px-4">
+    <div class="absolute top-[35%] sm:top-[45%] lg:top-[calc(50%-3rem)] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 flex flex-col items-center gap-2 sm:gap-3 lg:gap-4 w-[70vw] max-w-[15rem] sm:max-w-none px-4">
         <img src="/assets/images/friction-logo-new.png" alt="Friction"
             class="w-full sm:w-56 md:w-72 lg:w-96 mx-auto drop-shadow-lg">
         <div class="text-[0.7rem] sm:text-xs md:text-base lg:text-lg font-semibold tracking-widest uppercase text-neutral-300 drop-shadow max-w-[13rem] sm:max-w-[14rem] md:max-w-xs lg:max-w-sm leading-relaxed">
