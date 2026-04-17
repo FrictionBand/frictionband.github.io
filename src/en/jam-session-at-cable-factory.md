@@ -2,7 +2,7 @@
 title: Jam Session
 permalink: /jam-session-at-cable-factory/
 order: 3
-heroImage: /media/gallery/photo_2026-04-13 14.31.56.jpeg
+heroImage: /media/gallery/photo_2026-03-13 09.27.26.jpeg
 hidden: false
 ---
 # Monthly Groove & Afrobeat Jam Session

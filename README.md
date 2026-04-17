@@ -43,31 +43,23 @@ npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --m
 
 ### Whole Site / general
 
-- Rename page urls (jams -> jam-session, services -> contact)
-- New logo also in the navigation bar? If not then at least update font
-- Check the same photos aren't reused in several places
+- Check the same photos aren't reused in several places, organize photos 
 - Translate pages to Finnish (when done otherwise)
 
 ### Home
 
-- Gigs: "featured gig"
 
 ### Booking / Contact
 
-- Instead of email link on home page, own booking/contact page with contact form + details
 
 ### Single gig page
 
 - Footer with small band bio for search engines and embedding? Like Umo
-- Embedded map view?  
-- Remove tiny date from header and move into info box
-- Add a bunch of gig photo placeholders (maybe take pictures of instrument closeups?) 
-- "Back to all concerts" link
 
 ### Jam Session
 
-- Improve text
+- 
 
 ### About Friction
 
-- Too much text
+- 
