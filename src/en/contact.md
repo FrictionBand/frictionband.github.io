@@ -3,7 +3,7 @@ title: Contact
 permalink: /contact/
 order: 4
 hidden: false
-heroImage: /media/gallery/photo_2026-03-13 09.26.57.jpeg
+heroImage: /assets/images/gigs/friction-band-contact-2026-03-13.jpeg
 ---
 
 # Contact 

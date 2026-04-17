@@ -40,11 +40,10 @@ Olemme esiintyneet klubeilla, kaupunkifestareilla ja yksityistilaisuuksissa ymp�
   •  muutama lyhyt lainaus palautteista, jos niitä on (”Bändi sytytti yleisön heti ensimmäisestä biisistä lähtien” jne.)
 
 
-{% gallery 
-"/media/gallery/Guerilla-Outdoor-Gig-in-Jätkäsaari.jpeg", 
-"/media/gallery/IMG_0645.jpeg", 
-"/media/gallery/IMG_0652.jpeg", 
-"/media/gallery/Live-at-Kekri-Festival-2023.jpg", 
-"/media/gallery/Summer-Gigging-in-Kalasatama.jpeg"
+{% gallery
+"/assets/images/gigs/friction-gig-jatkasaari-outdoor.jpeg",
+"/assets/images/gigs/friction-gig-photo-001.jpeg",
+"/assets/images/gigs/friction-gig-photo-002.jpeg",
+"/assets/images/gigs/friction-gig-kalasatama-summer.jpeg"
 %}
 

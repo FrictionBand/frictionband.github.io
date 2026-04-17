@@ -3,7 +3,7 @@ title: About
 permalink: /about-friction/
 order: 2
 hidden: false
-heroImage: /media/gallery/photo_2026-03-13 09.26.09.jpeg
+heroImage: /assets/images/gigs/friction-band-photo-2026-03-13.jpeg
 
 ---
 # About Friction

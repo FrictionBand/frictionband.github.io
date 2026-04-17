@@ -40,9 +40,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/favicon");
   eleventyConfig.addPassthroughCopy("src/assets/css");
 
-  // Passthrough copy: media attachments
-  eleventyConfig.addPassthroughCopy("src/media");
-
   // Copy Tobii (Lightbox) CSS and JS to the output folder
   eleventyConfig.addPassthroughCopy({ "node_modules/@midzer/tobii/dist/tobii.min.css": "assets/css/tobii.min.css" });
   eleventyConfig.addPassthroughCopy({ "node_modules/@midzer/tobii/dist/tobii.min.js": "assets/js/tobii.min.js" });
@@ -71,18 +68,18 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("gallery", function (collectionApi) {
-    // Define the directory where your images are stored
-    const galleryDir = path.join(__dirname, 'src', 'media', 'gallery');
-
-    // Read the directory for image files
-    const imageFiles = fs.readdirSync(galleryDir).filter(file => {
-      return file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.png'); // Add more file types if needed
-    });
-
-    // Return image paths or further details as needed
-    return imageFiles.map(file => {
-      return { path: `/media/gallery/${file}` };
-    });
+    const dirs = [
+      { dir: path.join(__dirname, 'src', 'assets', 'images', 'gigs'), prefix: '/assets/images/gigs/' },
+      { dir: path.join(__dirname, 'src', 'assets', 'images', 'jams'), prefix: '/assets/images/jams/' },
+    ];
+    let images = [];
+    for (const { dir, prefix } of dirs) {
+      try {
+        const files = fs.readdirSync(dir).filter(f => /\.(jpe?g|png)$/i.test(f));
+        images = images.concat(files.map(file => ({ path: prefix + file })));
+      } catch (e) { /* dir missing */ }
+    }
+    return images;
   });
 
   // FILTER

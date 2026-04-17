@@ -2,7 +2,7 @@
 title: Jamit
 permalink: /fi/jamit/
 order: 2
-heroImage: /media/gallery/friction-helsinki-jam-session-2026-03-13-002.jpeg
+heroImage: /assets/images/jams/friction-jam-cable-factory-2026-03-13-002.jpeg
 hidden: false
 ---
 # Liity kuukausittaisiin jam-sessioihimme Kaapelitehtaalla!

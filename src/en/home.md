@@ -20,12 +20,11 @@ slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 
 <https://www.youtube.com/watch?v=Dd4TDrNdVuA>
 
-{% gallery 
-"/media/gallery/Live-at-Kekri-Festival-2023.jpg", 
-"/media/gallery/Guerilla-Outdoor-Gig-in-Jätkäsaari.jpeg", 
-"/media/gallery/Summer-Gigging-in-Kalasatama.jpeg",
-"/media/gallery/IMG_0645.jpeg", 
-"/media/gallery/IMG_0652.jpeg"
+{% gallery
+"/assets/images/gigs/friction-gig-jatkasaari-outdoor.jpeg",
+"/assets/images/gigs/friction-gig-kalasatama-summer.jpeg",
+"/assets/images/gigs/friction-gig-photo-001.jpeg",
+"/assets/images/gigs/friction-gig-photo-002.jpeg"
 %}
 
 Friction Groove Collective has been performing in Finland's capital region for the better part of a decade, playing a primarily afrobeat, jazz, and Latin cumbia influenced repertoire, with occasional added Near Eastern and North African flavours. 

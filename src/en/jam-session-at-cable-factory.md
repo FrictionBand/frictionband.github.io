@@ -2,7 +2,7 @@
 title: Jam Session
 permalink: /jam-session-at-cable-factory/
 order: 3
-heroImage: /media/gallery/photo_2026-03-13 09.27.26.jpeg
+heroImage: /assets/images/jams/friction-jam-cable-factory-hero-2026-03-13.jpeg
 hidden: false
 ---
 # Monthly Groove & Afrobeat Jam Session
@@ -32,12 +32,12 @@ Not playing? Grab a drink, pull up a chair. Listeners are equally welcome.
 [https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
 
 {% gallery
-"/media/gallery/Jamming-at-Cafe-Konttori-in-Kaapelitehdas-Helsinki.jpeg",
-"/media/gallery/friction-cable-factory-jam-2026-03-13-001.jpeg",
-"/media/gallery/friction-cable-factory-jam-2026-03-13-002.jpeg",
-"/media/gallery/friction-cable-factory-jam-2026-03-13-003.jpeg",
-"/media/gallery/friction-helsinki-jam-session-drawing-2025-05-19.jpg",
-"/media/gallery/friction-helsinki-jam-session-art-2026-03-13.jpeg",
-"/media/gallery/friction-helsinki-jam-session-billboard-2026-03-13.jpeg"
+"/assets/images/jams/friction-jam-konttori-kaapelitehdas.jpeg",
+"/assets/images/jams/friction-jam-cable-factory-2026-03-13-001.jpeg",
+"/assets/images/jams/friction-jam-cable-factory-2026-03-13-002.jpeg",
+"/assets/images/jams/friction-jam-cable-factory-2026-03-13-003.jpeg",
+"/assets/images/jams/friction-jam-drawing-2025-05-19.jpg",
+"/assets/images/jams/friction-jam-art-2026-03-13.jpeg",
+"/assets/images/jams/friction-jam-billboard-2026-03-13.jpeg"
 %}
 
