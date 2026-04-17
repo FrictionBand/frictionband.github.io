@@ -3,7 +3,10 @@ title: Home
 permalink: /
 order: 0
 hidden: false
-layout: home
+layout: page
+heroVideo: /assets/videos/slogan.mp4
+heroImage: /assets/images/video-fallback-image.jpg
+heroShowLogo: true
 slogan: "Afrobeat, Ethio-Jazz, Cumbia Collective from Helsinki"
 ---
 
