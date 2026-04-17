@@ -1,5 +1,5 @@
 {% if heroImage or heroVideo %}
-<div class="relative overflow-hidden bg-neutral-900 min-h-[22rem] sm:min-h-0 -mb-20 sm:-mb-24 lg:-mb-48">
+<div class="relative overflow-hidden bg-neutral-900 min-h-[55vh] sm:min-h-0 -mb-24 lg:-mb-48">
 
     <!-- Gradient fade to page background -->
     <div class="absolute inset-0 z-10 pointer-events-none"
@@ -9,7 +9,7 @@
     {% if heroVideo %}
     {# aspect-ratio pre-allocates height so layout is stable with preload=none #}
     <video preload="none" autoplay loop muted playsinline
-        class="block w-full object-cover relative z-[1] min-h-[22rem] sm:min-h-0"
+        class="block w-full object-cover relative z-[1] min-h-[55vh] sm:min-h-0"
         style="aspect-ratio: 16/9; max-height: 42rem;">
         <source src="{{ heroVideo }}" type="video/mp4">
     </video>
@@ -22,8 +22,8 @@
     {% elif heroImage %}
     {# Natural height on narrow viewports; capped + cropped on wide screens #}
     <img src="{{ heroImage }}" alt=""
-        class="block w-full object-cover relative"
-        style="height: auto; max-height: 42rem;">
+        class="block w-full object-cover relative min-h-[55vh] sm:min-h-0"
+        style="max-height: 42rem;">
     {% endif %}
 
     {% if heroShowLogo %}
