@@ -1,35 +1,37 @@
 {% if heroImage or heroVideo %}
-<div class="relative overflow-hidden bg-neutral-900 {% if heroShowLogo %}-mb-16{% else %}-mb-48{% endif %}" style="height: 70vh; min-height: 20rem; max-height: 42rem;">
-    <!-- Background gradient overlay -->
-    <div class="absolute inset-0 z-10"
-        style="background: linear-gradient(to bottom, transparent 0%, rgb(23, 23, 23) 100%); transform: translateZ(0);">
+<div class="relative overflow-hidden bg-neutral-900 -mb-48">
+
+    <!-- Gradient fade to page background -->
+    <div class="absolute inset-0 z-10 pointer-events-none"
+        style="background: linear-gradient(to bottom, transparent 0%, rgb(23, 23, 23) 100%);">
     </div>
 
-    <!-- Background image (video fallback, or main image if no video) -->
-    {% if heroImage %}
-    <img src="{{ heroImage }}" alt=""
-        class="absolute top-0 left-0 w-full h-full object-cover z-5">
-    {% endif %}
-
-    <!-- Video (optional) -->
     {% if heroVideo %}
-    <div class="absolute inset-0" style="bottom: 2px; overflow: hidden;">
+    {# aspect-ratio pre-allocates height so layout is stable with preload=none #}
     <video preload="none" autoplay loop muted playsinline
-        class="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 z-0"
-        style="object-fit: cover;">
+        class="block w-full object-cover relative z-[1]"
+        style="aspect-ratio: 16/9; max-height: 42rem;">
         <source src="{{ heroVideo }}" type="video/mp4">
     </video>
-    </div>
+    {% if heroImage %}
+    {# Static fallback shown behind video when autoplay is blocked #}
+    <img src="{{ heroImage }}" alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+        style="z-index: 0;">
+    {% endif %}
+    {% elif heroImage %}
+    {# Natural height on narrow viewports; capped + cropped on wide screens #}
+    <img src="{{ heroImage }}" alt=""
+        class="block w-full object-cover relative"
+        style="height: auto; max-height: 42rem;">
     {% endif %}
 
-    <!-- Logo + slogan (optional) -->
     {% if heroShowLogo %}
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 flex flex-col items-center gap-4 w-[85vw] max-w-xs sm:w-auto sm:max-w-none">
+    <div class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 flex flex-col items-center gap-4 w-[85vw] max-w-xs sm:w-auto sm:max-w-none" style="top: calc(50% - 2rem)">
         <img src="/assets/images/friction-logo-new.png" alt="Friction"
             class="w-full sm:w-96 mx-auto drop-shadow-lg">
         <div class="text-base md:text-lg font-semibold tracking-widest uppercase text-neutral-300 drop-shadow max-w-xs md:max-w-sm leading-relaxed">
             {{ slogan if slogan else site.slogan }}</div>
-        <!-- Audio play button -->
         <button id="hero-play-btn" aria-label="Play music"
             class="mt-2 w-12 h-12 rounded-full border-2 border-neutral-300 text-neutral-300 hover:border-white hover:text-white flex items-center justify-center transition-colors bg-transparent">
             <i class="fa-solid fa-play text-sm ml-0.5"></i>
