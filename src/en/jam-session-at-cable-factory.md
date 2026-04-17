@@ -5,30 +5,31 @@ order: 3
 heroImage: /media/gallery/photo_2026-04-13 14.31.56.jpeg
 hidden: false
 ---
-# Monthly Jam Sessions at Cable Factory
+# Monthly Groove & Afrobeat Jam Session
 
-Every first Friday of the month, Friction Groove Collective hosts an open jam session at [Cable Factory's Kahvibaari](https://www.kaapelitehdas.fi/en/cable-factorys-kahvibaari) in Helsinki. We kick off with a short showcase concert, then open the stage for a relaxed, groove-based jam session. Entry is free and happy hour prices apply at the bar.
+Every first Friday of the month, Friction hosts an open jam session at [Cable Factory's Kahvibaari](https://www.kaapelitehdas.fi/en/cable-factorys-kahvibaari) in Helsinki. We start with a short set, then open the stage. Entry is free, happy hour prices at the bar.
 
-[https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
 
-## What to Expect
+## Practical info
 
 - **Time**: 17:30 – 20:00
-- **Format**: Friction plays a short set, then the stage opens to everyone
-- **Music**: Primarily groove-based — afrobeat, cumbia, jazz, Latin, funk, and whatever else is in the air
-- **Backline provided**: Amplifiers, percussion, piano, PA system, and microphones are available
-- **Skill level**: All levels welcome — whether you're a seasoned player or just starting out
-- **Just listening?** Absolutely — grab a drink and enjoy the music
+- **Music**: Afrobeat, cumbia, Latin, jazz, funk, blues — world music broadly
+- **Backline**: Percussion, piano, PA, and microphones available. Two guitar amps on site — bringing your own is helpful but not required.
+- **Skill level**: All levels welcome
 
-No sign-up required. Just bring your instrument and show up.
+## How it works
+
+Friction opens with a few songs to set the tone and closes the evening. Everything in between is pretty free-form — depending on who shows up, we might free-jam, play covers or standards, run through some of our own repertoire with guest players, or work on something a player has brought in. The genre stays broadly within the groove/world music space but there's room to stretch.
+
+Chord sheets are available if we're playing from our own repertoire. For free jams and covers there are no sheets — feel free to bring your own if you have something specific in mind. No prior preparation needed otherwise; just show up with your instrument. Friends welcome too.
+
+Not playing? Grab a drink, pull up a chair. Listeners are equally welcome.
 
 {% gigs 3, false, "Upcoming Sessions", "jam", false %}
 
-You can also find our jam sessions on [Groovehub](https://www.groovehub.io/events/groove-afrobeat-jam-session).
+You can also find us on [Groovehub](https://www.groovehub.io/events/groove-afrobeat-jam-session).
 
-## Come Join Us
-
-Feel the energy of the community and help make each session a proper celebration of music and culture. Whatever your skill level, grab your instrument, bring your mates, and head down to the Cable Factory for something genuinely special. Hope to see you there!
+[https://youtu.be/aHjAq2m47S0](https://youtu.be/aHjAq2m47S0)
 
 {% gallery
 "/media/gallery/Jamming-at-Cafe-Konttori-in-Kaapelitehdas-Helsinki.jpeg",

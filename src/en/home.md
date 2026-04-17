@@ -30,11 +30,7 @@ Friction Groove Collective has been performing in Finland's capital region for t
 [More about Friction →](/about-friction/)
 
 
-
-
-<!-- {% link_button "/about-friction/", "More about the band" %} -->
-
-## Join Our Monthly Jam Session at Cable Factory
+### Join Our Monthly Jam Session at Cable Factory
 
 Every first Friday of the month, we host a Groove and Afrobeat Jam Session at Cable Factory's Kahvibaari in Helsinki. All instruments and skill levels are welcome — come play, sing, or just enjoy the music with a drink. Entry is free. 
 
