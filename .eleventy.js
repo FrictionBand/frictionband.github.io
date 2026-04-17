@@ -211,6 +211,12 @@ module.exports = function (eleventyConfig) {
     if (!heading) throw new Error('gigs shortcode requires a heading parameter');
     const { DateTime } = require('luxon');
 
+    // Detect language from current page URL (fallback: English)
+    const pageUrl = (this && this.page && this.page.url) || '';
+    const isFi = pageUrl.startsWith('/fi/');
+    const jamUrl = isFi ? '/fi/jam-session-at-cable-factory/' : '/jam-session-at-cable-factory/';
+    const seeAllText = isFi ? 'Katso kaikki tulevat konsertit →' : 'See all upcoming concerts →';
+
     let allGigs = [];
     if (this && this.collections && this.collections.gigs) {
       allGigs = this.collections.gigs;
@@ -268,7 +274,7 @@ module.exports = function (eleventyConfig) {
     });
 
     const shouldLink = linkCards !== false && linkCards !== 'false';
-    return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc, linkCards: shouldLink, hasMore, moreUrl: moreUrl || null });
+    return nunjucks.renderString(tpl, { items: prepared, heading, showDescription: showDesc, linkCards: shouldLink, hasMore, moreUrl: moreUrl || null, jamUrl, seeAllText });
   });
 
   // WATCH TARGETS
