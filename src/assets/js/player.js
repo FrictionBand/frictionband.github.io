@@ -11,6 +11,7 @@
   if (!bar || !audio) return;
 
   var barVisible = false;
+  var isTouch = navigator.maxTouchPoints > 0 || ('ontouchstart' in window);
 
   function showBar() {
     bar.style.transform = 'translateY(0)';
@@ -62,43 +63,33 @@
     try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
   }
 
-  // Restore state from previous page in the same tab session
-  (function restoreSession() {
-    try {
-      var raw = sessionStorage.getItem(SESSION_KEY);
-      if (!raw) return;
-      var state = JSON.parse(raw);
-      if (!state.visible) return;
-      showBar();
-      var seekTo = state.currentTime || 0;
-      // Always restore position, play only if it was playing
-      function doRestore() {
-        if (seekTo > 0) audio.currentTime = seekTo;
-        if (state.playing) {
-          audio.play().then(function () { setIcon(true); }).catch(function () {
-            // iOS blocks autoplay without a user gesture — resume on the next interaction
-            setIcon(false);
-            var resumed = false;
-            function resumeOnGesture() {
-              if (resumed) return;
-              resumed = true;
-              audio.play().then(function () { setIcon(true); }).catch(function () {});
-            }
-            document.addEventListener('touchstart', resumeOnGesture, { once: true, passive: true });
-            document.addEventListener('click', resumeOnGesture, { once: true });
-          });
+  // Restore state from previous page (desktop only — mobile clears on navigation)
+  if (!isTouch) {
+    (function restoreSession() {
+      try {
+        var raw = sessionStorage.getItem(SESSION_KEY);
+        if (!raw) return;
+        var state = JSON.parse(raw);
+        if (!state.visible) return;
+        showBar();
+        var seekTo = state.currentTime || 0;
+        function doRestore() {
+          if (seekTo > 0) audio.currentTime = seekTo;
+          if (state.playing) {
+            audio.play().then(function () { setIcon(true); }).catch(function () { setIcon(false); });
+          }
         }
-      }
-      if (audio.readyState >= 1) {
-        doRestore();
-      } else {
-        audio.addEventListener('loadedmetadata', doRestore, { once: true });
-      }
-    } catch (e) {}
-  })();
+        if (audio.readyState >= 1) {
+          doRestore();
+        } else {
+          audio.addEventListener('loadedmetadata', doRestore, { once: true });
+        }
+      } catch (e) {}
+    })();
+  }
 
-  // Save state on navigation (fires reliably for both normal links and back/forward)
-  window.addEventListener('pagehide', saveSession);
+  // Save state on navigation (desktop only — mobile gets a clean slate on each page)
+  if (!isTouch) window.addEventListener('pagehide', saveSession);
 
   if (heroBtn) {
     heroBtn.addEventListener('click', function () {
