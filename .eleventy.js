@@ -267,7 +267,7 @@ module.exports = function (eleventyConfig) {
         location: (gig.data && gig.data.location) ? gig.data.location : null,
         fblink: (gig.data && gig.data.fblink) ? gig.data.fblink : null,
         weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
-        image: (gig.data && gig.data.image) ? gig.data.image : pickPlaceholder(gig.url || gig.data.title || '', gig.data && gig.data.type),
+        heroImage: (gig.data && gig.data.heroImage) ? gig.data.heroImage : pickPlaceholder(gig.url || gig.data.title || '', gig.data && gig.data.type),
         type: (gig.data && gig.data.type) ? gig.data.type : null,
         featured: !!(gig.data && gig.data.featured),
       };
