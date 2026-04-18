@@ -6,4 +6,7 @@ hidden: false
 heroImage: /assets/images/gigs/friction-live-kekri-festival-2023.jpg
 
 ---
-{% gigs 0, false, "Upcoming Concerts" %}
+
+# Upcoming Concerts
+
+{% gigs 0, false, false %}

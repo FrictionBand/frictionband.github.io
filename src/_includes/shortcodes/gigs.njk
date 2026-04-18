@@ -1,9 +1,11 @@
 {% if items and items | length > 0 %}
 <section class="overflow-visible">
 
+  {% if heading %}
   <div class="prose">
     <h2 class="mt-16 mb-14" id="gigs">{{ heading }}</h2>
   </div>
+  {% endif %}
 
   {% for gig in items %}
 

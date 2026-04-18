@@ -208,7 +208,7 @@ module.exports = function (eleventyConfig) {
   // Gigs shortcode: render upcoming gigs.
   // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %} or {% gigs 3, false, "Upcoming Jams", "jam", false %} or {% gigs 4, false, "Upcoming Concerts", "", true, "/concerts/" %}
   eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type, linkCards, moreUrl) {
-    if (!heading) throw new Error('gigs shortcode requires a heading parameter');
+    heading = heading || '';
     const { DateTime } = require('luxon');
 
     // Detect language from current page URL (fallback: English)
