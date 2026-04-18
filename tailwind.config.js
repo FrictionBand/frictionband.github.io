@@ -100,6 +100,7 @@ module.exports = {
             h1: {
               color: theme('colors.neutral.100'), // headings use neutral white-ish
               fontSize: theme('fontSize.2xl'), // base sizes for h1
+              marginBottom: theme('spacing.14'),
               '@screen md': {
                 fontSize: theme('fontSize.3xl'), // larger on md
               },
