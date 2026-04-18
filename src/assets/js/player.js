@@ -75,7 +75,18 @@
       function doRestore() {
         if (seekTo > 0) audio.currentTime = seekTo;
         if (state.playing) {
-          audio.play().then(function () { setIcon(true); }).catch(function () { setIcon(false); });
+          audio.play().then(function () { setIcon(true); }).catch(function () {
+            // iOS blocks autoplay without a user gesture — resume on the next interaction
+            setIcon(false);
+            var resumed = false;
+            function resumeOnGesture() {
+              if (resumed) return;
+              resumed = true;
+              audio.play().then(function () { setIcon(true); }).catch(function () {});
+            }
+            document.addEventListener('touchstart', resumeOnGesture, { once: true, passive: true });
+            document.addEventListener('click', resumeOnGesture, { once: true });
+          });
         }
       }
       if (audio.readyState >= 1) {
