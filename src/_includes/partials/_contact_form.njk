@@ -52,9 +52,9 @@
       access_key: '0140b0c4-ce30-477a-b23e-7e6bf71537f0',
       subject: 'Friction website enquiry',
       botcheck: form.elements['botcheck'].checked,
-      name: form.elements['name'].value,
-      email: form.elements['email'].value,
-      message: form.elements['message'].value,
+      name: document.getElementById('cf-name').value,
+      email: document.getElementById('cf-email').value,
+      message: document.getElementById('cf-message').value,
     };
 
     fetch('https://api.web3forms.com/submit', {
