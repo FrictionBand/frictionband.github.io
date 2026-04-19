@@ -4,7 +4,7 @@
 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="not-prose space-y-5 mt-8">
   <input type="hidden" name="access_key" value="0140b0c4-ce30-477a-b23e-7e6bf71537f0">
   <input type="hidden" name="subject" value="Friction website enquiry">
-  <input type="hidden" name="redirect" value="{{ site.url }}{{ page.url }}?sent=1">
+  <input type="hidden" name="redirect" value="{{ site.url }}{% if lang == 'fi' %}/fi/kiitos/{% else %}/thank-you/{% endif %}">
   {# Honeypot — bots fill this, humans don't #}
   <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
 
@@ -39,10 +39,3 @@
 <noscript>
   <p class="text-neutral-300 mt-4">{{ ft.noscript }} <a href="mailto:contact@friction-helsinki.com" class="text-primary-400 hover:text-primary-300">contact@friction-helsinki.com</a></p>
 </noscript>
-
-<script>
-if (new URLSearchParams(window.location.search).get('sent') === '1') {
-  document.getElementById('contact-form').style.display = 'none';
-  document.getElementById('cf-success').classList.remove('hidden');
-}
-</script>
