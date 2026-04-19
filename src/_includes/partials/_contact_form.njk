@@ -1,7 +1,10 @@
 {% set formLang = lang if lang else 'en' %}
 {% set ft = i18n[formLang].contactForm %}
 
-<form id="contact-form" class="not-prose space-y-5 mt-8">
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="not-prose space-y-5 mt-8">
+  <input type="hidden" name="access_key" value="0140b0c4-ce30-477a-b23e-7e6bf71537f0">
+  <input type="hidden" name="subject" value="Friction website enquiry">
+  <input type="hidden" name="redirect" value="{{ site.url }}{{ page.url }}?sent=1">
   {# Honeypot — bots fill this, humans don't #}
   <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
 
@@ -24,11 +27,9 @@
   </div>
 
   <button type="submit"
-    class="bg-primary-600 hover:bg-primary-500 text-white font-semibold px-6 py-2 rounded-full transition-colors disabled:opacity-50">
+    class="bg-primary-600 hover:bg-primary-500 text-white font-semibold px-6 py-2 rounded-full transition-colors">
     {{ ft.send }}
   </button>
-
-  <p id="cf-error" class="hidden text-red-400 font-semibold mt-4">{{ ft.error }}</p>
 </form>
 
 <p id="cf-success" class="hidden text-neutral-100 font-semibold mt-4">{{ ft.success }}</p>
@@ -40,43 +41,8 @@
 </noscript>
 
 <script>
-(function () {
-  var form = document.getElementById('contact-form');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-
-    var data = {
-      access_key: '0140b0c4-ce30-477a-b23e-7e6bf71537f0',
-      subject: 'Friction website enquiry',
-      botcheck: form.elements['botcheck'].checked,
-      name: form.elements['name'].value,
-      email: form.elements['email'].value,
-      message: form.elements['message'].value,
-    };
-
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(data),
-    })
-      .then(function (r) { return r.json(); })
-      .then(function (res) {
-        if (res.success) {
-          form.style.display = 'none';
-          document.getElementById('cf-success').classList.remove('hidden');
-          document.getElementById('cf-error').classList.add('hidden');
-        } else {
-          throw new Error(res.message || 'unknown error');
-        }
-      })
-      .catch(function () {
-        document.getElementById('cf-error').classList.remove('hidden');
-        document.getElementById('cf-success').classList.add('hidden');
-        btn.disabled = false;
-      });
-  });
-})();
+if (new URLSearchParams(window.location.search).get('sent') === '1') {
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('cf-success').classList.remove('hidden');
+}
 </script>
