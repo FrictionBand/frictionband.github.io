@@ -11,6 +11,15 @@
   {% set otherUrl = '/fi/' %}
 {% endif %}
 
+<!-- Home link — mobile overlay only -->
+{% if mobileNavi == true %}
+{% set homeUrl = '/fi/' if currentLang == 'fi' else '/' %}
+<a href="{{ homeUrl }}" class="p-5 uppercase font-extrabold whitespace-nowrap block text-center
+    {% if page.url === homeUrl %}text-primary-100{% else %}text-gray-300 hover:text-primary-500{% endif %}">
+    {{ t.nav.home }}
+</a>
+{% endif %}
+
 <!-- If there are gigs, include special "gigs" jump link -->
 
 {% set showGigs = false %}
