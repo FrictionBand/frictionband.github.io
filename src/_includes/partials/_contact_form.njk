@@ -1,8 +1,9 @@
 {% set formLang = lang if lang else 'en' %}
 {% set ft = i18n[formLang].contactForm %}
+{% set accessKey = 'c68e2c10-1627-4219-96c5-5dbeca77841b' if lang == 'fi' else '0140b0c4-ce30-477a-b23e-7e6bf71537f0' %}
 
 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="not-prose space-y-5 mt-8">
-  <input type="hidden" name="access_key" value="0140b0c4-ce30-477a-b23e-7e6bf71537f0">
+  <input type="hidden" name="access_key" value="{{ accessKey }}">
   <input type="hidden" name="subject" id="cf-subject" value="Friction Website Submission">
   <input type="hidden" name="redirect" value="{{ site.url }}{% if lang == 'fi' %}/fi/kiitos/{% else %}/thank-you/{% endif %}">
   {# Honeypot — bots fill this, humans don't #}
