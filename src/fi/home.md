@@ -15,7 +15,7 @@ slogan: "Afrobeat, Ethio-Jazz ja Cumbia -kollektiivi Helsingistä"
 
 **Voit varata Frictionin** – konsertteihin, festivaaleille ja yritysjuhliin! Tuomme lavalle ammattitaitoa ja tanssittavaa soundia. Bändi on soittanut kaikkea kattokeikoista, väitöskaronkoista ja tanssitapahtumista aina kaupunkifestivaalien päälavoille. Räätälöimme esiintymisen juuri sinun tapahtumaasi sopivaksi.
 
-[Ota yhteyttä →](/fi/about-friction/)
+[Ota yhteyttä →](/fi/contact/)
 
 
 <https://www.youtube.com/watch?v=Dd4TDrNdVuA>

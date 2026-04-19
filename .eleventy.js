@@ -208,7 +208,7 @@ module.exports = function (eleventyConfig) {
   // Gigs shortcode: render upcoming gigs.
   // Usage: {% gigs 3, false, "Upcoming Gigs" %} or {% gigs 3, false, "Upcoming Jams", "jam" %} or {% gigs 3, false, "Upcoming Jams", "jam", false %} or {% gigs 4, false, "Upcoming Concerts", "", true, "/concerts/" %}
   eleventyConfig.addShortcode("gigs", function (limit, showDescription, heading, type, linkCards, moreUrl) {
-    if (!heading) throw new Error('gigs shortcode requires a heading parameter');
+    heading = heading || '';
     const { DateTime } = require('luxon');
 
     // Detect language from current page URL (fallback: English)
@@ -267,7 +267,7 @@ module.exports = function (eleventyConfig) {
         location: (gig.data && gig.data.location) ? gig.data.location : null,
         fblink: (gig.data && gig.data.fblink) ? gig.data.fblink : null,
         weblink: (gig.data && gig.data.weblink) ? gig.data.weblink : null,
-        image: (gig.data && gig.data.image) ? gig.data.image : pickPlaceholder(gig.url || gig.data.title || '', gig.data && gig.data.type),
+        heroImage: (gig.data && gig.data.heroImage) ? gig.data.heroImage : pickPlaceholder(gig.url || gig.data.title || '', gig.data && gig.data.type),
         type: (gig.data && gig.data.type) ? gig.data.type : null,
         featured: !!(gig.data && gig.data.featured),
       };
