@@ -3,7 +3,7 @@
 
 <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="not-prose space-y-5 mt-8">
   <input type="hidden" name="access_key" value="0140b0c4-ce30-477a-b23e-7e6bf71537f0">
-  <input type="hidden" name="subject" value="Friction website enquiry">
+  <input type="hidden" name="subject" id="cf-subject" value="Friction Website Submission">
   <input type="hidden" name="redirect" value="{{ site.url }}{% if lang == 'fi' %}/fi/kiitos/{% else %}/thank-you/{% endif %}">
   {# Honeypot — bots fill this, humans don't #}
   <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off">
@@ -35,6 +35,18 @@
 <p id="cf-success" class="hidden text-neutral-100 font-semibold mt-4">{{ ft.success }}</p>
 
 <p class="text-sm text-neutral-500 mt-6">{{ ft.orEmail }} <a href="mailto:contact@friction-helsinki.com" class="text-primary-400 hover:text-primary-300">contact@friction-helsinki.com</a></p>
+
+<script>
+(function () {
+  var name = document.getElementById('cf-name');
+  var subject = document.getElementById('cf-subject');
+  name.addEventListener('input', function () {
+    subject.value = name.value.trim()
+      ? name.value.trim() + ' via Friction Website Form'
+      : 'Friction Website Submission';
+  });
+})();
+</script>
 
 <noscript>
   <p class="text-neutral-300 mt-4">{{ ft.noscript }} <a href="mailto:contact@friction-helsinki.com" class="text-primary-400 hover:text-primary-300">contact@friction-helsinki.com</a></p>
