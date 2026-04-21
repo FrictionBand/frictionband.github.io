@@ -1,19 +1,20 @@
+{% set homePath = '/fi/' if lang == 'fi' else '/' %}
 <div id="menu" class="bg-black h-16 fixed w-full z-50 hidden">
     <nav class="bg-black flex items-center justify-between max-w-3xl mx-auto w-full">
 
         <!-- Friction logo (functions as home link as well) -->
-        <a href="{{ site.baseUrl }}/" id="logo" class="inline-block p-4 uppercase font-semibold text-xl tracking-wider 
-        {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+        <a href="{{ site.baseUrl }}{{ homePath }}" id="logo" class="inline-block p-4 uppercase font-semibold text-xl tracking-wider
+        {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-primary-500{% endif %}"
             style="width: 150px;">
             {% include "svg/logo.svg" %}
         </a>
 
         <!-- Top navigation for bigger screens -->
-        <div class="hidden sm:flex justify-end">{% include "partials/_navi_links.njk" %}</div>
+        <div class="hidden md:flex justify-end">{% include "partials/_navi_links.njk" %}</div>
 
         <!-- Mobile navigation toggle for small screens -->
-        <div class="flex justify-end sm:hidden">
-            <button id="menuToggle" class="hidden p-4 text-xl text-gray-300 hover:text-sky-400">
+        <div class="flex justify-end md:hidden">
+            <button id="menuToggle" class="hidden p-4 text-xl text-gray-300 hover:text-primary-500">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -27,8 +28,8 @@
         <nav class="bg-black max-w-3xl mx-auto w-full">
 
             <!-- Friction logo (functions as home link as well) -->
-            <a href="{{ site.baseUrl }}/" id="logo" class="inline-flex p-3 uppercase font-semibold text-xl tracking-wider 
-            {% if page.url === '/' %}text-neutral-100{% else %}text-neutral-100 hover:text-sky-400{% endif %}"
+            <a href="{{ site.baseUrl }}{{ homePath }}" id="logo" class="inline-flex p-3 uppercase font-semibold text-xl tracking-wider
+            {% if page.url === homePath %}text-neutral-100{% else %}text-neutral-100 hover:text-primary-500{% endif %}"
                 style="height: 50px;">
                 {% include "svg/logo.svg" %}
             </a>

@@ -1,0 +1,6 @@
+{
+  "lang": "en",
+  "tags": "pages",
+  "layout": "page",
+  "templateEngineOverride": "njk,md"
+}

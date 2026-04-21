@@ -1,19 +1,25 @@
 <div class="relative overflow-hidden bg-neutral-900" style="height: 60vh; min-height: 32rem; max-height: 35rem;">
     <!-- Background gradient overlay -->
-    <div class="absolute inset-0 z-10" style="background: linear-gradient(to bottom, transparent 0%, rgba(23, 23, 23, 0.6) 70%, rgb(23, 23, 23) 100%);"></div>
+    <div class="absolute inset-0 z-10"
+        style="background: linear-gradient(to bottom, transparent 0%, rgba(23, 23, 23, 0.6) 70%, rgb(23, 23, 23) 100%);">
+    </div>
 
     <!-- Video -->
-    <img src="assets/images/video-fallback-image.jpg" alt="Fallback Image" id="fallbackImage"
+    <img src="/assets/images/video-fallback-image.jpg" alt="Fallback Image" id="fallbackImage"
         class="absolute top-0 left-0 w-full h-full object-cover z-5">
     <video id="backgroundVideo" preload="none" autoplay loop muted playsinline
         class="absolute top-1/2 left-1/2 w-full h-full -translate-x-1/2 -translate-y-1/2 z-0"
         style="object-fit: cover;">
-        <source src="assets/videos/slogan.mp4" type="video/mp4">
+        <source src="/assets/videos/slogan.mp4" type="video/mp4">
     </video>
 
-    <!-- Text overlay -->
-    <div class="max-w-3xl absolute top-1/2 left-1/2 
-        w-full px-5 -translate-x-1/2 -translate-y-1/2 text-center z-20">
-        <div class="text-6xl md:text-7xl font-bold text-neutral-200">{{ site.slogan }}</div>
+    <!-- Logo + slogan overlay -->
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 flex flex-col items-center gap-4">
+        <img src="/assets/images/friction-logo-new.png" alt="Friction Groove Collective"
+            class="w-96 mx-auto drop-shadow-lg">
+        <div
+            class="text-xs sm:text-base font-semibold tracking-widest uppercase text-neutral-300 drop-shadow max-w-xs md:max-w-sm leading-relaxed">
+            {{ slogan if slogan else site.slogan }}</div>
     </div>
 </div>

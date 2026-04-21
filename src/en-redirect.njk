@@ -1,0 +1,23 @@
+---
+pagination:
+  data: enRedirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.from }}"
+eleventyExcludeFromCollections: true
+layout: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url={{ redirect.to }}">
+  <link rel="canonical" href="{{ redirect.to }}">
+  <link rel="alternate" hreflang="en" href="{{ redirect.to }}">
+  <link rel="alternate" hreflang="fi" href="/fi{{ redirect.to }}">
+  <title>Redirecting…</title>
+</head>
+<body>
+  <a href="{{ redirect.to }}">Redirecting to English version…</a>
+</body>
+</html>

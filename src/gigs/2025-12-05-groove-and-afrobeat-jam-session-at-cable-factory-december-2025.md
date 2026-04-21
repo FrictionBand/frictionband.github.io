@@ -1,4 +1,5 @@
 ---
+type: jam
 title: "Afrobeat Open Jam@Cable Factory Kahvibaari"
 date: 2025-12-05
 time: 17:30 - 20:00

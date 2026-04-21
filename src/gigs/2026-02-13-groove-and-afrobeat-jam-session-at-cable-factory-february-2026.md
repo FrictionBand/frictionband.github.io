@@ -1,4 +1,5 @@
 ---
+type: jam
 title: "Open Jam @ Cable Factory Kahvibaari"
 date: 2026-02-13
 time: 17:30 - 20:00

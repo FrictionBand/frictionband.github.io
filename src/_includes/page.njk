@@ -2,8 +2,9 @@
 layout: base
 ---
 
-<main class="items-center justify-between max-w-3xl mx-auto w-full 
-    mt-6 p-5">
+{% include "partials/_hero.njk" %}
+
+<main class="relative z-10 items-center justify-between max-w-3xl mx-auto w-full p-5 mt-12">
 
     <div class="w-full prose">{{content| safe}}</div>
 

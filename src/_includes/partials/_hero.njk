@@ -1,0 +1,42 @@
+{% if heroImage or heroVideo %}
+<div class="relative overflow-hidden bg-neutral-900 min-h-[55vh] sm:min-h-0 {% if heroVideo %}-mb-36{% else %}-mb-48{% endif %} sm:-mb-24 lg:-mb-48">
+
+    <!-- Gradient fade to page background -->
+    <div class="absolute inset-0 z-10 pointer-events-none"
+        style="background: linear-gradient(to bottom, transparent 0%, rgb(23, 23, 23) 100%);">
+    </div>
+
+    {% if heroVideo %}
+    {# aspect-ratio pre-allocates height so layout is stable with preload=none #}
+    <video preload="none" autoplay loop muted playsinline
+        class="block w-full object-cover relative z-[1] min-h-[55vh] sm:min-h-0"
+        style="aspect-ratio: 16/9; max-height: 42rem;">
+        <source src="{{ heroVideo }}" type="video/mp4">
+    </video>
+    {% if heroImage %}
+    {# Static fallback shown behind video when autoplay is blocked #}
+    <img src="{{ heroImage }}" alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+        style="z-index: 0;">
+    {% endif %}
+    {% elif heroImage %}
+    {# Natural height on narrow viewports; capped + cropped on wide screens #}
+    <img src="{{ heroImage }}" alt=""
+        class="block w-full object-cover relative min-h-[55vh] sm:min-h-0"
+        style="max-height: 42rem;">
+    {% endif %}
+
+    {% if heroShowLogo %}
+    <div class="absolute top-[42%] sm:top-[45%] lg:top-[calc(50%-3rem)] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-20 flex flex-col items-center gap-2 sm:gap-3 lg:gap-4 w-[70vw] max-w-[15rem] sm:max-w-none px-4">
+        <img src="/assets/images/friction-logo-new.png" alt="Friction"
+            class="w-full sm:w-56 md:w-72 lg:w-96 mx-auto drop-shadow-lg">
+        <div class="text-[0.7rem] sm:text-xs md:text-base lg:text-lg font-semibold tracking-widest uppercase text-neutral-300 drop-shadow max-w-[13rem] sm:max-w-[14rem] md:max-w-xs lg:max-w-sm leading-relaxed">
+            {{ slogan if slogan else site.slogan }}</div>
+        <button id="hero-play-btn" aria-label="Play music"
+            class="mt-0 sm:mt-1 lg:mt-2 w-10 h-10 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full border-2 border-neutral-300 text-neutral-300 hover:border-white hover:text-white flex items-center justify-center transition-colors bg-transparent">
+            <i class="fa-solid fa-play text-xs sm:text-sm ml-0.5"></i>
+        </button>
+    </div>
+    {% endif %}
+</div>
+{% endif %}

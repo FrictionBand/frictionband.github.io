@@ -1,0 +1,9 @@
+---
+type: jam
+title: "Groove & Afrobeat Jam Session"
+date: 2026-08-07
+time: 17:30 - 20:00
+location: Kahvibaari, Cable Factory, Helsinki
+gmaps: https://maps.app.goo.gl/Xra21KuKk93WzB3JA
+weblink: https://www.groovehub.io/events/groove-afrobeat-jam-session
+---

@@ -1,5 +1,14 @@
-<footer class="text-center mt-8 pb-8">
+<footer class="text-center mt-8 pb-24">
 
     <div class="text-neutral-300">{% include "partials/_social.html" %}</div>
+
+    {# {% set tFooter = i18n[lang | default('en')].footer %}
+    {% set pressKitUrl = '/fi/presskit/' if lang == 'fi' else '/presskit/' %}
+    {% set legalUrl = '/fi/legal/' if lang == 'fi' else '/legal/' %}
+    <div class="mt-4 text-sm text-neutral-500">
+        <a href="{{ pressKitUrl }}" class="hover:text-primary-500">{{ tFooter.pressKit }}</a>
+        <span class="mx-2">·</span>
+        <a href="{{ legalUrl }}" class="hover:text-primary-500">{{ tFooter.legal }}</a>
+    </div> #}
 
 </footer>
