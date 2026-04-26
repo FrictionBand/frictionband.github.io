@@ -39,6 +39,12 @@ If you need the raw command used by the Cloudflare build step (runs Tailwind the
 npx tailwindcss -i src/assets/css/input.css -o _site/assets/css/tailwind.css --minify && npx @11ty/eleventy
 ```
 
+## Deployment
+
+The site is built and hosted by Cloudflare Pages, which rebuilds automatically on every push to `main`.
+
+A GitHub Actions workflow ([.github/workflows/nightly-build.yml](.github/workflows/nightly-build.yml)) also pings a Cloudflare deploy hook every night at 00:00 UTC so that the "upcoming gigs" filtering stays current without manual pushes. It can also be triggered manually from the Actions tab. The hook URL is stored in the `CF_DEPLOY_HOOK_URL` repo secret.
+
 ## TODO
 
 ### Whole Site / general
