@@ -67,8 +67,8 @@ weblink: https://example.com/event
 Event description in Markdown.
 ```
 
-The gig appears automatically on the home page under "Upcoming Gigs" when its date is today or later. Past gigs fall off automatically (no deletion needed — the site redeploys daily via a scheduled GitHub Actions workflow).
+The gig appears automatically on the home page under "Upcoming Gigs" when its date is today or later. Past gigs fall off automatically (no deletion needed — the site rebuilds nightly).
 
 ### Deployment
 
-GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to GitHub Pages on every push **and** on a daily cron at midnight UTC. The daily rebuild ensures "upcoming gigs" filtering stays current without manual pushes.
+The site is built and hosted by Cloudflare Pages, which rebuilds automatically on every push to `main`. A GitHub Actions workflow (`.github/workflows/nightly-build.yml`) also pings a Cloudflare deploy hook (stored in the `CF_DEPLOY_HOOK_URL` repo secret) every night at 00:00 UTC, so "upcoming gigs" filtering stays current without manual pushes.
