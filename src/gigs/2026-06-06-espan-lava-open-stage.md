@@ -1,5 +1,5 @@
 ---
-title: "Live at Espan Lava Open Stage"
+title: "Live at Espan Lava"
 date: 2026-06-06
 location: Espan Lava, Esplanadi Park
 gmaps: https://maps.app.goo.gl/iZLCh2bSrsHC4qvbA
