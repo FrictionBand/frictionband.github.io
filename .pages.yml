@@ -91,10 +91,6 @@ content:
         type: string
         required: false
         description: Short slogan shown in the hero section. Used on the home page.
-      - name: enableLightbox
-        label: Enable Image Gallery
-        type: boolean
-        description: If enabled, groups of consecutive pictures open in a media gallery when clicked. Intended for the media page.
       - name: hidden
         label: Hidden
         type: boolean
@@ -102,11 +98,19 @@ content:
       - name: body
         label: Body
         type: rich-text
-        description: You can embed YouTube videos by adding a line with only the video URL and nothing else.
+        description: |
+          Available shortcodes:
+          • YouTube embed: paste the video URL on its own line with nothing else around it.
+          • {% gallery "/assets/images/foo.jpg", "/assets/images/bar.jpg" %} — masonry image gallery with lightbox.
+          • {% gigs 4, false, "Tulevat konsertit", "", true, "/fi/konsertit/" %} — list of upcoming gigs (limit, showDescription, heading, type ("jam" or ""), linkCards, moreUrl).
+          • {% contact "Ota yhteyttä" %} — contact button that opens the email form.
+          • {% link_button "/fi/bio/", "Lue lisää" %} — styled link button.
+          • {% cta "/fi/bio/", "Lue lisää", "Ota yhteyttä" %} — link button + contact button side by side.
+          • {% right %}content{% endright %} — right-align a block of content.
     view:
-      fields: [ title, order ]
+      fields: [ title, order, hidden ]
       primary: title
-      sort: [ order, title, hidden ]
+      sort: [ order, title ]
       default:
         search: ''
         sort: order
@@ -152,10 +156,6 @@ content:
         type: string
         required: false
         description: Short slogan shown in the hero section. Used on the home page.
-      - name: enableLightbox
-        label: Enable Image Gallery
-        type: boolean
-        description: If enabled, groups of consecutive pictures open in a media gallery when clicked. Intended for the media page.
       - name: hidden
         label: Hidden
         type: boolean
@@ -163,7 +163,15 @@ content:
       - name: body
         label: Body
         type: rich-text
-        description: You can embed YouTube videos by adding a line with only the video URL and nothing else.
+        description: |
+          Available shortcodes:
+          • YouTube embed: paste the video URL on its own line with nothing else around it.
+          • {% gallery "/assets/images/foo.jpg", "/assets/images/bar.jpg" %} — masonry image gallery with lightbox.
+          • {% gigs 4, false, "Upcoming Concerts", "", true, "/concerts/" %} — list of upcoming gigs (limit, showDescription, heading, type ("jam" or ""), linkCards, moreUrl).
+          • {% contact "Get in touch" %} — contact button that opens the email form.
+          • {% link_button "/about/", "Read more" %} — styled link button.
+          • {% cta "/about/", "Read more", "Get in touch" %} — link button + contact button side by side.
+          • {% right %}content{% endright %} — right-align a block of content.
     view:
       fields: [ title, order, hidden ]
       primary: title
