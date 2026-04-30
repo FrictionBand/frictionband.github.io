@@ -92,7 +92,7 @@ content:
         required: false
         description: Short slogan shown in the hero section. Used on the home page.
       - name: hidden
-        label: Hidden
+        label: Hidden from navi
         type: boolean
         description: Hide this page from navigation (it will still be accessible by its URL).
       - name: body
@@ -157,7 +157,7 @@ content:
         required: false
         description: Short slogan shown in the hero section. Used on the home page.
       - name: hidden
-        label: Hidden
+        label: Hidden from navi
         type: boolean
         description: Hide this page from navigation (it will still be accessible by its URL).
       - name: body
