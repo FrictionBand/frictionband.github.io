@@ -1,6 +1,6 @@
 media:
-  input: src/media
-  output: /media
+  input: src/assets/images
+  output: /assets/images
 
 content:
 
@@ -27,17 +27,17 @@ content:
         label: Google Maps link
         type: string
         required: false
-        description: Optional, must be a valid link  
+        description: Optional, must be a valid link
       - name: fblink
         label: Facebook event link
         type: string
         required: false
-        description: Optional, must be a valid link 
+        description: Optional, must be a valid link
       - name: weblink
         label: Website event link
         type: string
         required: false
-        description: Optional, must be a valid link 
+        description: Optional, must be a valid link
       - name: body
         label: Description
         type: rich-text
@@ -51,10 +51,10 @@ content:
         sort: date
         order: asc
 
-  - name: pages
-    label: Pages
+  - name: fi-pages
+    label: Finnish Pages
     type: collection
-    path: 'src/pages/dynamic'
+    path: 'src/fi'
     fields:
       - name: title
         label: Title
@@ -62,27 +62,47 @@ content:
       - name: permalink
         label: Permalink
         type: string
-        description: The link path for this site, e.g. "/bio/" makes the site available under "https://<website url>/bio/" The slash / in the end is important, it's not gonna work without for some reason.
+        description: The URL path for this page, e.g. "/fi/bio/" (the trailing slash is important).
       - name: order
         type: number
         label: Navigation order
-        description: The links in the navigation will be shown in the order given here. Make sure each site has a different positive number so the ordering works.
+        description: Links in the navigation are shown in this order. Each page should have a unique positive number.
       - name: layout
         type: string
         hidden: true
-        default: "page" 
-      - name: enableLightbox
-        label: Enable Image Gallary
+        default: "page"
+      - name: heroImage
+        label: Hero Image
+        type: image
+        required: false
+        description: Optional banner image shown at the top of the page.
+      - name: heroVideo
+        label: Hero Video
+        type: string
+        required: false
+        description: Optional video path for the hero section (e.g. /assets/videos/slogan.mp4). Used on the home page.
+      - name: heroShowLogo
+        label: Show Logo in Hero
         type: boolean
-        description: If you enable this, groups of consecutive pictures are wrapped into a column layout and will open in a media gallery when clicked. This is specifically meant for the "media" page.
+        required: false
+        description: Show the band logo overlaid on the hero video/image. Used on the home page.
+      - name: slogan
+        label: Slogan
+        type: string
+        required: false
+        description: Short slogan shown in the hero section. Used on the home page.
+      - name: enableLightbox
+        label: Enable Image Gallery
+        type: boolean
+        description: If enabled, groups of consecutive pictures open in a media gallery when clicked. Intended for the media page.
       - name: hidden
         label: Hidden
         type: boolean
-        description: You can hide a site from the navigation if you activate this. Then it will still be accessible by directly visiting the url of the site.
+        description: Hide this page from navigation (it will still be accessible by its URL).
       - name: body
         label: Body
         type: rich-text
-        description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
+        description: You can embed YouTube videos by adding a line with only the video URL and nothing else.
     view:
       fields: [ title, order ]
       primary: title
@@ -92,34 +112,66 @@ content:
         sort: order
         order: asc
 
-  - name: home
-    label: Home page
-    path: src/pages/special/home.md
-    type: file
+  - name: en-pages
+    label: English Pages
+    type: collection
+    path: 'src/en'
     fields:
       - name: title
         label: Title
         type: string
       - name: permalink
+        label: Permalink
         type: string
-        hidden: true
-        default: "/"
+        description: The URL path for this page, e.g. "/bio/" (the trailing slash is important).
       - name: order
         type: number
-        hidden: true
-        default: 0
-      - name: hidden
-        type: boolean
-        hidden: true
-        default: false     
+        label: Navigation order
+        description: Links in the navigation are shown in this order. Each page should have a unique positive number.
       - name: layout
         type: string
         hidden: true
-        default: "home"   
+        default: "page"
+      - name: heroImage
+        label: Hero Image
+        type: image
+        required: false
+        description: Optional banner image shown at the top of the page.
+      - name: heroVideo
+        label: Hero Video
+        type: string
+        required: false
+        description: Optional video path for the hero section (e.g. /assets/videos/slogan.mp4). Used on the home page.
+      - name: heroShowLogo
+        label: Show Logo in Hero
+        type: boolean
+        required: false
+        description: Show the band logo overlaid on the hero video/image. Used on the home page.
+      - name: slogan
+        label: Slogan
+        type: string
+        required: false
+        description: Short slogan shown in the hero section. Used on the home page.
+      - name: enableLightbox
+        label: Enable Image Gallery
+        type: boolean
+        description: If enabled, groups of consecutive pictures open in a media gallery when clicked. Intended for the media page.
+      - name: hidden
+        label: Hidden
+        type: boolean
+        description: Hide this page from navigation (it will still be accessible by its URL).
       - name: body
         label: Body
         type: rich-text
-        description: You can embed YouTube videos by adding an new line with only the link to the video and nothing else in it. This will automatically embed the video in the post.
+        description: You can embed YouTube videos by adding a line with only the video URL and nothing else.
+    view:
+      fields: [ title, order ]
+      primary: title
+      sort: [ order, title ]
+      default:
+        search: ''
+        sort: order
+        order: asc
 
   - name: site
     label: Site Configuration
@@ -142,7 +194,7 @@ content:
       - name: slogan
         label: Slogan
         type: string
-        description: The slogan that is shown on the home page. Be careful to change this as the current layout is somewhat relying on a certain length of this slogan (e.g. a too long slogan will probably break the layout of the home page).
+        description: The slogan shown on the home page. Be careful changing this as the layout depends on its length.
       - name: url
         type: string
         hidden: true
@@ -150,4 +202,4 @@ content:
       - name: baseUrl
         type: string
         hidden: true
-        description: The path prefix, e.g. /friction-website/ if the website is hosted under <url>/friction-website/
+        description: The path prefix, e.g. /friction-website/ if hosted under a subdirectory
