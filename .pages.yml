@@ -106,7 +106,7 @@ content:
     view:
       fields: [ title, order ]
       primary: title
-      sort: [ order, title ]
+      sort: [ order, title, hidden ]
       default:
         search: ''
         sort: order
@@ -165,7 +165,7 @@ content:
         type: rich-text
         description: You can embed YouTube videos by adding a line with only the video URL and nothing else.
     view:
-      fields: [ title, order ]
+      fields: [ title, order, hidden ]
       primary: title
       sort: [ order, title ]
       default:
