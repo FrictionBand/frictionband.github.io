@@ -38,6 +38,16 @@ content:
         type: string
         required: false
         description: Optional, must be a valid link
+      - name: heroImage
+        label: Hero Image
+        type: string
+        required: false
+        description: the header image, e.g. /assets/images/misc/espan-lava-2026-01.jpeg 
+      - name: featured
+        label: Featured
+        type: boolean
+        required: false
+        description: Featured gigs are displayed more prominently in the gigs list
       - name: body
         label: Description
         type: rich-text
