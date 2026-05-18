@@ -1,7 +1,7 @@
 ---
 title: Live at Espan Lava
 date: 2026-06-06
-time: 15:00
+time: 15:00 - 15:45
 location: Espan Lava, Esplanadi Park
 gmaps: https://maps.app.goo.gl/iZLCh2bSrsHC4qvbA
 weblink: https://www.espanlava.fi/en/openstage
