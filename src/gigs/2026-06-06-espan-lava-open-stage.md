@@ -4,7 +4,7 @@ date: 2026-06-06
 time: 15:00 - 15:45
 location: Espan Lava, Esplanadi Park
 gmaps: https://maps.app.goo.gl/iZLCh2bSrsHC4qvbA
-weblink: https://www.espanlava.fi/en/openstage
+weblink: https://www.espanlava.fi/fi/tapahtumat/event/931BD155A782B258DF2D9EC8E6BE257B/Friction_Groove_Collective
 heroImage: /assets/images/misc/espan-lava-2026-01.jpeg
 featured: true
 ---
