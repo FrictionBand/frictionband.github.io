@@ -8,6 +8,16 @@ on:
 jobs:
   trigger-cloudflare:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - name: Trigger Cloudflare Pages rebuild
         run: curl -fsS -X POST "${{ secrets.CF_DEPLOY_HOOK_URL }}"
+
+      # GitHub disables scheduled workflows after 60 days without repo
+      # activity (state "disabled_inactivity"). Re-enabling this workflow on
+      # every run resets that timer so the nightly build keeps going.
+      - name: Keep scheduled workflow enabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/nightly-build.yml/enable"
