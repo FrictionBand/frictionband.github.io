@@ -14,4 +14,4 @@ Viaporin Kekri is a contemporary urban celebration inspired by old kekri traditi
 
 Come and experience the UNESCO World Heritage site of Suomenlinna in a new way and discover doors worth peeking behind. Prepare for an adventure with weather-appropriate gear and a curious mind!
 
-We play three sets: at ++18:00++, ++19:45++ & ++21:00++, see you there! 
+We play three sets: at 18:00, 19:45 & 21:00, see you there! 
