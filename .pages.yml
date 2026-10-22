@@ -23,6 +23,11 @@ content:
       - name: location
         type: string
         label: Location
+      - name: price
+        label: Price
+        type: string
+        required: false
+        description: Optional free text shown on the gig's own page only, e.g. "20 eur" or "Admission free"
       - name: gmaps
         label: Google Maps link
         type: string
