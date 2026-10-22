@@ -1,7 +1,7 @@
 ---
 title: Viaporin Kekri Beer Fest 2026
 date: 2026-10-31
-time: 18:00
+time: "18:00 "
 location: Tenalji von Fersen, Suomenlinna
 gmaps: https://maps.app.goo.gl/nEP2pS3eprCNb9Ew8
 weblink: https://suomenlinna.fi/en/explore/viaporin-kekri/
