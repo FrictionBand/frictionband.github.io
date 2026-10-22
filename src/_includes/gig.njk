@@ -18,6 +18,11 @@ layout: base
         <i class="fa-regular fa-clock w-5 text-center"></i><span>{{ time }}</span>
       </li>
       {% endif %}
+      {% if price %}
+      <li class="text-neutral-300 flex items-center gap-3">
+        <i class="fa-solid fa-ticket w-5 text-center"></i><span>{{ price }}</span>
+      </li>
+      {% endif %}
       {% if gmaps %}
       <li class="text-neutral-300 flex items-center gap-3">
         <i class="fas fa-map-marker-alt w-5 text-center"></i>

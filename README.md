@@ -103,6 +103,7 @@ shortDescription: "One-line teaser shown on cards"
 heroImage: /assets/images/gigs/your-photo.jpg   # otherwise a placeholder is auto-picked
 fblink: https://facebook.com/events/...
 weblink: https://example.com/event
+price: "20 eur"   # free text ("Admission free"); shown on the single gig page only, not on cards
 type: jam       # set this for jam-session entries; omit for normal gigs
 featured: true  # highlights the card
 archived: false

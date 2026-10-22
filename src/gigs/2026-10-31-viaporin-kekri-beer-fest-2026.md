@@ -7,12 +7,14 @@ gmaps: https://maps.app.goo.gl/nEP2pS3eprCNb9Ew8
 weblink: https://suomenlinna.fi/en/explore/viaporin-kekri/
 heroImage: /assets/images/gigs/friction-live-kekri-festival-2023.jpg
 featured: true
+price: Admission Free / Vapaa pääsy
 ---
+
 Viapori’s popular Kekri Beer Festival returns once again beneath the vaulted arches of Tenalji von Fersen, hosted by the new Suomenlinna-based brewery, Viaporin Panimo! Participating breweries also include CoolHead Brewery and Kakolan Panimo, among others.
 
-Providing the musical entertainment is Friction Groove Collective. This dynamic 13-piece band, featuring musicians from Suomenlinna as well, is sure to get the crowd moving. The band will perform three sets: 
+Providing the musical entertainment is Friction Groove Collective. This dynamic 13-piece band, featuring musicians from Suomenlinna as well, is sure to get the crowd moving. The band will perform three sets:
 
-18:00: Cumbia & Ethiojazz   
+18:00: Cumbia & Ethiojazz  
 19:45: From Latin to Afrobeat, getting the groove on  
 21:00: Afrobeat Dance Party
 

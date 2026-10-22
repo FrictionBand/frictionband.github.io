@@ -73,6 +73,7 @@ heroImage: /assets/images/gigs/photo.jpg   # else a placeholder is auto-picked
 shortDescription: "One-line teaser used on cards"
 fblink: https://facebook.com/events/...
 weblink: https://example.com/event
+price: "20 eur"   # free text ("Admission free"); shown on the single gig page only, not on cards
 type: jam        # jam sessions only; changes placeholder folder and card link target
 featured: true   # renders a large full-bleed card instead of the compact one
 ---
